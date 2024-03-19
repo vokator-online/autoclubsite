@@ -14,17 +14,17 @@ class UserRegisterView(generic.CreateView):
     success_url = reverse_lazy('login')
 
 
-def signup(request: HttpRequest) -> HttpResponse:
-    if request.method == "POST":
-        form = forms.UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('login')
-    else:
-        form = forms.UserCreationForm()
-    return render(request, 'registration/registration.html', {
-        'form': form,
-    })
+# def signup(request: HttpRequest) -> HttpResponse:
+#     if request.method == "POST":
+#         form = forms.UserCreationForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('login')
+#     else:
+#         form = forms.UserCreationForm()
+#     return render(request, 'registration/registration.html', {
+#         'form': form,
+#     })
 
 
 class ShowProfilePageView(generic.DetailView):

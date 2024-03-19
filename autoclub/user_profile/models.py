@@ -18,4 +18,4 @@ class Profile(models.Model):
         return str(self.user)
     
     def get_absolute_url(self):
-        return reverse("discussion")
+        return reverse("user_profile", kwargs={"pk": self.pk})
