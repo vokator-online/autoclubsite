@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils.translation import gettext as _
 
+
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE, verbose_name=_("user"))
     bio = models.TextField(blank=True, verbose_name=_("bio"))
