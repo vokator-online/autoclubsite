@@ -126,6 +126,10 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR.joinpath(MEDIA_URL)
 
 
+LOGIN_REDIRECT_URL = 'discussion'
+LOGOUT_REDIRECT_URL = 'discussion'
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
