@@ -1,0 +1,24 @@
+{% extends 'discussion/base.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+{% block content %}
+
+<div class="login-container">
+    <h1 class="login-form-title">Login:</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form-actions">
+            <input type="submit" value="Login" class="custom-button">
+            <a href="{% url 'discussion' %}" class="custom-button">Return To Homepage</a>
+        </div>
+        <div class="auth__actions">
+            <a href={% url 'reset_password' %}>Forget Password?</a>
+        </div>
+        <div class="auth__alternative">
+            <p>Don't have an Account? <a href="{% url 'registration' %}">Sign Up</a></p>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

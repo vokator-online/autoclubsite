@@ -1,0 +1,36 @@
+{% extends 'discussion/base.html' %}
+{% load static %}
+{% block title %}User Profile{% endblock %}
+{% block content %}
+    <div class="profile-container">
+        <h1 class="profile-heading">User Profile</h1>
+
+        <div class="profile-card">
+            <div class="profile-row">
+                <div class="profile-pic-container">
+                    {% if page_user.profile_pic %}
+                        <img src="{{ page_user.profile_pic.url }}" class="profile-pic" alt="PROFILE">
+                    {% else %}
+                        <img src="{% static 'img/default_profile_pic.png' %}" class="profile-pic" alt="PROFILE">
+                    {% endif %}
+                </div>
+
+                <div class="profile-info">
+                    <h5 class="profile-name">
+                        <strong>
+                        {{ page_user.user.first_name }} {{ page_user.user.last_name }}
+                        </strong>
+                    </h5>
+                    <p class="profile-links">
+                        {% if page_user.website_url %} | <a href="{{ page_user.website_url }}" target="_blank">Website</a> {% endif %}
+                        {% if page_user.facebook_url %} | <a href="{{ page_user.facebook_url }}"target="_blank">Facebook</a> {% endif %}
+                        {% if page_user.twitter_url %} | <a href="{{ page_user.twitter_url }}"target="_blank">Twitter</a> {% endif %}
+                        {% if page_user.instagram_url %} | <a href="{{ page_user.instagram_url }}"target="_blank">Instagram</a> {% endif %}
+                        {% if page_user.pinterest_url %} | <a href="{{ page_user.pinterest_url }}"target="_blank">Pinterest</a> {% endif %}
+                    </p>
+                    <p class="profile-bio">{{ page_user.bio }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

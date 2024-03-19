@@ -1,0 +1,26 @@
+{% extends 'discussion/base.html' %}
+{% load static %}
+{% block title %}Edit profile{% endblock %}
+{% block content %}
+
+<div class="edit-profile-container">
+    <h1 class="edit-profile-title">Edit profile</h1>
+    <form method="POST" class="edit-profile-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <div class="form-actions">
+            <input type="submit" value="Update profile" class="custom-button">
+        </div>
+
+        <div class="edit-profile-change-password">
+            <a href="{% url 'password_change' %}" class="password-button">Change Password</a>
+        </div>
+
+        <div class="form-actions">
+            <a href="{% url 'home' %}" class="custom-button">Return To Homepage</a>
+        </div>
+    </form>   
+</div>
+
+{% endblock %}

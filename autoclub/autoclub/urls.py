@@ -24,11 +24,11 @@ from user_profile import views
 urlpatterns = [
     path('', include('website.urls')),
     path('discussion/', include('discussion.urls')),
-    # path('user_profile/', include('user_profile.urls')),
+    path('user_profile/', include('user_profile.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('tinymce/', include('tinymce.urls')),
     path('admin/', admin.site.urls),
-    # path('change_password/', views.PasswordsChangeView.as_view(template_name='registration/change_password.html'), name='change_password'),
+    path('change_password/', views.PasswordsChangeView.as_view(template_name='registration/change_password.html'), name='change_password'),
     path('password_success/', auth_views.PasswordChangeDoneView.as_view(), name='password_success'),
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name='registration/reset_password.html'), name="reset_password"),
     path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(template_name='registration/reset_password_sent.html'), name="password_reset_done"),

@@ -1,0 +1,18 @@
+{% extends 'discussion/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1 style="margin-top: 1em; margin-bottom: 2em;">Enter new password:</h1>
+
+<p>Please enter your new password twice so we can verify you typed it in correctly.</p>
+	<br>
+
+<form class="form" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+		<button type="submit" class="btn btn-secondary">Change My Password</button>
+		<span style="margin-right: 4px;"></span>
+		<a href="{% url 'discussion' %}" class="btn btn-secondary">Return To Homepage</a>
+</form>
+
+{% endblock %}
