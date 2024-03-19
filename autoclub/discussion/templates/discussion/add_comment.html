@@ -1,0 +1,31 @@
+{% extends 'discussion/base.html' %}
+{% load static %}
+{% block title %}Rašyti komentarą{% endblock %}
+{% block content %}
+<br>
+<br>
+{% if user.is_authenticated %}
+    <h1>Rašyti komentarą</h1>
+    <br>
+    <br>
+    <div class="form-group">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <hr>
+            <button class="btn btn-secondary">Paskelbti komentarą</button>
+            <a href="{% url 'discussion' %}" class="btn btn-secondary">Grįžti</a>
+            <br>
+            <br>
+        </form>
+    </div>
+{% else %}
+<br>
+<br>
+    <h2>Prieiga uždrausta! Prisijunkite prie puslapio!</h2>
+    <br>
+    <br>    
+{% endif %}
+
+{% endblock %}

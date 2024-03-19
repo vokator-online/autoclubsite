@@ -1,0 +1,34 @@
+{% extends 'discussion/base.html' %}
+{% load static %}
+{% block content %}
+    <br>
+    <br>    
+    <h1>Diskusijų lenta</h1>
+    <br>
+    <br>
+    <ul>
+    {% for post in object_list %}
+        <li>
+            <a href="{% url 'article_detail' post.pk %}">{{ post.title }}</a>
+            - <a href="{% url 'category' post.category %}">{{ post.category }}</a>
+            - {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.created_at }}
+            <small>
+                {% if user.is_authenticated %}
+                    {% if user.id == post.author.id %}
+                        - <a href="{% url 'update_post' post.pk %}">Redaguoti pranešimą</a>
+                        <span style="margin-right: 5px;"></span>
+                        <a href="{% url 'delete_post' post.pk %}">Ištrinti pranešimą</a>
+                    {% endif %}
+                {% endif %}
+            </small>
+            <br>
+            <br>
+            {{ post.snippet }}
+        </li>
+        <br>
+        <br>
+        <hr>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

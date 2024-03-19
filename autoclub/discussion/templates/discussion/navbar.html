@@ -1,0 +1,110 @@
+{% load static %}
+
+<div id="logo" class="container">
+  <h1><a href="{% url 'home' %}"><strong>AUTOMOBILIŲ MĖGĖJŲ<span> KLUBAS</span></strong></a></h1>
+  <p class="style3"><a href=" ">Lietuvos automobilių mėgėjų klubas, vienijantis įvairaus amžiaus, 
+    skirtingų profesijų ir požiūrių vairuotojus</a></p>
+</div>
+
+<nav class="navbar navbar-expand-lg bg-body-secondary" style="max-width: 1200px; margin: 0 auto;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'discussion' %}">Diskusijų blogas</a>
+        <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            {% if cat_menu %}
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Temų kategorijos
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        {% for item in cat_menu %}
+                            {% with item_slug=item|slugify %}
+                                <a class="dropdown-item" href="{% url 'category' item_slug %}">{{ item }}</a>
+                            {% endwith %}
+                        {% endfor %}
+
+                    </ul>
+                </li>
+
+            {% else %}
+            
+                <li class="nav-item">
+                    <a class="nav-link active"
+                    aria-current="page"
+                    {% comment %} href="{% url 'category_list' %}">Temų kategorijos</a> {% endcomment %}
+                </li>
+
+            {% endif %}
+                        
+            {% if user.is_authenticated %}
+
+            <li class="nav-item">
+                <a class="nav-link active"
+                aria-current="page"
+                href="{% url 'add_post' %}">Pridėti naują pranešimą</a>
+            </li>
+
+            {% else %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'registration' %}">Registracija</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Prisijungti</a>
+                </li>
+
+            {% endif %}
+
+        </ul>
+
+        {% if user.is_authenticated %}
+            <ul class="navbar-nav ml-auto" style="align-items: center; height: 50px;">
+                <li class="nav-item dropdown" style="display: flex; align-items: center; height: 100%;">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: flex; align-items: center;">
+                        <span>{{ user|capfirst }}</span>
+                        {% if user.profile and user.profile.profile_pic %}
+                            <img src="{{ user.profile.profile_pic.url }}" class="rounded-circle" style="height: 64px; width: 64px; margin-left: 10px;" alt="PROFILE PICTURE">
+                        {% else %}
+                            <img src="{% static 'img/default_profile_pic.png' %}" class="rounded-circle" style="height: 64px; width: 64px; margin-left: 10px;" alt="PROFILE PICTURE">
+                        {% endif %}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Profilio nustatymai</a></li>
+                        {% if user.profile.id %}
+                            <li><a class="dropdown-item" href="{% url 'edit_profile_page' pk=user.profile.id %}">Redaguoti vartotojo profilio puslapį</a></li>
+                            <li><a class="dropdown-item" href="{% url 'show_profile_page' pk=user.profile.id %}">Rodyti vartotojo profilio puslapį</a></li>
+                        {% else %}
+                            <li><a class="dropdown-item" href="{% url 'create_profile_page' %}">Sukurti vartotojo profilio puslapį</a></li>
+                        {% endif %}
+                        <form action="{% url 'logout' %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="dropdown-item" style="border: none; background: none; cursor: pointer">Atsijungti</button>
+                        </form>
+                    </ul>
+                </li>
+            </ul>
+        {% endif %}
+
+    </div>
+</nav>
+
+<div id="banner" class="container">
+    <div class="d-flex justify-content-center align-items-center">
+        <img src="{% static 'img/pic01.jpeg' %}" width="1200" height="200" alt="BANNER">
+    </div>
+    <hr>
+</div>

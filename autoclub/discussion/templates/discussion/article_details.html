@@ -1,0 +1,195 @@
+{% extends 'discussion/base.html' %}
+{% load static %}
+{% block title %}{{ post.title_tag }}{% endblock %}
+{% block content %}
+<br>
+<br>
+<h1>{{ post.title }}</h1>
+<br>
+<br>
+
+<div class="card mb-3" style="background-color: transparent !important; border: none;">
+  <div class="row g-0" style="display: flex; align-items: center;">
+    <div class="col-md-2" style="flex: 0 0 120px; max-width: 120px; display: flex; justify-content: center; align-items: center;">
+    {% if post.author.profile.profile_pic %}
+      <img src="{{ post.author.profile.profile_pic.url }}" width="120" height="120" class="rounded-circle" alt="PROFILE" style="object-fit: cover;">
+    
+    {% else %}
+      <img src="{% static 'img/default_profile_pic.png' %}" width="120" height="120" class="rounded-circle" alt="PROFILE" style="object-fit: cover;">
+    {% endif %}
+    </div>
+    
+    <div class="col-md-10" style="flex: 1;">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #2E9AFE;">
+          <strong>
+          {{ post.author.first_name }}
+          {{ post.author.last_name }}
+          </strong>
+        </h5>
+
+        <p class="card-text" style="color: #919191;">
+
+          <a href="{% url 'show_profile_page' post.author.profile.id %}">Profile Page</a>
+
+          {% if post.author.profile.website_url %}
+            | <a href="{{ post.author.profile.website_url }}" target="_blank">Website</a>
+          {% endif %}
+
+          {% if post.author.profile.facebook_url %}
+            | <a href="{{ post.author.profile.facebook_url }}"target="_blank">Facebook</a>
+          {% endif %}
+
+          {% if post.author.profile.twitter_url %}
+            | <a href="{{ post.author.profile.twitter_url }}"target="_blank">Twitter</a>
+          {% endif %}
+
+          {% if post.author.profile.instagram_url %}
+            | <a href="{{ post.author.profile.instagram_url }}"target="_blank">Instagram</a>
+          {% endif %}
+
+          {% if post.author.profile.pinterest_url %}
+            | <a href="{{ post.author.profile.pinterest_url }}"target="_blank">Pinterest</a>
+          {% endif %}
+        </p>
+
+        <p class="card-text" style="color: #919191;"><small>{{ post.author.profile.bio }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+<small>By:
+    {{ post.author.first_name }}
+    {{ post.author.last_name }} -
+    {{ post.created_at }}
+    
+    {% if user.is_authenticated %}
+        {% if user.id == post.author.id %}
+         - <a href="{% url 'update_post' post.pk %}">Redaguoti pranešimą</a>
+            <span style="margin-right: 5px;"></span>
+            <a href="{% url 'delete_post' post.pk %}">Ištrinti pranešimą</a>
+        {% endif %}
+    {% endif %}    
+</small>
+
+<hr>
+<br>
+
+{% if post.header_image %}
+    <img src="{{ post.header_image.url }}" style="max-width: 50%; height: auto; cursor: pointer;" data-toggle="modal" data-target="#imageModal">
+      <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 70%; margin: auto;" role="document">
+          <div class="modal-content">
+            <div class="modal-body" style="display: flex; justify-content: center; align-items: center; overflow: hidden;">
+              <img src="{{ post.header_image.url }}" style="max-height: 80vh; max-width: 100%; height: auto;">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Uždaryti</button>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endif %}
+
+{{ post.content | safe }}
+
+<hr>
+
+<h1 style="margin-top: 3em; margin-bottom: 2em;">Temos komentarai:</h1>
+
+{% if not post.comments.all %}
+      Nėra paliktų komentarų
+      <a href="{% url 'add_comment' post.pk %}" style="display: block; margin-bottom: 3em;">Rašyti komentarą</a>
+
+{% else %}
+
+<a href="{% url 'add_comment' post.pk %}" style="display: block; margin-bottom: 3em;">Rašyti komentarą</a>
+
+{% for comment in post.comments.all %}
+<div class="comment" style="margin-bottom: 5em; background-color: #2c2c2c;">
+  <div class="card mb-3" style="background-color: transparent !important; border: none;">
+    <div class="row g-0" style="display: flex; align-items: center;">
+      <div class="col-md-2" style="flex: 0 0 120px; max-width: 120px; display: flex; justify-content: center; align-items: center;">
+      {% if comment.author.profile.profile_pic %}
+        <img src="{{ comment.author.profile.profile_pic.url }}" width="120" height="120" class="rounded-circle" alt="PROFILE" style="object-fit: cover;">
+      
+      {% else %}
+        <img src="{% static 'img/default_profile_pic.png' %}" width="120" height="120" class="rounded-circle" alt="PROFILE" style="object-fit: cover;">
+      {% endif %}
+      </div>
+      
+      <div class="col-md-10" style="flex: 1;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #2E9AFE;">
+            <strong>
+            {{ comment.author.first_name }}
+            {{ comment.author.last_name }}
+            </strong>
+          </h5>
+  
+          <p class="card-text" style="color: #919191;">
+  
+            <a href="{% url 'show_profile_page' comment.author.profile.id %}">Profile Page</a>
+  
+            {% if comment.author.profile.website_url %}
+              | <a href="{{ comment.author.profile.website_url }}" target="_blank">Website</a>
+            {% endif %}
+  
+            {% if comment.author.profile.facebook_url %}
+              | <a href="{{ comment.author.profile.facebook_url }}"target="_blank">Facebook</a>
+            {% endif %}
+  
+            {% if comment.author.profile.twitter_url %}
+              | <a href="{{ comment.author.profile.twitter_url }}"target="_blank">Twitter</a>
+            {% endif %}
+  
+            {% if comment.author.profile.instagram_url %}
+              | <a href="{{ comment.author.profile.instagram_url }}"target="_blank">Instagram</a>
+            {% endif %}
+  
+            {% if comment.author.profile.pinterest_url %}
+              | <a href="{{ comment.author.profile.pinterest_url }}"target="_blank">Pinterest</a>
+            {% endif %}
+          </p>
+  
+          <p class="card-text" style="color: #919191;"><small>{{ comment.author.profile.bio }}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <hr>
+  <small>By:
+      {{ comment.author.first_name }}
+      {{ comment.author.last_name }} -
+      {{ comment.created_at }}
+      
+      {% if user.is_authenticated %}
+          {% if user.id == comment.author.id %}
+           - <a href="{% url 'update_comment' comment.pk %}">Redaguoti komentarą</a>
+              <span style="margin-right: 5px;"></span>
+              <a href="{% url 'delete_comment' comment.pk %}">Ištrinti komentarą</a>
+          {% endif %}
+      {% endif %}    
+  </small>
+  
+  <hr>
+
+    {{ comment.content|safe }}
+
+  <hr>
+
+</div>
+{% endfor %}
+
+    <a href="{% url 'add_comment' post.pk %}" style="display: block; margin-bottom: 4em;">Rašyti komentarą</a>
+
+{% endif %}
+
+
+<a href="{% url 'discussion' %}" class="btn btn-secondary">Grįžti</a>
+<br>
+<br>
+{% endblock %}

@@ -23,7 +23,7 @@ from user_profile import views
 
 urlpatterns = [
     path('', include('website.urls')),
-    # path('discussion/', include('discussion.urls')),
+    path('discussion/', include('discussion.urls')),
     # path('user_profile/', include('user_profile.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('tinymce/', include('tinymce.urls')),

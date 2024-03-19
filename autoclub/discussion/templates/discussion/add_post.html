@@ -1,0 +1,31 @@
+{% extends 'discussion/base.html' %}
+{% load static %}
+{% block title %}Sukurti naują pranešimą{% endblock %}
+{% block content %}
+<br>
+<br>
+{% if user.is_authenticated %}
+    <h1>Sukurti naują pranešimą</h1>
+    <br>
+    <br>
+    <div class="form-group">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <hr>
+            <button class="btn btn-secondary">Paskelbti pranešimą</button>
+            <a href="{% url 'discussion' %}" class="btn btn-secondary">Grįžti</a>
+            <br>
+            <br>
+        </form>
+    </div>
+{% else %}
+<br>
+<br>
+    <h2>Prieiga uždrausta! Prisijunkite prie puslapio!</h2>
+    <br>
+    <br>    
+{% endif %}
+
+{% endblock %}

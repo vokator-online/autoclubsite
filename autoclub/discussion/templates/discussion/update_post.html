@@ -1,0 +1,31 @@
+{% extends 'discussion/base.html' %}
+{% load static %}
+{% block title %}Redaguoti pranešimą{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
+    <br>
+    <br>
+        <h1>Redaguoti pranešimą</h1>
+        <br>
+        <br>
+        <div class="form-group">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-secondary">Atnaujinti</button>
+                <a href="{% url 'discussion' %}" class="btn btn-secondary">Grįžti</a>
+            </form>
+        </div>
+    {% else %}
+        <h2>Prieiga uždrausta! Prisijunkite prie puslapio!</h2>
+    {% endif %}
+    
+{% else %}
+
+<h2>Prieiga uždrausta! Prisijunkite prie puslapio!</h2>
+
+{% endif %}
+
+{% endblock %}

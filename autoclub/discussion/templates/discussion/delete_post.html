@@ -1,0 +1,35 @@
+{% extends 'discussion/base.html' %}
+{% load static %}
+{% block title %}Ištrinti pranešimą{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
+    <br>
+    <br>
+        <h1>Ištinti pranešimą</h1>
+        <br>
+        <br>
+        <h3>Ištrinti: {{ post.title }}</h3>
+        <br>
+        <div class="form-group">
+            <form method="POST">
+                {% csrf_token %}
+                <strong>Ar Jūs tikrai norite ištrinti šį pranešimą?</strong>
+                <br>
+                <br>
+                <button class="btn btn-secondary">Ištrinti pranešimą</button>
+                <a href="{% url 'discussion' %}" class="btn btn-secondary">Grįžti</a>
+            </form>
+        </div>
+    {% else %}
+        <h2>Prieiga uždrausta! Prisijunkite prie puslapio!</h2>
+    {% endif %}
+
+{% else %}
+
+<h2>Prieiga uždrausta! Prisijunkite prie puslapio!</h2>
+
+{% endif %}
+
+{% endblock %}

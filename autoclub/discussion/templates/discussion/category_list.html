@@ -1,0 +1,14 @@
+{% extends 'discussion/base.html' %}
+{% load static %}
+{% block title %}Temų kategorijos{% endblock %}
+{% block content %}
+
+    <h1>Temų kategorijos</h1>
+
+    {% for item in cat_menu_list %}
+        {% with item_slug=item|slugify %}
+            <h4><a class="dropdown-item" href="{% url 'category' item_slug %}">{{ item }}</a></h4>
+        {% endwith %}
+    {% endfor %}
+
+{% endblock %}
