@@ -1,0 +1,325 @@
+.custom-button {
+    background-color: #6c757d;
+    color: white;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    border-radius: 0.40rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.custom-button:hover {
+    background-color: #5a6268;
+}
+
+.buttons-container, .form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+}
+
+
+/*********************************************************************************/
+/* Registration Form                                                             */
+/*********************************************************************************/
+
+.registration-container {
+    min-height: 120vh;
+    width: 800px;
+    margin: auto;
+}
+
+h1.registration-form-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/*********************************************************************************/
+/* Login Form                                                                    */
+/*********************************************************************************/
+
+/* Login Form */
+
+.login-container {
+    margin: 2rem auto;
+    min-height: 120vh;
+}
+
+.login-form-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.login-container input[type="text"],
+.login-container input[type="username"],
+.login-container input[type="password"] {
+    width: 100%; /* Užtikrinama, kad laukai išsiplečia iki konteinerio pločio */
+    max-width: 700px; /* Neleidžia laukams išplisti per daug, jei konteineris yra platesnis */
+    padding: 10px; /* Padidina laukų aukštį per vidinį tarpą */
+    margin-bottom: 20px; /* Užtikrina atstumą tarp formos laukų */
+    border-radius: 5px; /* Suteikia formos laukams švelnesnius kampus */
+    border: 1px solid #ccc; /* Nustato subtilią rėmelio spalvą */
+}
+
+.form-actions,
+.auth__actions,
+.auth__alternative {
+    margin-top: 2rem; /* Vienodina atstumą tarp skirtingų formos dalių */
+}
+
+
+/*********************************************************************************/
+/* Password Change Form                                                          */
+/*********************************************************************************/
+
+.password-change-container {
+    min-height: 120vh;
+}
+
+.password-change-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+/*********************************************************************************/
+/* Password Change Successful Form                                               */
+/*********************************************************************************/
+
+.password-success-container {
+    min-height: 120vh;
+}
+
+.password-success-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.password-change-title {
+    margin-bottom: 40px;
+}
+
+.password-change-message {
+    margin-bottom: 40px;
+}
+
+
+/*********************************************************************************/
+/* Password Reset Complete Form                                                  */
+/*********************************************************************************/
+
+.password-reset-complete-container {
+    min-height: 120vh;
+}
+
+.password-reset-complete-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.password-reset-complete-message {
+    margin-bottom: 40px;
+}
+
+
+/*********************************************************************************/
+/* Password Reset Sent Form                                                      */
+/*********************************************************************************/
+
+.password-reset-sent-container {
+    min-height: 120vh;
+}
+
+.password-reset-sent-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.password-reset-sent-message {
+    margin-bottom: 40px;
+}
+
+
+/*********************************************************************************/
+/* Password Reset Form                                                           */
+/*********************************************************************************/
+
+.password-reset-container {
+    min-height: 120vh;
+}
+
+.password-reset-sent-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.password-reset-sent-message {
+    margin-bottom: 40px;
+}
+
+
+/*********************************************************************************/
+/* Edit Profile Page Form                                                           */
+/*********************************************************************************/
+
+.custom-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-heading {
+    margin-bottom: 1.5rem;
+}
+
+.custom-form-group {
+    margin-bottom: 1rem;
+}
+
+.access-denied {
+    color: red;
+    margin-top: 1rem;
+}
+
+
+/*********************************************************************************/
+/* User Profile Form                                                           */
+/*********************************************************************************/
+
+.profile-container {
+    margin: 2rem auto;
+    min-height: 120vh;
+}
+
+.profile-heading {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.profile-card {
+    background-color: transparent;
+    border: none;
+    display: flex;
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic-container {
+    flex: 0 0 120px;
+    max-width: 120px;
+    display: flex;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    /* border-radius: 50%; */
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+    padding-left: 1rem;
+}
+
+.profile-name {
+    color: #2E9AFE;
+    margin-bottom: 1rem;
+}
+
+.profile-links a {
+    color: #919191;
+    text-decoration: none;
+}
+
+.profile-links {
+    color: #919191;
+    margin-bottom: 1rem;
+}
+
+.profile-bio {
+    color: #919191;
+}
+
+
+/*********************************************************************************/
+/* Edit Profile Form                                                             */
+/*********************************************************************************/
+
+.edit-profile-container {
+    margin: 2rem auto;
+    min-height: 120vh;
+}
+
+h1.edit-profile-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+}
+
+.edit-profile-form p {
+    margin-bottom: 30px;
+}
+
+.edit-profile-form input[type="text"],
+.edit-profile-form input[type="email"],
+.edit-profile-form textarea {
+    width: 100%; /* Užtikrinama, kad laukai išsiplečia iki konteinerio pločio */
+    max-width: 700px; /* Neleidžia laukams išplisti per daug, jei konteineris yra platesnis */
+    padding: 5px; /* Padidina laukų aukštį per vidinį tarpą */
+    margin-bottom: 20px; /* Užtikrina atstumą tarp formos laukų */
+    border-radius: 5px; /* Suteikia formos laukams švelnesnius kampus */
+    border: 1px solid #ccc; /* Nustato subtilią rėmelio spalvą */
+}
+
+.password-button {
+    background-color: #ffc107;
+    color: white;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    border-radius: 0.40rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.password-button:hover {
+    background-color: #e0a800;
+}
+
+.edit-profile-change-password {
+    margin-top: 20px;
+}

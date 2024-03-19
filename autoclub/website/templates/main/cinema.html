@@ -1,0 +1,218 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block title %}Einam į kiną{% endblock %}
+{% block content %}
+
+<div class="container page">
+	<div class="content">
+		<div class="title" style="margin-bottom: 5em;">
+			<h2>Einam <span class="byline">į kiną</span></h2>
+		</div>
+		
+		<h2 style="margin-top: 2em; margin-bottom: 4em;">Pirmadieniais keliaujam į kino teatrą "MULTIKINO":</h2>
+
+			<a href="https://www.ozas.lt/" target="_blank">
+				<img src="{% static 'photos/cinema/ozas_logo.png' %}" alt="OZAS">
+			</a>
+
+			<a href="https://multikino.lt/" target="_blank">
+				<img src="{% static 'photos/cinema/multikino.png' %}" alt="MULTIKINO">
+			</a>		
+			
+			<p style="margin-top: 4em;"> Kodėl pirmadieniais???</p>
+			<p>Atsakymas labai paprastas!</p>
+			
+			<a href="{% static 'photos/cinema/04.jpg' %}">
+				<img src="{% static 'photos/cinema/thumbs/04.jpg' %}" alt="04" style="float:left; margin-right:15px;"></a>
+			<p style="margin-top: 2.5em;">Kino seansas - geriausias laisvalaikio praleidimo būdas, 
+				o pirmadieniais visi naujausi filmai ir visos premjeros yra rodomos mažesne nei įprasta kaina:</p>
+				<p>į 2D filmą tik 3.50 EUR;</p>
+				<p>į 3D filmą tik 4,50 EUR.</p>
+			
+			<p style="margin-top: 3em;">Iš pradžių į šią idėją buvo žiūrėta nerimtai, 
+				nes filmų peržiūra ir automobiliai nelabai ką turi bendro. 
+				Tačiau ilgainiui kino teatro lankymas tapo vienas iš susitikimų būdų, 
+				tad toks laisvalaikio praleidimo laikas buvo atskirtas nuo bendrų kassavaitinių susitikimų ir yra organizuojamas atskirai.</p>
+			
+			<p style="margin-top: 3em;">Renginių akimirkos <strong>MULTIKINO</strong> kino teatre:</p>
+			<a href="{% static 'photos/cinema/01.jpg' %}">
+				<img src="{% static 'photos/cinema/thumbs/01.jpg' %}" alt="01"></a>
+				<span style="margin-right: 1px;"></span>
+			<a href="{% static 'photos/cinema/02.jpg' %}">
+				<img src="{% static 'photos/cinema/thumbs/02.jpg' %}" alt="02"></a>
+				<span style="margin-right: 1px;"></span>
+			<a href="{% static 'photos/cinema/03.jpg' %}">
+				<img src="{% static 'photos/cinema/thumbs/03.jpg' %}" alt="03"></a>
+			<br>
+			<img src="{% static 'photos/cinema/forum_cinemas_logo.png' %}" 
+			style="margin-top: 6em; float:left; margin-right:15px;" alt="FORUM CINEMAS VINGIS"></a>
+			<p style="margin-top: 9em;">Labai retais ir išskirtiniais atvejais aplankome ir 
+				<strong>"FORUM CINEMAS VINGIS"</strong> kino teatrą:</p>
+			
+			<p style="margin-top: 2em; margin-bottom: 2em;">
+				Išankstinės filmo <strong>"IRKLAIS PER ATLANTĄ"</strong> premjeros akimirkos kino teatre
+			<strong>"FORUM CINEMAS VINGIS"</strong> kartu su <strong>AURIMU VALUJAVIČIUMI</strong>:</p>
+
+			<a href="{% static 'photos/cinema/row_atlantic_premjera_01.jpg' %}">
+				<img src="{% static 'photos/cinema/thumbs/row_atlantic_premjera_01.jpg' %}" alt="ROW ATLANTIC PREMJERA 01"></a>
+				<span style="margin-right: 1px;"></span>
+			<a href="{% static 'photos/cinema/row_atlantic_premjera_02.jpg' %}">
+				<img src="{% static 'photos/cinema/thumbs/row_atlantic_premjera_02.jpg' %}" alt="ROW ATLANTIC PREMJERA 02"></a>
+				<span style="margin-right: 1px;"></span>
+			<a href="{% static 'photos/cinema/row_atlantic_premjera_03.jpg' %}">
+				<img src="{% static 'photos/cinema/thumbs/row_atlantic_premjera_03.jpg' %}" alt="ROW ATLANTIC PREMJERA 03"></a>
+
+			<h2 style="margin-top: 6em; margin-bottom: 2.5em;">MULTIKINO RENGINIŲ APRAŠYMAI IR NUOTRAUKOS:</h2>
+
+		<ul class="style2">
+			<li class="first" style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt30624233/" target="_blank">
+					<img src="{% static 'photos/cinema/row_atlantic.jpg' %}"
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="ROW ATLANTIC">
+				</a>
+				<p style="margin: 0;"><strong>FORUM CINEMAS:</strong>
+					<br>					
+					IRKLAIS PER ATLANTĄ, 2024-01-18, VINGIS, 21.20 val.
+					<br>
+					<strong>IŠANKSTINĖ PREMJERA, KARTU SU AURIMU VALUJAVIČIUMI</strong></p>
+			</li>
+
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/video/vi1013231641/" target="_blank">
+					<img src="{% static 'photos/cinema/terminator_genisys.png' %}"
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="TERMINATOR GENISYS 3D">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					TERMINATOR GENISYS 3D, 2015-07-20, OZAS, 21.30 val.</p>
+			</li>
+
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt0369610/" target="_blank">
+					<img src="{% static 'photos/cinema/jurassic_world.jpg' %}"
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="JURASSIC WORLD">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					JUROS PERIODO PASAULIS 3D, 2015-06-29, OZAS, 21.30 val.</p>
+			</li>
+
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt2126355/" target="_blank">
+					<img src="{% static 'photos/cinema/san_andreas.jpg' %}"
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="SAN ANDREAS">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					SAN ANDREAS 3D, 2015-06-08, OZAS, 21.45 val.</p>
+			</li>
+
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt2369135/" target="_blank">
+					<img src="{% static 'photos/cinema/need_for_speed.jpg' %}"
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="NEED FOR SPEED. IŠTROŠKĘ GREIČIO">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					NEED FOR SPEED. IŠTROŠKĘ GREIČIO, 2014-03-24, OZAS, 21.45 val.</p>
+			</li>
+
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt2275946/" target="_blank">
+					<img src="{% static 'photos/cinema/redirected_uz_lietuva.jpg' %}"
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="REDIRECTED / UŽ LIETUVĄ!">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					REDIRECTED / UŽ LIETUVĄ!, OZAS, 2014-01-20, 20.45 val.</p>
+			</li>
+
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt3604944/" target="_blank">
+					<img src="{% static 'photos/cinema/kaip_pavogti_zmona.jpg' %}"
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="KAIP PAVOGTI ŽMONĄ">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					KAIP PAVOGTI ŽMONĄ, OZAS, 2013-12-30, 21.15 val.</p>
+			</li>
+
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt5512814/" target="_blank">
+					<img src="{% static 'photos/cinema/moterys_meluoja_geriau.jpg' %}"
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="MOTERYS MĖLUOJA GERIAU. KRISTINA">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					MOTERYS MĖLUOJA GERIAU. KRISTINA, 2013-12-16, OZAS, 22.00 val.</p>
+			</li>
+
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt1211956/" target="_blank">
+					<img src="{% static 'photos/cinema/escape_plan.jpg' %}"
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="PABĖGIMO PLANAS">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					PABĖGIMO PLANAS, 2013-11-04, OZAS, 21.00 val.</p>
+			</li>
+			
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt1411250/" target="_blank">
+					<img src="{% static 'photos/cinema/riddick_2013.jpg' %}"
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="RYDIKO KRONIKOS">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					RYDIKO KRONIKOS, 2013-09-23, OZAS, 21.00 val.</p>
+			</li>
+
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt1535108/" target="_blank">
+					<img src="{% static 'photos/cinema/elysium.jpg' %}"
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="ELIZIEJUS">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					ELIZIEJUS, 2013-08-19, OZAS, 21.45 val.</p>
+			</li>
+
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt1821694/" target="_blank">
+					<img src="{% static 'photos/cinema/red_2.jpg' %}" 
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="RED 2">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					RIZIKINGA ERZINTI DIEDUKUS 2, RED 2, 2013-07-29, OZAS, 22.00 val.</p>
+			</li>
+
+			<li style="display: flex; align-items: center;">
+				<a href="https://www.imdb.com/title/tt0816711/" target="_blank">
+					<img src="{% static 'photos/cinema/pasauliu_karai_z.jpg' %}" 
+					width="120" height="160" style="flex: 0 0 auto; margin-right: 15px;" alt="PASAULIŲ KARAI Z">
+				</a>
+				<p style="margin: 0;"><strong>MULTIKINO:</strong>
+					<br>
+					PASAULIŲ KARAI Z, 2013-07-05, OZAS, 21.30 val.</p>
+			</li>
+
+			<li>
+				<img src="{% static 'photos/cinema/multikino_panorama.jpg' %}" style="margin-top: 2em; margin-bottom: 1em;" alt="MultiKino">
+			</li>
+			
+			<li>
+				<p style="margin-top: 1em;">Turite klausimų?
+					<br>
+					Susisiekite su mumis <a href="{% url 'contact' %}" target="KONTAKTAI">
+						<strong>KONTAKTAI</strong></a> skiltyje nurodytais kontaktais,
+					prisijunkite prie bendros <a href="https://t.me/djvokator" target="_blank"><strong>TELEGRAM</strong></a>
+					arba <a href="viber://add?number=37062476198&text=Viber"><strong>VIBER</strong></a> konferencijos
+					ir diskutuokite su visais dalyviais gyvai.
+					<br>
+					Dalyvaukite, lauksime Jūsų!</p>
+			</li>
+		</ul>
+	</div>
+
+{% endblock %}

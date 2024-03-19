@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="lt">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>
+        {% block title %}
+        Automobilių mėgėjų klubas - pagrindinis puslapis
+        {% endblock %}
+      </title>
+	<meta name="keywords" content="Automobilių mėgėjų klubas, Vilnius, automobiliai">
+	<meta name="description" content="Automobilių mėgėjų klubo svetainė">
+	<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+</head>
+
+<body>
+	<div id="logo" class="container">
+		<h1><a href="{% url 'home' %}">AUTOMOBILIŲ MĖGĖJŲ<span> KLUBAS</span></a></h1>
+		<p class="style3"><a href=" ">Lietuvos automobilių mėgėjų klubas, vienijantis įvairaus amžiaus, skirtingų profesijų ir požiūrių vairuotojus</a></p>
+	</div>
+
+    <div id="menu" class="container">
+		<ul>
+			<li {% url 'home' as url_home %}{% if request.path == url_home %} class="current_page_item"{% endif %}><a href="{% url 'home' %}" title="Pagrindinis puslapis">Pagrindinis</a></li>
+			<li {% url 'events' as url_events %}{% if request.path == url_events %} class="current_page_item"{% endif %}><a href="{% url 'events' %}" title="Renginių organizavimas ir jų apžvalgos">Renginiai</a></li>
+            <li {% url 'merchandise' as url_merchandise %}{% if request.path == url_merchandise %} class="current_page_item"{% endif %}><a href="{% url 'merchandise' %}" title="Atributika">Atributika</a></li>
+            <li {% url 'contact' as url_contact %}{% if request.path == url_contact %} class="current_page_item"{% endif %}><a href="{% url 'contact' %}" title="Susisiekite su mumis">Kontaktai</a></li>
+            <li {% url 'discussion' as url_discussion %}{% if request.path == url_discussion %} class="current_page_item"{% endif %}><a href="{% url 'discussion' %}" title="Diskusijos gyvai">Diskusijos</a></li>
+		</ul>
+	</div>
+
+<div id="banner" class="container">
+	<img src="{% static 'img/pic01.jpeg' %}" width="1200" height="200" alt="BANNER">
+</div>
+
+<div id="three-column" class="container">
+	<div id="tbox1">
+		<h2>NAUJAMETINIS RENGINYS PANEMUNĖS PILYJE<br>
+			2023-12-31</h2>
+			<p class="style3">2023 m. gruodžio 31 d. klubas organizuoja Naujametinį renginį Panemunės pilyje. 
+				Kviečiame visus norinčius ir galinčius atvykti į šį renginį bei smagiai kartu sutikti 2024 - uosius metus.</p>
+			<a href=" " class="button">Sužinoti daugiau</a>
+	</div>
+
+	<div id="tbox2">
+        <h2>AUTOMOBILIŲ MĖGĖJŲ KLUBO GRAND MEET '2023<br>
+            2023-10-14</h2>
+			<p class="style3">2023 m. spalio 14 d. klubas organizuoja rudens GRAND MEET'ą 2023, 
+				į kurį rinksis automobilių mylėtojai, draugai, svečiai. Renginys yra atviras ir kviečiami visi norintys prisijungti ir sudalyvauti.</p>
+			<a href=" " class="button">Sužinoti daugiau</a>
+    </div>
+
+	<div id="tbox3">
+		<h2>AUTOMOBILIŲ MĖGĖJŲ KLUBO OPEN AIR '2023<br>
+			2023-08-11</h2>
+			<p class="style3">2023 m. rugpjūčio 11, 12 ir 13 dienomis klubas organizavo vasaros renginį „OPEN AIR '2023“.
+				<br>
+				Šiemet klubas atvirąjam renginiui pasirinko SE - LIA - VI kempingą, Molėtų rajone.</p>
+				<a href=" " class="button">Sužinoti daugiau</a>
+	</div>
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+<div id="sidebar">
+    <h3 class="title">SUSITIKIMAI VILNIUJE:</h3>
+    <ul class="style2">
+        <li class="first">
+            <h4>Kassavaitiniai susitikimai</h4>
+            <p>Penktadieniais, kai visi darbai jau yra nudirbti ir prasideda savaitgalis, 20.00 val.
+                mes renkamės pasilabinti, pasidalinti nuveiktos savaitės įspūdžiais, apžiūrėti vienas kitų automobilius
+                ir šiaip linksmai praleisti laiką.</p>
+            <p><a href="{% url 'meetings' %}">Sužinoti daugiau...</a></p>
+        </li>
+
+        <li>
+            <h4>Einam į kiną</h4>
+            <p>Pirmadieniais susiorganizuojam rodomų filmų peržiūrą MULTIKINO kino teatre, OZO prekybos centre, Vilniuje.</p>
+            <p><a href="{% url 'cinema' %}">Sužinoti daugiau...</a></p>
+        </li>
+        
+        <li>
+            <h4>Mūsų automobiliai</h4>
+            <p>Trumpi klubo narių ir jų automobilių prisistatymai.</p>
+            <p><a href="{% url 'applications' %}">Sužinoti daugiau...</a></p>
+        </li>
+    </ul>
+</div>
+</div>
+
+<div id="footer" class="container">
+<div id="fbox1">
+    <h2 class="title">DRAUGAI IR <br>PARTNERIAI</h2>
+    <ul class="style1">
+        <li class="first"><a href="https://www.activevilnius.lt/" target="_blank">Sveikas miestas</a></li>
+        <li><a href="https://www.partyinbox.lt/" target="_blank">PARTY INBOX švenčių ekspertai</a></li>
+        <li><a href="http://www.zirnaja.lt/" target="_blank">Kaimo turizmo sodyba "Žirnaja"</a></li>
+        <li><a href="https://www.geradovana.lt/" target="_blank">Gera dovana</a></li>
+        <li></li>						
+    </ul>		
+</div>
+
+<div id="fbox2">
+    <h2 class="title">TARPKLUBINIS BENDRAVIMAS</h2>
+    <ul class="style1">
+        <li class="first"><a href="http://ltak.lt/" target="_blank">Lietuvos automobilių klubas</a></li>
+        <li><a href="https://www.oldtimers.lt/" target="_blank">Klasikinių automobilių klubas "Oldtimers.lt"</a></li>
+        <li><a href="https://www.klasika.us/" target="_blank">Senovinių automobilių klubas „Klasika”</a></li>
+        <li><a href="https://www.automonada.lt/" target="_blank">Automonada</a></li>
+        <li></li>
+    </ul>
+</div>
+
+<div id="fbox3">
+    <h2 class="title">SOCIALINIAI TINKLAI</h2>
+    <ul class="style1">
+        <li class="first"><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+        <li><a href="https://t.me/djvokator" target="_blank">Telegram</a></li>
+        <li><a href="viber://add?number=37062476198&text=Viber">Viber</a></li>
+        <li></li>
+    </ul>
+</div>
+</div>
+
+<div id="copyright" class="container">
+<p>Copyright (c) 2024 www.autoclub.lt | All rights reserved. | Photos by <a href=" ">Fotogrph</a> | Design by <a href=" " rel="nofollow">Autoclub</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block title %}Klubo narių prisistatymai{% endblock %}
+{% block content %}
+
+<div class="container page">
+	<div class="content">
+		<div class="title" style="margin-bottom: 5em;">
+			<h2>Klubo narių <span class="byline">prisistatymai</span></h2>
+		</div>
+
+			<h1>zbygoil</h1>
+			<br>
+			<ul class="style2">
+				<li class="first"><img src="{% static 'photos/applications/01.jpg' %}" alt="zbygoil">
+					<p>Sveiki, esu Robertas, man 38 metai. BMW vairuoju nuo neatmenamų laikų, pakeičiau jų nemažai. Šiuo metu turi dvi BMW, nuotraukoje viena iš mano gražuolių.</p>
+				</li>
+
+				<li>
+					<h1>felka</h1>
+					<br>
+					<img src="{% static 'photos/applications/02.jpg' %}" alt="felka">
+					<p>Sveiki, esu Silvestras, man 54 metai. Klube esu nuo įkūrimo dienos. Kaip ne kaip, bet jau skaičiuoju 24 metus. Tad esu senbūvis. Daug nubėgo vandens, buvau kiek peršokęs į kitokias mašinas, bet greitai supratau, 
+						kad mieliausia širdžiai yra BMW automobiliai. Turiu keletas išskirtinių ir labai brangių modelių, vienas ekskliuzyvinis pateiktoje nuotraukoje.</p>
+				</li>				
+				
+				<li>
+					<h1>cherbango</h1>
+					<br>
+					<img src="{% static 'photos/applications/03.jpg' %}" alt="felka">
+					<p>Sveiki, esu Tomas, man 26 metai. Klube esu jau 5 metai. Dalyvauju visuose organizuojamose renginiuose. Mėgstu automobilių sportą, dalyvauju varžybose. 
+						BMW vairuoju nuo tada, kai gavau teises. Tai mano antra mašina. Planuoju jau atsinaujinti, o kol kas vairuoju šitą.</p>
+				</li>
+			</ul>	
+	</div>
+
+{% endblock %}

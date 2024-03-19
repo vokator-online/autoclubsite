@@ -1,0 +1,56 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block title %}Kontaktinė informacija{% endblock %}
+{% block content %}
+
+<div id="page" class="container">
+    <div id="content">
+        <div class="title" style="margin-bottom: 5em;">
+            <h2>Kontaktinė <span class="byline">informacija</span></h2>
+        </div>
+        <p>Turite klausimų?</p>
+        <p>Susisiekite su mumis!</p>
+        <p>Prisijunkite prie bendros <a href="https://t.me/djvokator" target="_blank"><strong>TELEGRAM</strong></a>
+            arba <a href="viber://add?number=37062476198&text=Viber"><strong>VIBER</strong></a> konferencijos
+            ir diskutuokite aktualiais klausimais su klubo dalyviais gyvai.</p>
+        <p>Lauksime Jūsų!</p>
+
+        <h2 style="margin-top: 4em;">Esate drovus žmogus?</h2>
+        <p>Palikite mums žinutę.</p>
+
+        <h2 style="margin-top: 2em;">PASTABA:</h2>
+        <p>Norėtume priminti, kad pildydami užklausos formą Jūs privalote užpildyti visus laukelius.
+            Priešingu atveju sistema Jūsų laiško neišsiųs, o mes negausime atsakymo.</p>
+            <br>
+            <br>
+
+            <form action="{% url 'contact' %}" method="post">
+              {% csrf_token %}
+              <div class="form-group">
+                  <label for="message_name">User Name:</label>
+                  <input type="text" id="message_name" name="message_name" class="input-txt">
+              </div>
+          
+              <div class="form-group">
+                  <label for="message_email">Email Address:</label>
+                  <input type="email" id="message_email" name="message_email" class="input-txt">
+              </div>
+          
+              <div class="form-group">
+                  <label for="message_subject">Message Subject:</label>
+                  <input type="text" id="message_subject" name="message_subject" class="input-txt">
+              </div>
+          
+              <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" class="text-area"></textarea>
+              </div>
+          
+              <div class="form-actions">
+                  <input class="contact-button" type="submit" value="Submit">
+                  <input class="contact-button" type="reset" value="Reset">
+              </div>
+            </form>          
+    </div>
+
+{% endblock %}
