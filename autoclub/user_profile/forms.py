@@ -1,7 +1,4 @@
 from django import forms
-# from django.contrib.auth.forms import PasswordChangeForm
-# from django.contrib.auth.hashers import check_password
-# from django.core.exceptions import ValidationError
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
@@ -56,21 +53,4 @@ class EditProfileForm(UserChangeForm):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email', 'last_login', 'date_joined')
-
-
-# class CustomPasswordChangeForm(PasswordChangeForm):
-#     def clean(self):
-#         cleaned_data = super().clean()
-#         old_password = cleaned_data.get("old_password")
-#         new_password = cleaned_data.get("new_password")
-#         new_password_confirmation = cleaned_data.get("new_password_confirmation")
-
-#         if new_password and new_password_confirmation:
-#             if new_password != new_password_confirmation:
-#                 raise ValidationError(_("The new passwords do not match."))
-
-#             if self.user.check_password(new_password):
-#                 raise ValidationError(_("Your new password cannot be the same as your old password."))
-
-#         return cleaned_data
     

@@ -55,7 +55,6 @@ class EditProfilePageView(generic.UpdateView):
 
 
 class PasswordsChangeView(PasswordChangeView):
-    # form_class = forms.PasswordChangeForm
     success_url = reverse_lazy('password_success')
     template_name = 'registration/password_change_done.html'
     
