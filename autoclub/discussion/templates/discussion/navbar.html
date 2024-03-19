@@ -88,7 +88,7 @@
                             <li><a class="dropdown-item" href="{% url 'edit_profile_page' pk=user.profile.id %}">Redaguoti vartotojo profilio puslapį</a></li>
                             <li><a class="dropdown-item" href="{% url 'show_profile_page' pk=user.profile.id %}">Rodyti vartotojo profilio puslapį</a></li>
                         {% else %}
-                            <li><a class="dropdown-item" href="{% url 'create_profile_page' %}">Sukurti vartotojo profilio puslapį</a></li>
+                            {% comment %} <li><a class="dropdown-item" href="{% url 'create_profile_page' %}">Sukurti vartotojo profilio puslapį</a></li> {% endcomment %}
                         {% endif %}
                         <form action="{% url 'logout' %}" method="post">
                             {% csrf_token %}
