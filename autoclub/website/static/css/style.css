@@ -602,3 +602,60 @@
 .style3 {
 				text-align: justify;
 }
+
+
+/*********************************************************************************/
+/* Gallery Form                                                                  */
+/*********************************************************************************/
+
+.container2 {
+    width: 100%;
+    text-align: center;
+}
+
+h1.merchandise-title {
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+
+h1.merchandise-title::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% { width: 100px; }
+    50% { width: 200px; }
+    100% { width: 100px; }
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pic { 
+    width: calc(33.333% - 20px);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgray;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}

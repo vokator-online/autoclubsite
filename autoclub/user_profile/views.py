@@ -49,7 +49,7 @@ class UserEditView(generic.UpdateView):
 
 class EditProfilePageView(generic.UpdateView):
     model = Profile
-    template_name = 'user_profile/edit_profile.html'
+    template_name = 'user_profile/edit_profile_page.html'
     fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url', 'pinterest_url']
     success_url = reverse_lazy('discussion')
 

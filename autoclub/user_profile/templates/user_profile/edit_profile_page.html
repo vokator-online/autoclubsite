@@ -4,28 +4,22 @@
 {% block content %}
 
 <div class="custom-container">
-    {% if user.is_authenticated %}
-        {% if user.id == profile.user.id %}
-            <h1 class="form-heading">Edit Profile Page</h1>
-            <form method="POST" enctype="multipart/form-data" class="profile-edit-form">
-                {% csrf_token %}
-                {% for field in form %}
-                <div class="custom-form-group">
-                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                    {{ field.errors }}
-                    {{ field }}
-                </div>
-                {% endfor %}
-                <div class="form-actions">
-                    <input type="submit" value="Update Profile Page" class="custom-button">
-                    <a href="{% url 'discussion' %}" class="custom-button">Return To Homepage</a>
-                </div>
-            </form>
-            {% else %}
-            <h2 class="access-denied">Access denied!
-                <br>
-                You are not allowed to edit this page!</h2>
-        {% endif %}
+    {% if user.is_authenticated and user.id == profile.user.id %}
+        <h1 class="form-heading">Edit Profile Page</h1>
+        <form method="POST" enctype="multipart/form-data" class="profile-edit-form">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="custom-form-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field.errors }}
+                {{ field }}
+            </div>
+            {% endfor %}
+            <div class="form-actions">
+                <input type="submit" value="Update Profile Page" class="custom-button">
+                <a href="{% url 'discussion' %}" class="custom-button">Return To Homepage</a>
+            </div>
+        </form>
     {% else %}
         <h2 class="access-denied">Access denied!
             <br>
