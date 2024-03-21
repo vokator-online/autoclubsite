@@ -1,50 +1,65 @@
-from django.shortcuts import render, redirect
-from django.core.mail import send_mail
+from django.views.generic import TemplateView
+from django.forms.models import BaseModelForm
+from django.shortcuts import render
+from django.views import generic
+from django.utils.translation import gettext_lazy as _
 from django.contrib import messages
+from django.urls import reverse_lazy
+from django.template.loader import get_template
+from django.core.mail import send_mail
+from . import models, forms
 
-def home(request):
-    return render(request, 'main/home.html', {})
 
-def events(request):
-    return render(request, 'main/events.html', {})
+class HomeView(TemplateView):
+    template_name = 'main/home.html'
 
-def cinema(request):
-    return render(request, 'main/cinema.html', {})
 
-def meetings(request):
-    return render(request, 'main/meetings.html', {})
+class EventsView(TemplateView):
+    template_name = 'main/events.html'
 
-def applications(request):
-    return render(request, 'main/applications.html', {})
 
-def merchandise(request):
-    return render(request, 'main/merchandise.html', {})
+class CinemaView(TemplateView):
+    template_name = 'main/cinema.html'
 
-def contact(request):
-    if request.method == "POST":
-        message_name = request.POST.get('name')
-        message_email = request.POST.get('email')
-        message_subject = request.POST.get('subject')
-        message = request.POST.get('message')
 
-        # Patikrinkite, ar visi laukai buvo pateikti
-        if not all([message_name, message_email, message_subject, message]):
-            # Galite pridėti pranešimą naudotojui apie trūkstamus laukus
-            messages.error(request, "Please fill out all fields.")
-            return redirect('contact')  # 'contact' yra URL pavadinimas tam pačiam puslapiui
+class MeetingsView(TemplateView):
+    template_name = 'main/meetings.html'
 
-        send_mail(
-            message_subject,
-            message,
-            message_email,
-            ['puthon.pychton@gmail.com'],
-            fail_silently=False,
-        )
 
-        # Galite pridėti sėkmingo veiksmo pranešimą naudotojui
-        messages.success(request, "Your message has been sent successfully.")
-        return redirect('contact')  # Peradresavimas į tą patį puslapį rodo sėkmės pranešimą
+class ApplicationsView(TemplateView):
+    template_name = 'main/applications.html'
 
-    else:
-        return render(request, 'main/contact.html', {})
-    
+
+class MerchandiseView(TemplateView):
+    template_name = 'main/merchandise.html'
+
+
+class TicketCreateView(generic.CreateView):
+    model = models.Ticket
+    template_name = 'main/contact.html'
+
+    def get_form_class(self) -> type[BaseModelForm]:
+        if self.request.user.is_authenticated:
+            return forms.TicketFormUser
+        else:
+            return forms.TicketFormGuest
+
+    def form_valid(self, form):
+        if self.request.user.is_authenticated:
+            form.instance.sender = self.request.user
+            form.instance.clean()
+        self.object:models.Ticket = form.instance
+        return super().form_valid(form)
+
+    def get_success_url(self) -> str:
+        template_text = get_template('main/ticket_email_text.html')
+        message = template_text.render({'obj': self.object})
+        try:
+            send_mail(f"Support Ticket: {self.object.subject}", message, self.object.sender_email, ["kestas@midonow.fi"])
+        except Exception as error:
+            messages.warning(self.request, _("Thank you. We had some issues ({}) but we still got your message.").format(error))
+        else:
+            self.object.mail_sent = True
+            self.object.save()
+            messages.success(self.request, _("Thank you. We will get back to you as soon as we can."))
+        return reverse_lazy('index')
