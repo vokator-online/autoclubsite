@@ -184,11 +184,41 @@ input[type="password"] {
 /* Edit Profile Page Form                                                           */
 /*********************************************************************************/
 
+.edit-profile-page-container {
+    margin: 2rem auto;
+    min-height: 120vh;
+}
+
+h1.edit-profile-page-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.edit-profile-page-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+}
+
+.edit-profile-page-form p {
+    margin-bottom: 30px;
+}
+
+.edit-profile-page-form input[type="text"],
+.edit-profile-page-form input[type="email"],
+.edit-profile-page-form textarea {
+    width: 100%;
+    max-width: 700px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
 .custom-container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 2rem auto;
     padding: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .form-heading {
@@ -295,12 +325,12 @@ h1.edit-profile-title {
 .edit-profile-form input[type="text"],
 .edit-profile-form input[type="email"],
 .edit-profile-form textarea {
-    width: 100%; /* Užtikrinama, kad laukai išsiplečia iki konteinerio pločio */
-    max-width: 700px; /* Neleidžia laukams išplisti per daug, jei konteineris yra platesnis */
-    padding: 5px; /* Padidina laukų aukštį per vidinį tarpą */
-    margin-bottom: 20px; /* Užtikrina atstumą tarp formos laukų */
-    border-radius: 5px; /* Suteikia formos laukams švelnesnius kampus */
-    border: 1px solid #ccc; /* Nustato subtilią rėmelio spalvą */
+    width: 100%;
+    max-width: 700px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .password-button {

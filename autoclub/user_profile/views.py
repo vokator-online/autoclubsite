@@ -1,6 +1,5 @@
 from django.views import generic
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpRequest, HttpResponse
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.contrib.auth.views import PasswordChangeView
 from . import forms
@@ -12,19 +11,6 @@ class UserRegisterView(generic.CreateView):
     form_class = forms.CreateUserForm
     template_name = 'registration/registration.html'
     success_url = reverse_lazy('login')
-
-
-# def signup(request: HttpRequest) -> HttpResponse:
-#     if request.method == "POST":
-#         form = forms.UserCreationForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('login')
-#     else:
-#         form = forms.UserCreationForm()
-#     return render(request, 'registration/registration.html', {
-#         'form': form,
-#     })
 
 
 class ShowProfilePageView(generic.DetailView):
@@ -49,9 +35,10 @@ class UserEditView(generic.UpdateView):
 
 class EditProfilePageView(generic.UpdateView):
     model = Profile
+    form_class = forms.ProfilePageForm
     template_name = 'user_profile/edit_profile_page.html'
-    fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url', 'pinterest_url']
     success_url = reverse_lazy('discussion')
+
 
 
 class PasswordsChangeView(PasswordChangeView):
