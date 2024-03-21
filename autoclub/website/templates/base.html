@@ -19,16 +19,35 @@
 <body>
 	<div id="logo" class="container">
 		<h1><a href="{% url 'home' %}">AUTOMOBILIŲ MĖGĖJŲ<span> KLUBAS</span></a></h1>
-		<p class="style3"><a href=" ">Lietuvos automobilių mėgėjų klubas, vienijantis įvairaus amžiaus, skirtingų profesijų ir požiūrių vairuotojus</a></p>
+		<p class="style3"><a href=" ">Lietuvos automobilių mėgėjų klubas, vienijantis įvairaus amžiaus, skirtingų profesijų ir požiūrių vairuotojus</a>
+        </p>
 	</div>
 
     <div id="menu" class="container">
 		<ul>
-			<li {% url 'home' as url_home %}{% if request.path == url_home %} class="current_page_item"{% endif %}><a href="{% url 'home' %}" title="Pagrindinis puslapis">Pagrindinis</a></li>
-			<li {% url 'events' as url_events %}{% if request.path == url_events %} class="current_page_item"{% endif %}><a href="{% url 'events' %}" title="Renginių organizavimas ir jų apžvalgos">Renginiai</a></li>
-            <li {% url 'merchandise' as url_merchandise %}{% if request.path == url_merchandise %} class="current_page_item"{% endif %}><a href="{% url 'merchandise' %}" title="Atributika">Atributika</a></li>
-            <li {% url 'contact' as url_contact %}{% if request.path == url_contact %} class="current_page_item"{% endif %}><a href="{% url 'contact' %}" title="Susisiekite su mumis">Kontaktai</a></li>
-            <li {% url 'discussion' as url_discussion %}{% if request.path == url_discussion %} class="current_page_item"{% endif %}><a href="{% url 'discussion' %}" title="Diskusijos gyvai">Diskusijos</a></li>
+			<li {% url 'home' as url_home %}
+            {% if request.path == url_home %} class="current_page_item"{% endif %}>
+            <a href="{% url 'home' %}" title="Pagrindinis puslapis">Pagrindinis</a>
+            </li>
+
+			<li {% url 'events' as url_events %}
+            {% if request.path == url_events %} class="current_page_item"{% endif %}>
+            <a href="{% url 'events' %}" title="Renginių organizavimas ir jų apžvalgos">Renginiai</a>
+            </li>
+
+            <li {% url 'merchandise' as url_merchandise %}
+            {% if request.path == url_merchandise %} class="current_page_item"{% endif %}>
+            <a href="{% url 'merchandise' %}" title="Atributika">Atributika</a>
+            </li>
+
+            <li {% url 'contact' as url_contact %}
+            {% if request.path == url_contact %} class="current_page_item"{% endif %}>
+            <a href="{% url 'contact' %}" title="Susisiekite su mumis">Kontaktai</a>
+            </li>
+            <li {% url 'discussion' as url_discussion %}
+            {% if request.path == url_discussion %} class="current_page_item"{% endif %}>
+            <a href="{% url 'discussion' %}" title="Diskusijos gyvai">Diskusijos</a>
+            </li>
 		</ul>
 	</div>
 
