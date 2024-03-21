@@ -24,3 +24,4 @@ class TicketFormUser(forms.ModelForm):
     class Meta:
         model = models.Ticket
         fields = ['subject', 'content']
+        

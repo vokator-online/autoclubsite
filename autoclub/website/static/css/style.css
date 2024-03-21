@@ -516,31 +516,18 @@
 /* Contact Form                                                                  */
 /*********************************************************************************/
 
-.form-group label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: normal;
-}
-
-.input-txt, .text-area {
-    font-family: Verdana, sans-serif;
-    padding: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.form-control {
     width: 100%;
-    max-width: 700px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.text-area {
-    height: 180px;
-}
-
-.form-actions {
-    display: flex;
-    justify-content: start;
-    gap: 8px;
-    margin-top: 1em;
+.form-select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
 }
 
 .contact-button {
@@ -580,27 +567,6 @@
 	-ms-transition: all .25s ease-in-out;
 	-o-transition: all .25s ease-in-out;
 	transition: all .25s ease-in-out;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 15px;
-}
-
-#content {
-    padding: 20px;
-}
-
-
-.style1 {
-				color: #FFFFFF;
-}
-.style2 {
-				font-weight: normal;
-}
-.style3 {
-				text-align: justify;
 }
 
 
@@ -658,4 +624,19 @@ h1.merchandise-title::before {
     height: 100%;
     border-radius: 10px;
     transition: .5s;
+}
+
+
+/*********************************************************************************/
+/* Untitled Form                                                                 */
+/*********************************************************************************/
+
+.style1 {
+	color: #FFFFFF;
+}
+.style2 {
+	font-weight: normal;
+}
+.style3 {
+	text-align: justify;
 }
