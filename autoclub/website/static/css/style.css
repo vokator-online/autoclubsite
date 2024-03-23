@@ -538,20 +538,6 @@
 /* Contact Form                                                                  */
 /*********************************************************************************/
 
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-select {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-}
-
 .contact-button {
 	display: inline-block;
 	background: #2E9AFE;

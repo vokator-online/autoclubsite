@@ -194,45 +194,12 @@ h1.edit-profile-page-title {
     margin-bottom: 2em;
 }
 
-.edit-profile-page-form {
+.profile-edit-form {
     display: flex;
     flex-direction: column;
     max-width: 700px;
 }
 
-.edit-profile-page-form p {
-    margin-bottom: 30px;
-}
-
-.edit-profile-page-form input[type="text"],
-.edit-profile-page-form input[type="email"],
-.edit-profile-page-form textarea {
-    width: 100%;
-    max-width: 700px;
-    padding: 5px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.custom-container {
-    max-width: 700px;
-    margin: 2rem auto;
-    padding: 1rem;
-}
-
-.form-heading {
-    margin-bottom: 1.5rem;
-}
-
-.custom-form-group {
-    margin-bottom: 1rem;
-}
-
-.access-denied {
-    color: red;
-    margin-top: 1rem;
-}
 
 
 /*********************************************************************************/

@@ -1,11 +1,11 @@
 {% extends 'discussion/base.html' %}
 {% load static %}
 {% block title %}Edit Profile Page{% endblock %}
-{% block content %}
+{% block content %}    
 
 <div class="edit-profile-page-container">
     {% if user.is_authenticated and user.id == profile.user.id %}
-        <h1 class="edit-profile-page-title">Edit Profile Page</h1>
+        <h1 class="edit-profile-page-title">Edit Profile Page:</h1>
         <form method="POST" enctype="multipart/form-data" class="profile-edit-form">
             {% csrf_token %}
             {{ form.as_p }}

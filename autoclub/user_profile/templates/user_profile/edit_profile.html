@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="edit-profile-container">
-    <h1 class="edit-profile-title">Edit profile</h1>
+    <h1 class="edit-profile-title">Edit profile:</h1>
     <form method="POST" class="edit-profile-form">
         {% csrf_token %}
         {{ form.as_p }}
