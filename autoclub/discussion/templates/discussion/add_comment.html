@@ -1,32 +1,26 @@
 {% extends 'discussion/base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}Rašyti komentarą{% endblock %}
+{% block title %}{% trans "comment on blog post"|title %}{% endblock %}
 {% block content %}
-<br>
-<br>
+
 {% if user.is_authenticated %}
-    <h1>Rašyti komentarą</h1>
-    <br>
-    <br>
+    <h1>{% trans "add comment:"|title %}</h1>
+
     <div class="form-group">
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.media }}
             {{ form.as_p }}
             <hr>
-            <button class="btn btn-secondary">Paskelbti komentarą</button>
-            <a href="{% url 'discussion' %}" class="btn btn-secondary">Grįžti</a>
-            <br>
-            <br>
+            <button class="btn btn-secondary">{% trans "add comment"|title %}</button>
+            <a href="{% url 'discussion' %}" class="btn btn-secondary">{% trans "return to homepage"|title %}</a>
         </form>
     </div>
 {% else %}
-<br>
-<br>
-    <h2>Prieiga uždrausta! Prisijunkite prie puslapio!</h2>
-    <br>
-    <br>    
+
+    <h2>{% trans "Access denied! Please log in to this page!" %}</h2>
+  
 {% endif %}
 
 {% endblock %}

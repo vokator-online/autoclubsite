@@ -108,7 +108,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'lt-lt'
+LANGUAGE_CODE = 'en-us'
+LANGUAGES = [
+    (LANGUAGE_CODE, 'English'),
+    ('lt', 'Lietuvių'),
+]
 
 TIME_ZONE = 'Europe/Vilnius'
 
@@ -143,17 +147,18 @@ TINYMCE_DEFAULT_CONFIG = {
     "menubar": "file edit view insert format tools table help",
     "plugins": "advlist autolink lists link image charmap anchor "
                "searchreplace visualblocks code insertdatetime "
-               "media table paste help wordcount emoticons",  # Užtikriname, kad 'emoticons' pluginas yra įtrauktas
-    "toolbar": "undo redo | bold italic underline strikethrough emoticons | "  # 'emoticons' perkeltas po 'strikethrough'
+               "media table paste help wordcount emoticons",
+    "toolbar": "undo redo | bold italic underline strikethrough emoticons | "
                "fontselect fontsizeselect formatselect | "
                "alignleft aligncenter alignright alignjustify | "
                "outdent indent | numlist bullist checklist | "
                "forecolor backcolor casechange permanentpen "
                "formatpainter removeformat | pagebreak | "
-               "charmap | insertfile image media "  # Pakeitėme šiek tiek tvarką ir pašalinome nereikalingas dalis
+               "charmap | insertfile image media "
                "pageembed link anchor codesample | "
                "ltr rtl | showcomments addcomment code",
     "custom_undo_redo_levels": 10,
+    "language": "lt",
 }
 
 

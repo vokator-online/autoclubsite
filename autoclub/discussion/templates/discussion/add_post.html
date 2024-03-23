@@ -1,12 +1,12 @@
 {% extends 'discussion/base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}Sukurti naują pranešimą{% endblock %}
+{% block title %}Create A New Blog Post{% endblock %}
 {% block content %}
 <br>
 <br>
 {% if user.is_authenticated %}
-    <h1>Sukurti naują pranešimą</h1>
+    <h1>Add Post</h1>
     <br>
     <br>
     <div class="form-group">
@@ -15,8 +15,8 @@
             {{ form.media }}
             {{ form.as_p }}
             <hr>
-            <button class="btn btn-secondary">Paskelbti pranešimą</button>
-            <a href="{% url 'discussion' %}" class="btn btn-secondary">Grįžti</a>
+            <button class="btn btn-secondary">Post</button>
+            <a href="{% url 'discussion' %}" class="btn btn-secondary">Return To Homepage</a>
             <br>
             <br>
         </form>
