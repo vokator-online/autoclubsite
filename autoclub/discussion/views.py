@@ -3,6 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView 
 from .models import Post, Comment, Category
 from .forms import PostForm, EditForm, CommentForm
+from django.utils.translation import gettext_lazy as _
 from django.urls import reverse_lazy
 
 

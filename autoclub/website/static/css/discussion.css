@@ -166,11 +166,11 @@ input[type="password"] {
 /* Password Reset Form                                                           */
 /*********************************************************************************/
 
-.password-reset-container {
+.password-reset-form-container {
     min-height: 120vh;
 }
 
-.password-reset-sent-title {
+.password-reset-form-title {
     margin-top: 1em;
     margin-bottom: 2em;
 }
