@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-23 16:20+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
+"11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
+"1 : n % 1 != 0 ? 2: 3);\n"
+
+#: website/admin.py:58
+msgid "mark unread"
+msgstr "pažymėti kaip neskaitytą"
+
+#: website/admin.py:62
+#, python-format
+msgid "%d ticket has been made as new"
+msgid_plural "%d tickets have been made as new"
+msgstr[0] "%d užklausa buvo sukurta kaip nauja"
+msgstr[1] "%d užklausos buvo sukurtos kaip naujos"
+
+#: website/admin.py:67
+msgid "mark read"
+msgstr "pažymėti kaip perskaitytą"
+
+#: website/admin.py:71
+#, python-format
+msgid "%d ticket has been marked as read"
+msgid_plural "%d tickets have been marked as read"
+msgstr[0] "%d užklausa pažymėta kaip perskaityta"
+msgstr[1] "%d užklausos pažymėtos kaip perskaitytos"
+
+#: website/admin.py:76
+msgid "set processing"
+msgstr "nustatyti apdorojimą"
+
+#: website/admin.py:80
+#, python-format
+msgid "%d ticket has been set processing"
+msgid_plural "%d tickets have been set processing"
+msgstr[0] "%d užklausai buvo nustatytas apdorojimas"
+msgstr[1] "%d užklausoms buvo nustatytas apdorojimas"
+
+#: website/admin.py:85
+msgid "close"
+msgstr "uždaryti"
+
+#: website/admin.py:89
+#, python-format
+msgid "%d ticket has been closed"
+msgid_plural "%d tickets have been closed"
+msgstr[0] "%d užklausa buvo uždaryta"
+msgstr[1] "%d užklausos buvo uždarytos"
+
+#: website/apps.py:8
+msgid "website"
+msgstr "interneto svetainė"
+
+#: website/models.py:9
+msgid "-- Please choose --"
+msgstr "-- Prašom pasirinkti --"
+
+#: website/models.py:10
+msgid "For those who want to join the club"
+msgstr "Norintiems tapti klubo nariais"
+
+#: website/models.py:11
+msgid "Official club events and organisational matters"
+msgstr "Oficialūs klubo renginiai ir organizaciniai klausimai"
+
+#: website/models.py:12
+msgid "Suggestions, complaints for club activities"
+msgstr "Pasiūlymai, pageidavimai klubo veiklai"
+
+#: website/models.py:13
+msgid "Club merchandise"
+msgstr "Klubo atributika"
+
+#: website/models.py:14
+msgid "Other general issues related to the club's activities"
+msgstr "Kiti bendri su klubo veikla susiję klausimai"
+
+#: website/models.py:18
+msgid "new"
+msgstr "nauja"
+
+#: website/models.py:19
+msgid "read"
+msgstr "perskaityta"
+
+#: website/models.py:20
+msgid "processing"
+msgstr "apdorojama"
+
+#: website/models.py:21
+msgid "closed"
+msgstr "uždaryta"
+
+#: website/models.py:26
+msgid "subject"
+msgstr "tema"
+
+#: website/models.py:27 website/models.py:64
+msgid "content"
+msgstr "turinys"
+
+#: website/models.py:30 website/models.py:67
+msgid "sender"
+msgstr "siuntėjas"
+
+#: website/models.py:35 website/models.py:79 website/models.py:81
+msgid "full name"
+msgstr "vardas ir pavardė"
+
+#: website/models.py:36 website/models.py:80 website/models.py:82
+msgid "email"
+msgstr "elektroninis pašto adresas"
+
+#: website/models.py:37 website/models.py:83
+msgid "sent at"
+msgstr "išsiųsta"
+
+#: website/models.py:38 website/models.py:84
+msgid "email sent"
+msgstr "išsiųstas elektroninis laiškas"
+
+#: website/models.py:39
+msgid "status"
+msgstr "būsena"
+
+#: website/models.py:42 website/models.py:63
+msgid "ticket"
+msgstr "užklausa"
+
+#: website/models.py:43
+msgid "tickets"
+msgstr "užklausos"
+
+#: website/models.py:47
+msgid "{} from {} sent {}"
+msgstr "{} nuo {} išsiųsta {}"
+
+#: website/models.py:74
+msgid "recipient"
+msgstr "gavėjas"
+
+#: website/models.py:85
+msgid "is read"
+msgstr "perskaityta"
+
+#: website/models.py:88
+msgid "ticket message"
+msgstr "užklausos pranešimas"
+
+#: website/models.py:89
+msgid "ticket messages"
+msgstr "užklausos pranešimai"
+
+#: website/models.py:93
+msgid "ticket: {} message from {} to {} at {}"
+msgstr "užklausa: {} pranešimas nuo {} kam {} į {}"
+
+#: website/utils.py:25
+msgid "Thank you. We had some issues ({}) but we still got your message."
+msgstr "Dėkojame. Turėjome tam tikrų problemų ({}), bet vis tiek gavome Jūsų užklausą."
+
+#: website/utils.py:29
+msgid "Message sent. Thank you. We will get back to you as soon as we can."
+msgstr "Pranešimas išsiųstas. Artimiausiu metu susisieksime su Jumis."

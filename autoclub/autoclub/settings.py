@@ -47,6 +47,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -107,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'lt-lt'
+LANGUAGE_CODE = 'lt'
 
 TIME_ZONE = 'Europe/Vilnius'
 
@@ -142,14 +143,14 @@ TINYMCE_DEFAULT_CONFIG = {
     "menubar": "file edit view insert format tools table help",
     "plugins": "advlist autolink lists link image charmap anchor "
                "searchreplace visualblocks code insertdatetime "
-               "media table paste help wordcount",
-    "toolbar": "undo redo | bold italic underline strikethrough | "
+               "media table paste help wordcount emoticons",  # Užtikriname, kad 'emoticons' pluginas yra įtrauktas
+    "toolbar": "undo redo | bold italic underline strikethrough emoticons | "  # 'emoticons' perkeltas po 'strikethrough'
                "fontselect fontsizeselect formatselect | "
                "alignleft aligncenter alignright alignjustify | "
                "outdent indent | numlist bullist checklist | "
                "forecolor backcolor casechange permanentpen "
                "formatpainter removeformat | pagebreak | "
-               "charmap emoticons | insertfile image media "
+               "charmap | insertfile image media "  # Pakeitėme šiek tiek tvarką ir pašalinome nereikalingas dalis
                "pageembed link anchor codesample | "
                "ltr rtl | showcomments addcomment code",
     "custom_undo_redo_levels": 10,
