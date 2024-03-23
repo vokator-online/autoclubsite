@@ -5,10 +5,10 @@ from django.utils.translation import gettext as _
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE, verbose_name=_("user"))
-    bio = models.TextField(blank=True, verbose_name=_("bio"))
-    profile_pic = models.ImageField(null=True, blank=True, upload_to="images/profile/", verbose_name=_("profile image"))
-    website_url = models.CharField(max_length=255, null=True, blank=True, verbose_name=_("website url"))
+    user = models.OneToOneField(User, verbose_name=_("user"), on_delete=models.CASCADE, null=True, db_index=True)
+    bio = models.TextField(_("bio"), blank=True)
+    profile_pic = models.ImageField(_("profile image"), upload_to='images/profile/', null=True, blank=True)
+    website_url = models.CharField(_("website url"), max_length=255, null=True, blank=True)
     facebook_url = models.CharField(max_length=255, null=True, blank=True)
     twitter_url = models.CharField(max_length=255, null=True, blank=True)
     instagram_url = models.CharField(max_length=255, null=True, blank=True)
