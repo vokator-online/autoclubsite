@@ -9,10 +9,10 @@ class Profile(models.Model):
     bio = models.TextField(_("bio"), blank=True)
     profile_pic = models.ImageField(_("profile image"), upload_to='images/profile/', null=True, blank=True)
     website_url = models.CharField(_("website url"), max_length=255, null=True, blank=True)
-    facebook_url = models.CharField(max_length=255, null=True, blank=True)
-    twitter_url = models.CharField(max_length=255, null=True, blank=True)
-    instagram_url = models.CharField(max_length=255, null=True, blank=True)
-    pinterest_url = models.CharField(max_length=255, null=True, blank=True)
+    facebook_url = models.CharField(_("facebook_url"),max_length=255, null=True, blank=True)
+    twitter_url = models.CharField(_("twitter_url"),max_length=255, null=True, blank=True)
+    instagram_url = models.CharField(_("instagram_url"),max_length=255, null=True, blank=True)
+    pinterest_url = models.CharField(_("pinterest_url"),max_length=255, null=True, blank=True)
 
     def __str__(self):
         return str(self.user)
