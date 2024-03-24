@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 21:25+0200\n"
+"POT-Creation-Date: 2024-03-24 23:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,6 +136,24 @@ msgstr "instagram puslapis"
 msgid "pinterest url"
 msgstr "pinterest puslapis"
 
+#: user_profile/templates/registration/change_password.html:4
+#: user_profile/templates/registration/change_password.html:8
+msgid "Password Change Form"
+msgstr "slaptažodžio keitimo forma"
+
+#: user_profile/templates/registration/change_password.html:16
+#: user_profile/templates/user_profile/edit_profile.html:18
+msgid "Change Password"
+msgstr "keisti slaptažodį"
+
+#: user_profile/templates/registration/change_password.html:17
+#: user_profile/templates/registration/login.html:14
+#: user_profile/templates/registration/reset_password.html:21
+#: user_profile/templates/user_profile/edit_profile.html:22
+#: user_profile/templates/user_profile/edit_profile_page.html:15
+msgid "Return To Homepage"
+msgstr "grįžti į pagrindinį puslapį"
+
 #: user_profile/templates/registration/login.html:4
 msgid "Logging in to the discussion page"
 msgstr "prisijungimas prie diskusijų puslapio"
@@ -144,13 +162,6 @@ msgstr "prisijungimas prie diskusijų puslapio"
 #: user_profile/templates/registration/login.html:13
 msgid "Login"
 msgstr "prisijungti"
-
-#: user_profile/templates/registration/login.html:14
-#: user_profile/templates/registration/reset_password.html:21
-#: user_profile/templates/user_profile/edit_profile.html:22
-#: user_profile/templates/user_profile/edit_profile_page.html:15
-msgid "Return To Homepage"
-msgstr "grįžti į pagrindinį puslapį"
 
 #: user_profile/templates/registration/login.html:17
 msgid "Forget Password?"
@@ -203,10 +214,6 @@ msgstr "redaguoti profilį"
 #: user_profile/templates/user_profile/edit_profile.html:14
 msgid "Update Profile"
 msgstr "atnaujinti profilį"
-
-#: user_profile/templates/user_profile/edit_profile.html:18
-msgid "Change Password"
-msgstr "keisti slaptažodį"
 
 #: user_profile/templates/user_profile/edit_profile_page.html:4
 msgid "Edit User Profile Page"

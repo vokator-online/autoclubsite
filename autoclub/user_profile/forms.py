@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 from user_profile.models import Profile
@@ -64,7 +64,7 @@ class ProfilePageForm(forms.ModelForm):
         fields = ('bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url', 'pinterest_url')
 
 
-class EditProfileForm(forms.ModelForm):
+class EditProfileForm(UserChangeForm):
     first_name = forms.CharField(
         label=_('First Name'),
         max_length=100, 

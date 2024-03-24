@@ -41,7 +41,6 @@ class EditProfilePageView(generic.UpdateView):
     success_url = reverse_lazy('discussion')
 
 
-
 class PasswordsChangeView(PasswordChangeView):
     success_url = reverse_lazy('password_success')
-    template_name = 'registration/password_change_done.html'
+    template_name = 'registration/change_password.html'
