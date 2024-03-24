@@ -7,7 +7,7 @@
 <div class="edit-profile-page-container">
     {% if user.is_authenticated and user.id == profile.user.id %}
         <h1 class="edit-profile-page-title">Edit Profile Page:</h1>
-        <form method="POST" enctype="multipart/form-data" class="profile-edit-form">
+        <form method="POST" enctype="multipart/form-data" class="edit-profile-page-form">
             {% csrf_token %}
             {{ form.as_p }}
             <div class="form-actions">

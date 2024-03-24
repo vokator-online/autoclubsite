@@ -192,12 +192,15 @@ h1.edit-profile-page-title {
     margin-bottom: 2em;
 }
 
-.profile-edit-form {
+.edit-profile-page-form {
     display: flex;
     flex-direction: column;
     max-width: 700px;
 }
 
+.edit-profile-page-form p {
+    margin-bottom: 30px;
+  }
 
 
 /*********************************************************************************/

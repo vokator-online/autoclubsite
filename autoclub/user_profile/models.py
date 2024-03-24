@@ -6,7 +6,7 @@ from django.utils.translation import gettext as _
 
 class Profile(models.Model):
     user = models.OneToOneField(User, verbose_name=_("user"), on_delete=models.CASCADE, null=True, db_index=True)
-    bio = models.TextField(_("bio"), blank=True)
+    bio = models.TextField(_("bio"), max_length=10000, blank=True)
     profile_pic = models.ImageField(_("profile image"), upload_to='images/profile/', null=True, blank=True)
     website_url = models.CharField(_("website url"), max_length=255, null=True, blank=True)
     facebook_url = models.CharField(_("facebook url"),max_length=255, null=True, blank=True)
