@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 14:46+0200\n"
+"POT-Creation-Date: 2024-03-24 16:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,35 +24,83 @@ msgstr ""
 msgid "user profile"
 msgstr "vartotojo profilis"
 
+#: user_profile/forms.py:32
+msgid "Bio"
+msgstr "Apie save"
+
+#: user_profile/forms.py:33
+msgid "Please tell us more about yourself"
+msgstr "Papasakokite mums daugiau apie save"
+
+#: user_profile/forms.py:37
+msgid "Website url"
+msgstr "Asmeninė svetainė"
+
+#: user_profile/forms.py:38
+msgid "Your website page (if you have one)"
+msgstr "Jūsų svetainės puslapis (jei turite)"
+
+#: user_profile/forms.py:42
+msgid "Facebook url"
+msgstr "Facebook puslapis"
+
+#: user_profile/forms.py:43
+msgid "Your Facebook page (if you have one)"
+msgstr "Jūsų Facebook puslapis (jei turite)"
+
 #: user_profile/forms.py:47
+msgid "Twitter url"
+msgstr "Twitter puslapis"
+
+#: user_profile/forms.py:48
+msgid "Your Twitter page (if you have one)"
+msgstr "Jūsų Twitter puslapis (jei turite)"
+
+#: user_profile/forms.py:52
+msgid "Instagram url"
+msgstr "Instagram puslapis"
+
+#: user_profile/forms.py:53
+msgid "Your Instagram page (if you have one)"
+msgstr "Jūsų Instagram puslapis (jei turite)"
+
+#: user_profile/forms.py:57
+msgid "Pinterest url"
+msgstr "Pinterest puslapis"
+
+#: user_profile/forms.py:58
+msgid "Your Pinterest page (if you have one)"
+msgstr "Jūsų Pinterest puslapis (jei turite)"
+
+#: user_profile/forms.py:79
 msgid "First Name"
 msgstr "Vardas"
 
-#: user_profile/forms.py:49
+#: user_profile/forms.py:81
 msgid "Please enter your First Name"
 msgstr "Prašom įvesti savo vardą"
 
-#: user_profile/forms.py:52
+#: user_profile/forms.py:84
 msgid "Last Name"
 msgstr "Pavardė"
 
-#: user_profile/forms.py:54
+#: user_profile/forms.py:86
 msgid "Please enter your Last Name"
 msgstr "Prašom įvesti savo pavardę"
 
-#: user_profile/forms.py:57
+#: user_profile/forms.py:89
 msgid "Email"
 msgstr "Elektroninis paštas"
 
-#: user_profile/forms.py:58
+#: user_profile/forms.py:90
 msgid "Please enter your e-mail address"
 msgstr "Prašom įvesti savo elektroninio pašto adresą"
 
-#: user_profile/forms.py:61
+#: user_profile/forms.py:93
 msgid "Last login"
 msgstr "Paskutinio prisijungimo duomenys"
 
-#: user_profile/forms.py:66
+#: user_profile/forms.py:98
 msgid "Date joined"
 msgstr "Registracijos data"
 
@@ -101,8 +149,12 @@ msgid "Forgotten your password?"
 msgstr "pamiršote slaptažodį?"
 
 #: user_profile/templates/registration/reset_password.html:11
-msgid "Enter your email address below, and we’ll email instructions for setting a new one."
-msgstr "įveskite savo elektroninio pašto adresą susietą su Jūsų paskyra ir mes atsiųsime Jums instrukcijas slaptažodžio atkūrimui."
+msgid ""
+"Enter your email address below, and we’ll email instructions for setting a "
+"new one."
+msgstr ""
+"įveskite savo elektroninio pašto adresą susietą su Jūsų paskyra ir mes "
+"atsiųsime Jums instrukcijas slaptažodžio atkūrimui."
 
 #: user_profile/templates/registration/reset_password.html:16
 msgid "Enter your email address"

@@ -28,18 +28,40 @@ class CreateUserForm(UserCreationForm):
 
 
 class ProfilePageForm(forms.ModelForm):
+    bio = forms.CharField(
+        label=_('Bio'), 
+        widget=forms.Textarea(attrs={'class': 'custom-form-control', 'placeholder': _('Please tell us more about yourself')}),
+        required=False
+    )
+    website_url = forms.CharField(
+        label=_('Website url'),
+        widget=forms.TextInput(attrs={'class': 'custom-form-control', 'placeholder': _('Your website page (if you have one)')}),
+        required=False
+    )
+    facebook_url = forms.CharField(
+        label=_('Facebook url'),
+        widget=forms.TextInput(attrs={'class': 'custom-form-control', 'placeholder': _('Your Facebook page (if you have one)')}),
+        required=False
+    )
+    twitter_url = forms.CharField(
+        label=_('Twitter url'),
+        widget=forms.TextInput(attrs={'class': 'custom-form-control', 'placeholder': _('Your Twitter page (if you have one)')}),
+        required=False
+    )
+    instagram_url = forms.CharField(
+        label=_('Instagram url'),
+        widget=forms.TextInput(attrs={'class': 'custom-form-control', 'placeholder': _('Your Instagram page (if you have one)')}),
+        required=False
+    )
+    pinterest_url = forms.CharField(
+        label=_('Pinterest url'),
+        widget=forms.TextInput(attrs={'class': 'custom-form-control', 'placeholder': _('Your Pinterest page (if you have one)')}),
+        required=False
+    )
+
     class Meta:
         model = Profile
-        fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url', 'pinterest_url']
-        
-        widgets = {
-            'bio': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Please tell us more about yourself'}),
-            'website_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your website page (if you have one)'}),
-            'facebook_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Facebook page (if you have one)'}),
-            'twitter_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Twitter page (if you have one)'}),
-            'instagram_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Instagram page (if you have one)'}),
-            'pinterest_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Pinterest page (if you have one)'}),
-        }
+        fields = ('bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url', 'pinterest_url')
 
 
 class EditProfileForm(forms.ModelForm):
