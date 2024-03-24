@@ -1,24 +1,25 @@
 {% extends 'discussion/base.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %}Edit profile{% endblock %}
+{% block title %}{% trans "Edit User Profile"|capfirst %}{% endblock %}
 {% block content %}
 
 <div class="edit-profile-container">
-    <h1 class="edit-profile-title">Edit profile:</h1>
+    <h1 class="edit-profile-title">{% trans "Edit Profile"|capfirst %}:</h1>
     <form method="POST" class="edit-profile-form">
         {% csrf_token %}
         {{ form.as_p }}
         <br>
         <div class="form-actions">
-            <input type="submit" value="Update profile" class="custom-button">
+            <input type="submit" value="{% trans "Update Profile"|capfirst %}" class="custom-button">
         </div>
 
         <div class="edit-profile-change-password">
-            <a href="{% url 'password_change' %}" class="password-button">Change Password</a>
+            <a href="{% url 'password_change' %}" class="password-button">{% trans "Change Password"|capfirst %}</a>
         </div>
 
         <div class="form-actions">
-            <a href="{% url 'home' %}" class="custom-button">Return To Homepage</a>
+            <a href="{% url 'home' %}" class="custom-button">{% trans "Return To Homepage"|capfirst %}</a>
         </div>
     </form>   
 </div>

@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 from user_profile.models import Profile
@@ -28,28 +28,46 @@ class CreateUserForm(UserCreationForm):
 
 
 class ProfilePageForm(forms.ModelForm):
-        class Meta:
-            model = Profile
-            fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url', 'pinterest_url']
-            
-            widgets = {
-                'bio': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Please tell us more about yourself'}),
-                'website_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your website page (if you have one)'}),
-                'facebook_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Facebook page (if you have one)'}),
-                'twitter_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Twitter page (if you have one)'}),
-                'instagram_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Instagram page (if you have one)'}),
-                'pinterest_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Pinterest page (if you have one)'}),
-            }
+    class Meta:
+        model = Profile
+        fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url', 'pinterest_url']
+        
+        widgets = {
+            'bio': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Please tell us more about yourself'}),
+            'website_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your website page (if you have one)'}),
+            'facebook_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Facebook page (if you have one)'}),
+            'twitter_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Twitter page (if you have one)'}),
+            'instagram_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Instagram page (if you have one)'}),
+            'pinterest_url': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Pinterest page (if you have one)'}),
+        }
 
 
-class EditProfileForm(UserChangeForm):
-    first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'custom-form-control', 'placeholder': 'Please enter your First Name'}))
-    last_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'custom-form-control', 'placeholder': 'Please enter your Last Name'}))
-    email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'custom-form-control', 'placeholder': 'Please enter your e-mail address'}))
-    last_login = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'readonly': True}))
-    date_joined = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'readonly': True}))
+class EditProfileForm(forms.ModelForm):
+    first_name = forms.CharField(
+        label=_('First Name'),
+        max_length=100, 
+        widget=forms.TextInput(attrs={'class': 'custom-form-control', 'placeholder': _('Please enter your First Name')})
+    )
+    last_name = forms.CharField(
+        label=_('Last Name'),
+        max_length=100, 
+        widget=forms.TextInput(attrs={'class': 'custom-form-control', 'placeholder': _('Please enter your Last Name')})
+    )
+    email = forms.EmailField(
+        label=_('Email'),
+        widget=forms.EmailInput(attrs={'class': 'custom-form-control', 'placeholder': _('Please enter your e-mail address')})
+    )
+    last_login = forms.CharField(
+        label=_('Last login'),
+        max_length=100,
+        widget=forms.TextInput(attrs={'readonly': True})
+    )
+    date_joined = forms.CharField(
+        label=_('Date joined'),
+        max_length=100,
+        widget=forms.TextInput(attrs={'readonly': True})
+    )
 
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email', 'last_login', 'date_joined')
-    

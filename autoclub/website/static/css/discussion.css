@@ -61,8 +61,6 @@ input[type="password"] {
 /* Login Form                                                                    */
 /*********************************************************************************/
 
-/* Login Form */
-
 .login-container {
     margin: 2rem auto;
     min-height: 120vh;
@@ -203,7 +201,7 @@ h1.edit-profile-page-title {
 
 
 /*********************************************************************************/
-/* User Profile Form                                                           */
+/* User Profile Form                                                             */
 /*********************************************************************************/
 
 .profile-container {
@@ -282,22 +280,11 @@ h1.edit-profile-title {
 .edit-profile-form {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 700px;
 }
 
 .edit-profile-form p {
     margin-bottom: 30px;
-}
-
-.edit-profile-form input[type="text"],
-.edit-profile-form input[type="email"],
-.edit-profile-form textarea {
-    width: 100%;
-    max-width: 700px;
-    padding: 5px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
 }
 
 .password-button {

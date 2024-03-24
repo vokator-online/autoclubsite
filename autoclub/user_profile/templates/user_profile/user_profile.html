@@ -1,9 +1,10 @@
 {% extends 'discussion/base.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %}User Profile{% endblock %}
+{% block title %}{% trans "User Profile"|capfirst %}{% endblock %}
 {% block content %}
     <div class="profile-container">
-        <h1 class="profile-heading">User Profile:</h1>
+        <h1 class="profile-heading">{% trans "User Profile"|capfirst %}:</h1>
 
         <div class="profile-card">
             <div class="profile-row">

@@ -10,4 +10,3 @@ def sync_user_profile(sender, instance, created, **kwargs):
         models.Profile.objects.create(user=instance)
     else:
         instance.profile.save()
-        

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 00:22+0200\n"
+"POT-Creation-Date: 2024-03-24 14:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,38 @@ msgstr ""
 #: user_profile/apps.py:8
 msgid "user profile"
 msgstr "vartotojo profilis"
+
+#: user_profile/forms.py:47
+msgid "First Name"
+msgstr "Vardas"
+
+#: user_profile/forms.py:49
+msgid "Please enter your First Name"
+msgstr "Prašom įvesti savo vardą"
+
+#: user_profile/forms.py:52
+msgid "Last Name"
+msgstr "Pavardė"
+
+#: user_profile/forms.py:54
+msgid "Please enter your Last Name"
+msgstr "Prašom įvesti savo pavardę"
+
+#: user_profile/forms.py:57
+msgid "Email"
+msgstr "Elektroninis paštas"
+
+#: user_profile/forms.py:58
+msgid "Please enter your e-mail address"
+msgstr "Prašom įvesti savo elektroninio pašto adresą"
+
+#: user_profile/forms.py:61
+msgid "Last login"
+msgstr "Paskutinio prisijungimo duomenys"
+
+#: user_profile/forms.py:66
+msgid "Date joined"
+msgstr "Registracijos data"
 
 #: user_profile/models.py:8
 msgid "user"
@@ -55,3 +87,53 @@ msgstr "instagram puslapis"
 #: user_profile/models.py:15
 msgid "pinterest url"
 msgstr "pinterest puslapis"
+
+#: user_profile/templates/registration/reset_password.html:4
+msgid "Password Reset Form"
+msgstr "slaptažodžio atkurimo forma"
+
+#: user_profile/templates/registration/reset_password.html:8
+msgid "Password Reset"
+msgstr "atkurti slaptažodį"
+
+#: user_profile/templates/registration/reset_password.html:9
+msgid "Forgotten your password?"
+msgstr "pamiršote slaptažodį?"
+
+#: user_profile/templates/registration/reset_password.html:11
+msgid "Enter your email address below, and we’ll email instructions for setting a new one."
+msgstr "įveskite savo elektroninio pašto adresą susietą su Jūsų paskyra ir mes atsiųsime Jums instrukcijas slaptažodžio atkūrimui."
+
+#: user_profile/templates/registration/reset_password.html:16
+msgid "Enter your email address"
+msgstr "įveskite savo elektroninio pašto adresą"
+
+#: user_profile/templates/registration/reset_password.html:17
+msgid "Please enter your email address"
+msgstr "prašom įvesti savo elektroninio pašto adresą"
+
+#: user_profile/templates/registration/reset_password.html:21
+#: user_profile/templates/user_profile/edit_profile.html:22
+msgid "Return To Homepage"
+msgstr "grįžti į pagrindinį puslapį"
+
+#: user_profile/templates/user_profile/edit_profile.html:4
+msgid "Edit User Profile"
+msgstr "vartotojo profilio redagavimas"
+
+#: user_profile/templates/user_profile/edit_profile.html:8
+msgid "Edit Profile"
+msgstr "redaguoti profilį"
+
+#: user_profile/templates/user_profile/edit_profile.html:14
+msgid "Update Profile"
+msgstr "atnaujinti profilį"
+
+#: user_profile/templates/user_profile/edit_profile.html:18
+msgid "Change Password"
+msgstr "keisti slaptažodį"
+
+#: user_profile/templates/user_profile/user_profile.html:4
+#: user_profile/templates/user_profile/user_profile.html:7
+msgid "User Profile"
+msgstr "vartotojo profilis"
