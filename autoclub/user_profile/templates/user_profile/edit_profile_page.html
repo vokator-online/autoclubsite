@@ -1,24 +1,24 @@
 {% extends 'discussion/base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}Edit Profile Page{% endblock %}
+{% block title %}{% trans "Edit User Profile Page"|capfirst %}{% endblock %}
 {% block content %}    
 
 <div class="edit-profile-page-container">
     {% if user.is_authenticated and user.id == profile.user.id %}
-        <h1 class="edit-profile-page-title">Edit Profile Page:</h1>
+        <h1 class="edit-profile-page-title">{% trans "Edit Profile Page"|capfirst %}:</h1>
         <form method="POST" enctype="multipart/form-data" class="edit-profile-page-form">
             {% csrf_token %}
             {{ form.as_p }}
             <div class="form-actions">
-                <input type="submit" value="Update Profile Page" class="custom-button">
-                <a href="{% url 'discussion' %}" class="custom-button">Return To Homepage</a>
+                <input type="submit" value={% trans "Update Profile Page"|capfirst %} class="custom-button">
+                <a href="{% url 'discussion' %}" class="custom-button">{% trans "Return To Homepage"|capfirst %}</a>
             </div>
         </form>
     {% else %}
-        <h2 class="access-denied">Access denied!
+        <h2 class="access-denied">{% trans "Access denied!"|capfirst %}
             <br>
-            You are not allowed to edit this page!</h2>
+            {% trans "You are not allowed to edit this page!"|capfirst %}</h2>
     {% endif %}
 </div>
 {% endblock %}

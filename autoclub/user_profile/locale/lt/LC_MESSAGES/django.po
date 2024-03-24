@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 16:31+0200\n"
+"POT-Creation-Date: 2024-03-24 21:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,35 +72,35 @@ msgstr "Pinterest puslapis"
 msgid "Your Pinterest page (if you have one)"
 msgstr "Jūsų Pinterest puslapis (jei turite)"
 
-#: user_profile/forms.py:79
+#: user_profile/forms.py:69
 msgid "First Name"
 msgstr "Vardas"
 
-#: user_profile/forms.py:81
+#: user_profile/forms.py:71
 msgid "Please enter your First Name"
 msgstr "Prašom įvesti savo vardą"
 
-#: user_profile/forms.py:84
+#: user_profile/forms.py:74
 msgid "Last Name"
 msgstr "Pavardė"
 
-#: user_profile/forms.py:86
+#: user_profile/forms.py:76
 msgid "Please enter your Last Name"
 msgstr "Prašom įvesti savo pavardę"
 
-#: user_profile/forms.py:89
+#: user_profile/forms.py:79
 msgid "Email"
 msgstr "Elektroninis paštas"
 
-#: user_profile/forms.py:90
+#: user_profile/forms.py:80
 msgid "Please enter your e-mail address"
 msgstr "Prašom įvesti savo elektroninio pašto adresą"
 
-#: user_profile/forms.py:93
+#: user_profile/forms.py:83
 msgid "Last login"
 msgstr "Paskutinio prisijungimo duomenys"
 
-#: user_profile/forms.py:98
+#: user_profile/forms.py:88
 msgid "Date joined"
 msgstr "Registracijos data"
 
@@ -136,6 +136,34 @@ msgstr "instagram puslapis"
 msgid "pinterest url"
 msgstr "pinterest puslapis"
 
+#: user_profile/templates/registration/login.html:4
+msgid "Logging in to the discussion page"
+msgstr "prisijungimas prie diskusijų puslapio"
+
+#: user_profile/templates/registration/login.html:8
+#: user_profile/templates/registration/login.html:13
+msgid "Login"
+msgstr "prisijungti"
+
+#: user_profile/templates/registration/login.html:14
+#: user_profile/templates/registration/reset_password.html:21
+#: user_profile/templates/user_profile/edit_profile.html:22
+#: user_profile/templates/user_profile/edit_profile_page.html:15
+msgid "Return To Homepage"
+msgstr "grįžti į pagrindinį puslapį"
+
+#: user_profile/templates/registration/login.html:17
+msgid "Forget Password?"
+msgstr "pamiršote slaptažodį"
+
+#: user_profile/templates/registration/login.html:20
+msgid "Don't have an Account?"
+msgstr "neturite paskyros?"
+
+#: user_profile/templates/registration/login.html:20
+msgid "Sign Up"
+msgstr "užsiregistruokite"
+
 #: user_profile/templates/registration/reset_password.html:4
 msgid "Password Reset Form"
 msgstr "slaptažodžio atkurimo forma"
@@ -164,11 +192,6 @@ msgstr "įveskite savo elektroninio pašto adresą"
 msgid "Please enter your email address"
 msgstr "prašom įvesti savo elektroninio pašto adresą"
 
-#: user_profile/templates/registration/reset_password.html:21
-#: user_profile/templates/user_profile/edit_profile.html:22
-msgid "Return To Homepage"
-msgstr "grįžti į pagrindinį puslapį"
-
 #: user_profile/templates/user_profile/edit_profile.html:4
 msgid "Edit User Profile"
 msgstr "vartotojo profilio redagavimas"
@@ -184,6 +207,26 @@ msgstr "atnaujinti profilį"
 #: user_profile/templates/user_profile/edit_profile.html:18
 msgid "Change Password"
 msgstr "keisti slaptažodį"
+
+#: user_profile/templates/user_profile/edit_profile_page.html:4
+msgid "Edit User Profile Page"
+msgstr "Vartotojo profilio redagavimo puslapis"
+
+#: user_profile/templates/user_profile/edit_profile_page.html:9
+msgid "Edit Profile Page"
+msgstr "redaguoti profilį"
+
+#: user_profile/templates/user_profile/edit_profile_page.html:14
+msgid "Update Profile Page"
+msgstr "atnaujinti profilį"
+
+#: user_profile/templates/user_profile/edit_profile_page.html:19
+msgid "Access denied!"
+msgstr "Prieiga uždrausta!"
+
+#: user_profile/templates/user_profile/edit_profile_page.html:21
+msgid "You are not allowed to edit this page!"
+msgstr "Jums draudžiama redaguoti šį puslapį!"
 
 #: user_profile/templates/user_profile/user_profile.html:4
 #: user_profile/templates/user_profile/user_profile.html:7

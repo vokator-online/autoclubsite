@@ -1,23 +1,23 @@
 {% extends 'discussion/base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}Login{% endblock %}
+{% block title %}{% trans "Logging in to the discussion page"|capfirst %}{% endblock %}
 {% block content %}
 
 <div class="login-container">
-    <h1 class="login-form-title">Login:</h1>
-    <form method="POST">
+    <h1 class="login-form-title">{% trans "Login"|capfirst %}:</h1>
+    <form method="POST" class="login-form">
         {% csrf_token %}
         {{ form.as_p }}
         <div class="form-actions">
-            <input type="submit" value="Login" class="custom-button">
-            <a href="{% url 'discussion' %}" class="custom-button">Return To Homepage</a>
+            <input type="submit" value="{% trans "Login"|capfirst %}" class="custom-button">
+            <a href="{% url 'discussion' %}" class="custom-button">{% trans "Return To Homepage"|capfirst %}</a>
         </div>
         <div class="auth__actions">
-            <a href={% url 'reset_password' %}>Forget Password?</a>
+            <a href={% url 'reset_password' %}>{% trans "Forget Password?"|capfirst %}</a>
         </div>
         <div class="auth__alternative">
-            <p>Don't have an Account? <a href="{% url 'registration' %}">Sign Up</a></p>
+            <p>{% trans "Don't have an Account?"|capfirst %} <a href="{% url 'registration' %}">{% trans "Sign Up"|capfirst %}</a></p>
         </div>
     </form>
 </div>

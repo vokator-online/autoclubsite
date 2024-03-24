@@ -71,21 +71,20 @@ input[type="password"] {
     margin-bottom: 2em;
 }
 
-.login-container input[type="text"],
-.login-container input[type="username"],
-.login-container input[type="password"] {
-    width: 100%; /* Užtikrinama, kad laukai išsiplečia iki konteinerio pločio */
-    max-width: 700px; /* Neleidžia laukams išplisti per daug, jei konteineris yra platesnis */
-    padding: 10px; /* Padidina laukų aukštį per vidinį tarpą */
-    margin-bottom: 20px; /* Užtikrina atstumą tarp formos laukų */
-    border-radius: 5px; /* Suteikia formos laukams švelnesnius kampus */
-    border: 1px solid #ccc; /* Nustato subtilią rėmelio spalvą */
-}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+  }
+  
+  .login-form p {
+    margin-bottom: 30px;
+  }
 
 .form-actions,
 .auth__actions,
 .auth__alternative {
-    margin-top: 2rem; /* Vienodina atstumą tarp skirtingų formos dalių */
+    margin-top: 2rem;
 }
 
 
@@ -179,7 +178,7 @@ input[type="password"] {
 
 
 /*********************************************************************************/
-/* Edit Profile Page Form                                                           */
+/* Edit Profile Page Form                                                        */
 /*********************************************************************************/
 
 .edit-profile-page-container {
