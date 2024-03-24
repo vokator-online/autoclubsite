@@ -209,7 +209,7 @@ h1.edit-profile-page-title {
     min-height: 120vh;
 }
 
-.profile-heading {
+h1.profile-title {
     margin-top: 1em;
     margin-bottom: 2em;
 }
