@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 23:50+0200\n"
+"POT-Creation-Date: 2024-03-25 00:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -148,6 +148,7 @@ msgstr "keisti slaptažodį"
 
 #: user_profile/templates/registration/change_password.html:17
 #: user_profile/templates/registration/login.html:14
+#: user_profile/templates/registration/password_change_done.html:12
 #: user_profile/templates/registration/reset_password.html:21
 #: user_profile/templates/user_profile/edit_profile.html:22
 #: user_profile/templates/user_profile/edit_profile_page.html:15
@@ -174,6 +175,15 @@ msgstr "neturite paskyros?"
 #: user_profile/templates/registration/login.html:20
 msgid "Sign Up"
 msgstr "užsiregistruokite"
+
+#: user_profile/templates/registration/password_change_done.html:4
+#: user_profile/templates/registration/password_change_done.html:8
+msgid "Password Change Successful"
+msgstr "slaptažodžio keitimas sėkmingai atliktas"
+
+#: user_profile/templates/registration/password_change_done.html:9
+msgid "Your password was successfully changed!"
+msgstr "jūsų slaptažodis buvo sėkmingai pakeistas!"
 
 #: user_profile/templates/registration/reset_password.html:4
 msgid "Password Reset Form"
