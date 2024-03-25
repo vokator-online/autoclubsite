@@ -1,26 +1,28 @@
 {% extends 'discussion/base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}{% trans "comment on blog post"|title %}{% endblock %}
+{% block title %}{% trans "Comment On Blog Post"|capfirst %}{% endblock %}
 {% block content %}
 
-{% if user.is_authenticated %}
-    <h1>{% trans "add comment:"|title %}</h1>
-
-    <div class="form-group">
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.media }}
-            {{ form.as_p }}
-            <hr>
-            <button class="btn btn-secondary">{% trans "add comment"|title %}</button>
-            <a href="{% url 'discussion' %}" class="btn btn-secondary">{% trans "return to homepage"|title %}</a>
-        </form>
-    </div>
-{% else %}
-
-    <h2>{% trans "Access denied! Please log in to this page!" %}</h2>
-  
-{% endif %}
-
+<div class="add-comment-container">
+    {% if user.is_authenticated %}
+    <h1 class="add-comment-title">{% trans "Add Comment:"|capfirst %}</h1>
+        <div class="form-group">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.media }}
+                {{ form.as_p }}
+                <hr>
+                <div class="form-actions">
+                    <button class="custom-button">{% trans "Add Comment"|capfirst %}</button>
+                    <a href="{% url 'discussion' %}" class="custom-button">{% trans "Return To Homepage"|capfirst %}</a>
+                </div>
+            </form>
+        </div>
+    {% else %}
+        <h2 class="access-denied">{% trans "Access denied!"|capfirst %}
+            <br>
+            {% trans "Please log in to this page!"|capfirst %}</h2>    
+    {% endif %}
+</div>
 {% endblock %}

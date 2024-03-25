@@ -371,3 +371,17 @@ h1.edit-profile-title {
 .edit-profile-change-password {
     margin-top: 20px;
 }
+
+
+/*********************************************************************************/
+/* Add Comment Form                                                              */
+/*********************************************************************************/
+
+.add-comment-container {
+    margin: 2rem auto;
+}
+
+h1.add-comment-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 16:20+0200\n"
+"POT-Creation-Date: 2024-03-25 21:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,21 +77,25 @@ msgid "comments"
 msgstr "komentarai"
 
 #: discussion/templates/discussion/add_comment.html:4
-msgid "comment on blog post"
-msgstr "komentuoti pranešimą"
+msgid "Comment On Blog Post"
+msgstr "komentuoti tinklaraščio įrašą"
 
-#: discussion/templates/discussion/add_comment.html:8
-msgid "add comment:"
+#: discussion/templates/discussion/add_comment.html:9
+msgid "Add Comment:"
 msgstr "rašyti komentarą"
 
-#: discussion/templates/discussion/add_comment.html:16
-msgid "add comment"
+#: discussion/templates/discussion/add_comment.html:17
+msgid "Add Comment"
 msgstr "paskelbti komentarą"
 
-#: discussion/templates/discussion/add_comment.html:17
-msgid "return to homepage"
-msgstr "grįžti į pradinį puslapį"
+#: discussion/templates/discussion/add_comment.html:18
+msgid "Return To Homepage"
+msgstr "grįžti į pagrindinį puslapį"
 
-#: discussion/templates/discussion/add_comment.html:22
-msgid "Access denied! Please log in to this page!"
-msgstr "Prieiga uždrausta! Prisijunkite prie puslapio!"
+#: discussion/templates/discussion/add_comment.html:23
+msgid "Access denied!"
+msgstr "prieiga uždrausta!"
+
+#: discussion/templates/discussion/add_comment.html:25
+msgid "Please log in to this page!"
+msgstr "prisijunkite prie puslapio!"
