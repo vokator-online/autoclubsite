@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 23:51+0200\n"
+"POT-Creation-Date: 2024-03-25 16:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,51 +24,55 @@ msgstr ""
 msgid "discussion"
 msgstr "diskusijos"
 
-#: discussion/models.py:19
-msgid "title"
-msgstr "antraštė"
-
-#: discussion/models.py:20
-msgid "header image"
-msgstr "antraštės paveikslėlis"
-
-#: discussion/models.py:21 discussion/models.py:42
-msgid "author"
-msgstr "autorius"
-
-#: discussion/models.py:22 discussion/models.py:43
-msgid "content"
-msgstr "turinys"
-
-#: discussion/models.py:23
-msgid "snippet"
-msgstr "pranešimo ištrauka (fragmentas)"
-
-#: discussion/models.py:24 discussion/models.py:44
-msgid "created at"
-msgstr "sukurta"
-
-#: discussion/models.py:25 discussion/models.py:45
-msgid "updated at"
-msgstr "atnaujinta"
-
-#: discussion/models.py:26
+#: discussion/models.py:12 discussion/models.py:30
 msgid "category"
 msgstr "kategorija"
 
-#: discussion/models.py:29 discussion/models.py:41
+#: discussion/models.py:13
+msgid "categories"
+msgstr "kategorijos"
+
+#: discussion/models.py:23
+msgid "title"
+msgstr "antraštė"
+
+#: discussion/models.py:24
+msgid "header image"
+msgstr "antraštės paveikslėlis"
+
+#: discussion/models.py:25 discussion/models.py:46
+msgid "author"
+msgstr "autorius"
+
+#: discussion/models.py:26 discussion/models.py:47
+msgid "content"
+msgstr "turinys"
+
+#: discussion/models.py:27
+msgid "snippet"
+msgstr "pranešimo ištrauka (fragmentas)"
+
+#: discussion/models.py:28 discussion/models.py:48
+msgid "created at"
+msgstr "sukurta"
+
+#: discussion/models.py:29 discussion/models.py:49
+msgid "updated at"
+msgstr "atnaujinta"
+
+#: discussion/models.py:33 discussion/models.py:45
 msgid "post"
 msgstr "pranešimas"
 
-#: discussion/models.py:30
+#: discussion/models.py:34
 msgid "posts"
 msgstr "pranešimai"
 
-#: discussion/models.py:48
+#: discussion/models.py:52
 msgid "comment"
 msgstr "komentaras"
 
-#: discussion/models.py:49
+#: discussion/models.py:53
 msgid "comments"
 msgstr "komentarai"
 

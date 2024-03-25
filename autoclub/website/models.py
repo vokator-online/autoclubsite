@@ -1,6 +1,6 @@
 from typing import Iterable
 from django.db import models
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 from django.urls import reverse
 from django.contrib.auth.models import User
 
@@ -107,4 +107,3 @@ class TicketMessage(models.Model):
 
     def get_absolute_url(self):
         return reverse("ticketmessage_detail", kwargs={"pk": self.pk})
-    

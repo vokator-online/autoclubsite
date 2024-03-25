@@ -1,12 +1,16 @@
 from django.db import models
 from django.urls import reverse
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
 
 
 class Category(models.Model):
     name = models.CharField(max_length=255, db_index=True)
+
+    class Meta:
+        verbose_name = _("category")
+        verbose_name_plural = _("categories")
 
     def __str__(self):
         return self.name

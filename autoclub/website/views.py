@@ -49,5 +49,5 @@ class TicketCreateView(generic.CreateView):
 
     def get_success_url(self) -> str:
         utils.send_support_ticket_email(self.request, self.obj)
-        return reverse_lazy('index')
+        return reverse_lazy('home')
     

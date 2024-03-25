@@ -94,23 +94,23 @@ msgstr "Kiti bendri su klubo veikla susiję klausimai"
 
 #: website/models.py:18
 msgid "new"
-msgstr "nauja"
+msgstr "naujos"
 
 #: website/models.py:19
 msgid "read"
-msgstr "perskaityta"
+msgstr "perskaitytos"
 
 #: website/models.py:20
 msgid "processing"
-msgstr "apdorojama"
+msgstr "apdorojamos"
 
 #: website/models.py:21
 msgid "closed"
-msgstr "uždaryta"
+msgstr "uždarytos"
 
 #: website/models.py:26
 msgid "subject"
-msgstr "tema"
+msgstr "temą"
 
 #: website/models.py:27 website/models.py:64
 msgid "content"
@@ -130,7 +130,7 @@ msgstr "elektroninis pašto adresas"
 
 #: website/models.py:37 website/models.py:83
 msgid "sent at"
-msgstr "išsiųsta"
+msgstr "išsiuntimo laiką"
 
 #: website/models.py:38 website/models.py:84
 msgid "email sent"
@@ -138,7 +138,7 @@ msgstr "išsiųstas elektroninis laiškas"
 
 #: website/models.py:39
 msgid "status"
-msgstr "būsena"
+msgstr "būseną"
 
 #: website/models.py:42 website/models.py:63
 msgid "ticket"

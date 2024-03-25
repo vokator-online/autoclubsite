@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 14:40+0200\n"
+"POT-Creation-Date: 2024-03-25 16:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -171,6 +171,14 @@ msgstr "instagram puslapis"
 #: user_profile/models.py:15
 msgid "pinterest url"
 msgstr "pinterest puslapis"
+
+#: user_profile/models.py:18
+msgid "profile"
+msgstr "profilis"
+
+#: user_profile/models.py:19
+msgid "profiles"
+msgstr "profiliai"
 
 #: user_profile/templates/registration/change_password.html:4
 #: user_profile/templates/registration/change_password.html:8
