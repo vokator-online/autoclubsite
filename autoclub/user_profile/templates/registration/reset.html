@@ -1,19 +1,23 @@
 {% extends 'discussion/base.html' %}
 {% load i18n %}
 {% load static %}
+{% block title %}{% trans "Enter A New Password To Change"|capfirst %}{% endblock %}
 {% block content %}
 
-<h1 style="margin-top: 1em; margin-bottom: 2em;">Enter new password:</h1>
+<div class="reset-form-container">
+	<h1 style="reset-form-title">{% trans "Enter A New Password To Change"|capfirst %}:</h1>
 
-<p>Please enter your new password twice so we can verify you typed it in correctly.</p>
-	<br>
+	<p class="reset-message">{% trans "Please enter your new password twice so we can verify you typed it in correctly."|capfirst %}</p>
 
-<form class="form" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-		<button type="submit" class="btn btn-secondary">Change My Password</button>
-		<span style="margin-right: 4px;"></span>
-		<a href="{% url 'discussion' %}" class="btn btn-secondary">Return To Homepage</a>
-</form>
+	<form class="form" method="POST" class="reset-form">
+		{% csrf_token %}
+		{{ form.as_p }}
+
+		<div class="form-actions">
+			<button type="submit" class="custom-button">{% trans "Change My Password"|capfirst %}</button>
+			<a href="{% url 'discussion' %}" class="custom-button">{% trans "Return To Homepage"|capfirst %}</a>
+		</div>
+	</form>
+</div>
 
 {% endblock %}

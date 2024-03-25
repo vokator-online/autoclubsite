@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 08:12+0200\n"
+"POT-Creation-Date: 2024-03-25 10:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgstr "vartotojo profilis"
 
 #: user_profile/forms.py:32
 msgid "Bio"
-msgstr "Apie save"
+msgstr "Aapie save"
 
 #: user_profile/forms.py:33
 msgid "Please tell us more about yourself"
@@ -149,7 +149,10 @@ msgstr "keisti slaptažodį"
 #: user_profile/templates/registration/change_password.html:17
 #: user_profile/templates/registration/login.html:14
 #: user_profile/templates/registration/password_change_done.html:12
+#: user_profile/templates/registration/reset.html:18
 #: user_profile/templates/registration/reset_password.html:23
+#: user_profile/templates/registration/reset_password_complete.html:13
+#: user_profile/templates/registration/reset_password_sent.html:12
 #: user_profile/templates/user_profile/edit_profile.html:22
 #: user_profile/templates/user_profile/edit_profile_page.html:15
 msgid "Return To Homepage"
@@ -161,6 +164,7 @@ msgstr "prisijungimas prie diskusijų puslapio"
 
 #: user_profile/templates/registration/login.html:8
 #: user_profile/templates/registration/login.html:13
+#: user_profile/templates/registration/reset_password_complete.html:12
 msgid "Login"
 msgstr "prisijungti"
 
@@ -184,6 +188,23 @@ msgstr "slaptažodžio keitimas sėkmingai atliktas"
 #: user_profile/templates/registration/password_change_done.html:9
 msgid "Your password was successfully changed!"
 msgstr "jūsų slaptažodis buvo sėkmingai pakeistas!"
+
+#: user_profile/templates/registration/reset.html:4
+#: user_profile/templates/registration/reset.html:8
+msgid "Enter A New Password To Change"
+msgstr "įveskite naują slaptažodį norėdami pakeisti"
+
+#: user_profile/templates/registration/reset.html:10
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"įveskite naująjį slaptažodį du kartus, kad galėtume patikrinti, ar teisingai "
+"jį įvedėte."
+
+#: user_profile/templates/registration/reset.html:17
+msgid "Change My Password"
+msgstr "keisti mano slaptažodį"
 
 #: user_profile/templates/registration/reset_password.html:4
 msgid "Password Reset Form"
@@ -217,6 +238,28 @@ msgstr "prašom įvesti savo elektroninio pašto adresą"
 msgid "Reset My Password"
 msgstr "atkurti mano slaptažodį"
 
+#: user_profile/templates/registration/reset_password_complete.html:4
+#: user_profile/templates/registration/reset_password_complete.html:8
+msgid "Password Reset Complete"
+msgstr "slaptažodžio atkūrimas užbaigtas"
+
+#: user_profile/templates/registration/reset_password_complete.html:9
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr "jūsų slaptažodis nustatytas. Dabar galite prisijungti."
+
+#: user_profile/templates/registration/reset_password_sent.html:4
+#: user_profile/templates/registration/reset_password_sent.html:8
+msgid "Password reset sent"
+msgstr "išsiųstas slaptažodžio atkūrimas"
+
+#: user_profile/templates/registration/reset_password_sent.html:9
+msgid ""
+"We’ve emailed you instructions for setting your password, if an account "
+"exists with the email you entered, You should receive them shortly."
+msgstr ""
+"elektroniniu paštu išsiuntėme slaptažodžio nustatymo instrukcijas, "
+"jei Jūsų įvestu el. pašto adresu yra sukurta paskyra, netrukus turėtumėte jas gauti."
+
 #: user_profile/templates/user_profile/edit_profile.html:4
 msgid "Edit User Profile"
 msgstr "vartotojo profilio redagavimas"
@@ -231,7 +274,7 @@ msgstr "atnaujinti profilį"
 
 #: user_profile/templates/user_profile/edit_profile_page.html:4
 msgid "Edit User Profile Page"
-msgstr "Vartotojo profilio redagavimo puslapis"
+msgstr "vartotojo profilio redagavimo puslapis"
 
 #: user_profile/templates/user_profile/edit_profile_page.html:9
 msgid "Edit Profile Page"
@@ -243,11 +286,11 @@ msgstr "atnaujinti profilį"
 
 #: user_profile/templates/user_profile/edit_profile_page.html:19
 msgid "Access denied!"
-msgstr "Prieiga uždrausta!"
+msgstr "prieiga uždrausta!"
 
 #: user_profile/templates/user_profile/edit_profile_page.html:21
 msgid "You are not allowed to edit this page!"
-msgstr "Jums draudžiama redaguoti šį puslapį!"
+msgstr "jums draudžiama redaguoti šį puslapį!"
 
 #: user_profile/templates/user_profile/user_profile.html:4
 #: user_profile/templates/user_profile/user_profile.html:7
