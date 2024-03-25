@@ -28,9 +28,10 @@
 /*********************************************************************************/
 
 .registration-container {
-    min-height: 120vh;
-    width: 800px;
-    margin: auto;
+    width: 700px;
+    margin: 2rem auto;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 h1.registration-form-title {
@@ -39,12 +40,12 @@ h1.registration-form-title {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: .5em;
 }
 
 input[type="text"],
@@ -56,6 +57,17 @@ input[type="password"] {
     border-radius: 4px;
 }
 
+.form-group div[style*="color: red;"] {
+    color: #d9534f;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+}
+
 
 /*********************************************************************************/
 /* Login Form                                                                    */
@@ -63,7 +75,6 @@ input[type="password"] {
 
 .login-container {
     margin: 2rem auto;
-    min-height: 120vh;
 }
 
 .login-form-title {
@@ -75,11 +86,11 @@ input[type="password"] {
     display: flex;
     flex-direction: column;
     max-width: 700px;
-  }
+}
   
-  .login-form p {
+.login-form p {
     margin-bottom: 30px;
-  }
+}
 
 .form-actions,
 .auth__actions,
@@ -94,7 +105,6 @@ input[type="password"] {
 
 .password-change-container {
     margin: 2rem auto;
-    min-height: 120vh;
 }
 
 h1.password-change-title {
@@ -110,7 +120,7 @@ h1.password-change-title {
 
 .password-change-form p {
     margin-bottom: 30px;
-  }
+}
 
 
 /*********************************************************************************/
@@ -118,7 +128,7 @@ h1.password-change-title {
 /*********************************************************************************/
 
 .password-success-container {
-    min-height: 120vh;
+    margin: 2rem auto;
 }
 
 .password-success-title {
@@ -141,7 +151,6 @@ h1.password-change-title {
 
 .password-reset-complete-container {
     margin: 2rem auto;
-    min-height: 120vh;
 }
 
 h1.password-reset-complete-title {
@@ -160,7 +169,6 @@ h1.password-reset-complete-title {
 
 .password-reset-sent-container {
     margin: 2rem auto;
-    min-height: 120vh;
 }
 
 .password-reset-sent-title {
@@ -179,7 +187,6 @@ h1.password-reset-complete-title {
 
 .password-reset-form-container {
     margin: 2rem auto;
-    min-height: 120vh;
 }
 
 .password-reset-form-title {
@@ -199,12 +206,11 @@ h1.password-reset-complete-title {
 
 
 /*********************************************************************************/
-/* Reset Form                                                           */
+/* Reset Form                                                                    */
 /*********************************************************************************/
 
 .reset-form-container {
     margin: 2rem auto;
-    min-height: 120vh;
 }
 
 h1.reset-form-title {
@@ -230,7 +236,6 @@ h1.reset-form-title {
 
 .edit-profile-page-container {
     margin: 2rem auto;
-    min-height: 120vh;
 }
 
 h1.edit-profile-page-title {
@@ -246,7 +251,7 @@ h1.edit-profile-page-title {
 
 .edit-profile-page-form p {
     margin-bottom: 30px;
-  }
+}
 
 
 /*********************************************************************************/
@@ -255,7 +260,6 @@ h1.edit-profile-page-title {
 
 .profile-container {
     margin: 2rem auto;
-    min-height: 120vh;
 }
 
 h1.profile-title {
@@ -318,7 +322,6 @@ h1.profile-title {
 
 .edit-profile-container {
     margin: 2rem auto;
-    min-height: 120vh;
 }
 
 h1.edit-profile-title {
