@@ -1,11 +1,11 @@
 {% extends 'discussion/base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}Registration Form{% endblock %}
+{% block title %}{% trans "User Registration Form"|capfirst %}{% endblock %}
 {% block content %}
 
 <div class="registration-container">
-    <h1 class="registration-form-title">Registration Form:</h1>
+    <h1 class="registration-form-title">{% trans "Registration Form"|capfirst %}:</h1>
     <form method="post">
         {% csrf_token %}
         {% for field in form %}
@@ -22,8 +22,8 @@
         {% endfor %}
         <br>
         <div class="buttons-container">
-            <input type="submit" value="Submit Registration" class="custom-button">
-            <a href="{% url 'discussion' %}" class="custom-button">Return To Homepage</a>
+            <input type="submit" value="{% trans "Submit Registration"|capfirst %}" class="custom-button">
+            <a href="{% url 'discussion' %}" class="custom-button">{% trans "Return To Homepage"|capfirst %}</a>
         </div>
     </form>
 </div>

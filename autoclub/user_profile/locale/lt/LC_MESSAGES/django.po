@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 10:19+0200\n"
+"POT-Creation-Date: 2024-03-25 14:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,6 +149,7 @@ msgstr "keisti slaptažodį"
 #: user_profile/templates/registration/change_password.html:17
 #: user_profile/templates/registration/login.html:14
 #: user_profile/templates/registration/password_change_done.html:12
+#: user_profile/templates/registration/registration.html:26
 #: user_profile/templates/registration/reset.html:18
 #: user_profile/templates/registration/reset_password.html:23
 #: user_profile/templates/registration/reset_password_complete.html:13
@@ -188,6 +189,18 @@ msgstr "slaptažodžio keitimas sėkmingai atliktas"
 #: user_profile/templates/registration/password_change_done.html:9
 msgid "Your password was successfully changed!"
 msgstr "jūsų slaptažodis buvo sėkmingai pakeistas!"
+
+#: user_profile/templates/registration/registration.html:4
+msgid "User Registration Form"
+msgstr "vartotojo registracijos forma"
+
+#: user_profile/templates/registration/registration.html:8
+msgid "Registration Form"
+msgstr "registracijos forma"
+
+#: user_profile/templates/registration/registration.html:25
+msgid "Submit Registration"
+msgstr "pateikti registraciją"
 
 #: user_profile/templates/registration/reset.html:4
 #: user_profile/templates/registration/reset.html:8
@@ -257,8 +270,8 @@ msgid ""
 "We’ve emailed you instructions for setting your password, if an account "
 "exists with the email you entered, You should receive them shortly."
 msgstr ""
-"elektroniniu paštu išsiuntėme slaptažodžio nustatymo instrukcijas, "
-"jei Jūsų įvestu el. pašto adresu yra sukurta paskyra, netrukus turėtumėte jas gauti."
+"elektroniniu paštu išsiuntėme slaptažodžio nustatymo instrukcijas, jei Jūsų "
+"įvestu el. pašto adresu yra sukurta paskyra, netrukus turėtumėte jas gauti."
 
 #: user_profile/templates/user_profile/edit_profile.html:4
 msgid "Edit User Profile"
