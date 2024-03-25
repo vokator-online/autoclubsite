@@ -1,32 +1,29 @@
 {% extends 'discussion/base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}Create A New Blog Post{% endblock %}
+{% block title %}{% trans "Create A New Blog Post"|capfirst %}{% endblock %}
 {% block content %}
-<br>
-<br>
-{% if user.is_authenticated %}
-    <h1>Add Post</h1>
-    <br>
-    <br>
-    <div class="form-group">
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.media }}
-            {{ form.as_p }}
-            <hr>
-            <button class="btn btn-secondary">Post</button>
-            <a href="{% url 'discussion' %}" class="btn btn-secondary">Return To Homepage</a>
-            <br>
-            <br>
-        </form>
-    </div>
-{% else %}
-<br>
-<br>
-    <h2>Prieiga uždrausta! Prisijunkite prie puslapio!</h2>
-    <br>
-    <br>    
-{% endif %}
 
+<div class="add-post-container">
+    {% if user.is_authenticated %}
+    <h1 class="add-post-title">{% trans "Add Post"|capfirst %}</h1>
+
+        <div class="form-group">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.media }}
+                {{ form.as_p }}
+                <hr>
+                <div class="form-actions">
+                    <button class="custom-button">{% trans "Post"|capfirst %}</button>
+                    <a href="{% url 'discussion' %}" class="custom-button">{% trans "Return To Homepage"|capfirst %}</a>
+                </div>
+            </form>
+        </div>
+    {% else %}
+    <h2 class="access-denied">{% trans "Access denied!"|capfirst %}
+        <br>
+        {% trans "Please log in to this page!"|capfirst %}</h2>   
+    {% endif %}
+</div>
 {% endblock %}

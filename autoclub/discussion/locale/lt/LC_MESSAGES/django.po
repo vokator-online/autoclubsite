@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 21:08+0200\n"
+"POT-Creation-Date: 2024-03-25 22:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,18 +84,33 @@ msgstr "komentuoti tinklaraščio įrašą"
 msgid "Add Comment:"
 msgstr "rašyti komentarą"
 
-#: discussion/templates/discussion/add_comment.html:17
+#: discussion/templates/discussion/add_comment.html:18
 msgid "Add Comment"
 msgstr "paskelbti komentarą"
 
-#: discussion/templates/discussion/add_comment.html:18
+#: discussion/templates/discussion/add_comment.html:19
+#: discussion/templates/discussion/add_post.html:19
 msgid "Return To Homepage"
 msgstr "grįžti į pagrindinį puslapį"
 
-#: discussion/templates/discussion/add_comment.html:23
+#: discussion/templates/discussion/add_comment.html:24
+#: discussion/templates/discussion/add_post.html:24
 msgid "Access denied!"
 msgstr "prieiga uždrausta!"
 
-#: discussion/templates/discussion/add_comment.html:25
+#: discussion/templates/discussion/add_comment.html:26
+#: discussion/templates/discussion/add_post.html:26
 msgid "Please log in to this page!"
 msgstr "prisijunkite prie puslapio!"
+
+#: discussion/templates/discussion/add_post.html:4
+msgid "Create A New Blog Post"
+msgstr "sukurti naują įrašą"
+
+#: discussion/templates/discussion/add_post.html:9
+msgid "Add Post"
+msgstr "pridėti pranešimą"
+
+#: discussion/templates/discussion/add_post.html:18
+msgid "Post"
+msgstr "paskelbti pranešimą"
