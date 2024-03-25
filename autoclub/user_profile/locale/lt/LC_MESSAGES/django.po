@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 00:07+0200\n"
+"POT-Creation-Date: 2024-03-25 08:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,7 +149,7 @@ msgstr "keisti slaptažodį"
 #: user_profile/templates/registration/change_password.html:17
 #: user_profile/templates/registration/login.html:14
 #: user_profile/templates/registration/password_change_done.html:12
-#: user_profile/templates/registration/reset_password.html:21
+#: user_profile/templates/registration/reset_password.html:23
 #: user_profile/templates/user_profile/edit_profile.html:22
 #: user_profile/templates/user_profile/edit_profile_page.html:15
 msgid "Return To Homepage"
@@ -205,13 +205,17 @@ msgstr ""
 "įveskite savo elektroninio pašto adresą susietą su Jūsų paskyra ir mes "
 "atsiųsime Jums instrukcijas slaptažodžio atkūrimui."
 
-#: user_profile/templates/registration/reset_password.html:16
+#: user_profile/templates/registration/reset_password.html:17
 msgid "Enter your email address"
 msgstr "įveskite savo elektroninio pašto adresą"
 
-#: user_profile/templates/registration/reset_password.html:17
+#: user_profile/templates/registration/reset_password.html:18
 msgid "Please enter your email address"
 msgstr "prašom įvesti savo elektroninio pašto adresą"
+
+#: user_profile/templates/registration/reset_password.html:22
+msgid "Reset My Password"
+msgstr "atkurti mano slaptažodį"
 
 #: user_profile/templates/user_profile/edit_profile.html:4
 msgid "Edit User Profile"
