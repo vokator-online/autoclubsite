@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 22:03+0200\n"
+"POT-Creation-Date: 2024-03-26 12:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,6 +90,7 @@ msgstr "paskelbti komentarą"
 
 #: discussion/templates/discussion/add_comment.html:19
 #: discussion/templates/discussion/add_post.html:19
+#: discussion/templates/discussion/article_details.html:183
 msgid "Return To Homepage"
 msgstr "grįžti į pagrindinį puslapį"
 
@@ -114,3 +115,51 @@ msgstr "pridėti pranešimą"
 #: discussion/templates/discussion/add_post.html:18
 msgid "Post"
 msgstr "paskelbti pranešimą"
+
+#: discussion/templates/discussion/article_details.html:34
+#: discussion/templates/discussion/article_details.html:125
+msgid "Profile Page"
+msgstr "profilio puslapis"
+
+#: discussion/templates/discussion/article_details.html:37
+msgid "Website"
+msgstr "asmeninė svetainė"
+
+#: discussion/templates/discussion/article_details.html:64
+#: discussion/templates/discussion/article_details.html:155
+msgid "By"
+msgstr "paskelbė"
+
+#: discussion/templates/discussion/article_details.html:71
+msgid "Edit message"
+msgstr "redaguoti pranešimą"
+
+#: discussion/templates/discussion/article_details.html:73
+msgid "Delete message"
+msgstr "ištrinti pranešimą"
+
+#: discussion/templates/discussion/article_details.html:82
+msgid "Your Header Image"
+msgstr "jūsų antraštės paveikslėlis"
+
+#: discussion/templates/discussion/article_details.html:91
+msgid "Post comments"
+msgstr "temos komentarai"
+
+#: discussion/templates/discussion/article_details.html:94
+msgid "No comments have been left"
+msgstr "nėra paliktų komentarų"
+
+#: discussion/templates/discussion/article_details.html:95
+#: discussion/templates/discussion/article_details.html:99
+#: discussion/templates/discussion/article_details.html:178
+msgid "Write a comment"
+msgstr "rašyti komentarą"
+
+#: discussion/templates/discussion/article_details.html:162
+msgid "Edit comment"
+msgstr "redaguoti komentarą"
+
+#: discussion/templates/discussion/article_details.html:164
+msgid "Delete comment"
+msgstr "ištrinti komentarą"
