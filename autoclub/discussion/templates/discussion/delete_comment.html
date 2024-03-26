@@ -7,9 +7,7 @@
 <div class="delete-comment-container">
     {% if user.is_authenticated %}
         {% if comment.author == user %}
-            <h1>{% trans "Delete Comment"|capfirst %}</h1>
-
-            <h3>{% trans "Delete" %}: {{ post.title }}</h3>
+            <h1>{% trans "Delete Comment"|capfirst %}:</h1>
 
             <div class="form-group">
                 <form method="POST" class="delete-form">

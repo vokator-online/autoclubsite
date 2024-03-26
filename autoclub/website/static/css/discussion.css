@@ -390,19 +390,19 @@ h1.add-post-title {
 
 
 /*********************************************************************************/
-/* Delete Comment Form                                                                 */
+/* Delete Post Form                                                              */
 /*********************************************************************************/
 
-.delete-comment-container {
+.delete-post-container {
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
-.delete-comment-container h1 {
+.delete-post-container h1 {
     margin-bottom: 2rem;
 }
 
-.delete-form {
+.delete-post-form {
     margin-top: 1rem;
 }
 
@@ -432,7 +432,32 @@ h1.add-comment-title {
 
 
 /*********************************************************************************/
-/* Categories Form                                                              */
+/* Delete Comment Form                                                           */
+/*********************************************************************************/
+
+.delete-comment-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.delete-comment-container h1 {
+    margin-bottom: 2rem;
+}
+
+.delete-form {
+    margin-top: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4rem;
+}
+
+
+/*********************************************************************************/
+/* Categories Form                                                               */
 /*********************************************************************************/
 
 .category-posts {
