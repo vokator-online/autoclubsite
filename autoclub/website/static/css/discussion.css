@@ -378,7 +378,7 @@ h1.edit-profile-title {
 /*********************************************************************************/
 
 .add-post-container {
-    width: 700px;
+    width: 1200px;
     margin: 2rem auto;
     margin-left: 0;
     margin-right: auto;
@@ -390,41 +390,15 @@ h1.add-post-title {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*********************************************************************************/
 /* Add Comment Form                                                              */
 /*********************************************************************************/
 
 .add-comment-container {
+    width: 1200px;
     margin: 2rem auto;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 h1.add-comment-title {

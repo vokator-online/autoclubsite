@@ -91,6 +91,7 @@
                         {% endif %}
                         <form action="{% url 'logout' %}" method="post">
                             {% csrf_token %}
+                            <li><hr class="dropdown-divider"></li>
                             <button type="submit" class="dropdown-item" style="border: none; background: none; cursor: pointer">Atsijungti</button>
                         </form>
                     </ul>
