@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 21:57+0200\n"
+"POT-Creation-Date: 2024-03-26 22:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,6 @@ msgid "mark unread"
 msgstr "pažymėti kaip neskaitytą"
 
 #: website/admin.py:62
-#, python-format
 msgid "%d ticket has been made as new"
 msgid_plural "%d tickets have been made as new"
 msgstr[0] "%d užklausa buvo sukurta kaip nauja"
@@ -36,7 +35,6 @@ msgid "mark read"
 msgstr "pažymėti kaip perskaitytą"
 
 #: website/admin.py:71
-#, python-format
 msgid "%d ticket has been marked as read"
 msgid_plural "%d tickets have been marked as read"
 msgstr[0] "%d užklausa pažymėta kaip perskaityta"
@@ -47,7 +45,6 @@ msgid "set processing"
 msgstr "nustatyti apdorojimą"
 
 #: website/admin.py:80
-#, python-format
 msgid "%d ticket has been set processing"
 msgid_plural "%d tickets have been set processing"
 msgstr[0] "%d užklausai buvo nustatytas apdorojimas"
@@ -58,7 +55,6 @@ msgid "close"
 msgstr "uždaryti"
 
 #: website/admin.py:89
-#, python-format
 msgid "%d ticket has been closed"
 msgid_plural "%d tickets have been closed"
 msgstr[0] "%d užklausa buvo uždaryta"
@@ -69,27 +65,27 @@ msgid "website"
 msgstr "interneto svetainė"
 
 #: website/models.py:9
-msgid "-- Please choose --"
-msgstr "-- Pasirinkite temą --"
+msgid "Please Choose a Topic That Interests You"
+msgstr "Prašome pasirinkti Jus dominančią temą"
 
 #: website/models.py:10
-msgid "For those who want to join the club"
+msgid "For Those Wishing to Become Club Members"
 msgstr "Norintiems tapti klubo nariais"
 
 #: website/models.py:11
-msgid "Official club events and organisational matters"
+msgid "Official Club Events and Organizational Matters"
 msgstr "Oficialūs klubo renginiai ir organizaciniai klausimai"
 
 #: website/models.py:12
-msgid "Suggestions, complaints for club activities"
+msgid "Suggestions, Requests for Club Activities"
 msgstr "Pasiūlymai, pageidavimai klubo veiklai"
 
 #: website/models.py:13
-msgid "Club merchandise"
+msgid "Club Merchandise"
 msgstr "Klubo atributika"
 
 #: website/models.py:14
-msgid "Other general issues related to the club's activities"
+msgid "Other General Issues Related to Club Activities"
 msgstr "Kiti bendri su klubo veikla susiję klausimai"
 
 #: website/models.py:18
@@ -174,19 +170,20 @@ msgstr "užklausa: {} pranešimas nuo {} kam {} į {}"
 
 #: website/templates/base.html:151
 msgid "All rights reserved."
-msgstr ""
+msgstr "Visos teisės saugomos."
 
 #: website/templates/base.html:151
 msgid "Photos by"
-msgstr ""
+msgstr "Nuotraukų autorius"
 
 #: website/templates/base.html:151
 msgid "Design by"
-msgstr ""
+msgstr "Dizainą kūrė"
 
 #: website/utils.py:25
 msgid "Thank you. We had some issues ({}) but we still got your message."
-msgstr "Dėkojame. Turėjome tam tikrų problemų ({}), bet vis tiek gavome Jūsų "
+msgstr ""
+"Dėkojame. Turėjome tam tikrų problemų ({}), bet vis tiek gavome Jūsų "
 "užklausą."
 
 #: website/utils.py:29

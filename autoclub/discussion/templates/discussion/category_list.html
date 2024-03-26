@@ -1,10 +1,10 @@
 {% extends 'discussion/base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}Temų kategorijos{% endblock %}
+{% block title %}{% trans "Post categories"|capfirst %}{% endblock %}
 {% block content %}
 
-    <h1>Temų kategorijos</h1>
+    <h1>{% trans "Post categories"|capfirst %}</h1>
 
     {% for item in cat_menu_list %}
         {% with item_slug=item|slugify %}

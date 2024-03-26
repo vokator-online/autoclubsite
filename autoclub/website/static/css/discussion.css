@@ -377,6 +377,16 @@ h1.edit-profile-title {
 /* Add Post Form                                                                 */
 /*********************************************************************************/
 
+h1.article-details-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+
+/*********************************************************************************/
+/* Add Post Form                                                                 */
+/*********************************************************************************/
+
 .add-post-container {
     width: 1200px;
     margin: 2rem auto;
@@ -404,4 +414,41 @@ h1.add-post-title {
 h1.add-comment-title {
     margin-top: 1em;
     margin-bottom: 2em;
+}
+
+
+/*********************************************************************************/
+/* Categories Form                                                              */
+/*********************************************************************************/
+
+.category-posts {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.category-title, .not-found {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.posts-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.post-item {
+    margin-bottom: 2rem;
+}
+
+.post-actions {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.spacer {
+    margin-right: 5px;
+}
+
+.post-content {
+    margin-top: 1rem;
 }

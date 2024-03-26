@@ -93,3 +93,4 @@ class EditProfileForm(UserChangeForm):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email', 'last_login', 'date_joined')
+        # help_texts = {'password': "labas"}

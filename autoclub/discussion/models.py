@@ -5,8 +5,20 @@ from django.contrib.auth.models import User
 from tinymce.models import HTMLField
 
 
+CATEGORY_CHOICES = (
+    ('', _('Please Choose a Topic That Interests You')),
+    ('Meetings', _('Meetings and Joint Activities')),
+    ('Event', _('Event Overview and Organizational Issues')),
+    ('Cinema', _('Going to the Cinema')),
+    ('Suggestions', _('Suggestions for Club Activities')),
+    ('Introduction', _('New Members Introduction')),
+    ('Discussions', _('General Discussions (Off Topic)')),
+    ('Testing', _('Testing Environment')),
+)
+
+
 class Category(models.Model):
-    name = models.CharField(max_length=255, db_index=True)
+    name = models.CharField(max_length=255, choices=CATEGORY_CHOICES, default='')
 
     class Meta:
         verbose_name = _("category")

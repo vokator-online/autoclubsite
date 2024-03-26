@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-26 12:07+0200\n"
+"POT-Creation-Date: 2024-03-26 22:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,55 +24,95 @@ msgstr ""
 msgid "discussion"
 msgstr "diskusijos"
 
-#: discussion/models.py:12 discussion/models.py:30
+#: discussion/forms.py:17 discussion/forms.py:34 discussion/models.py:9
+msgid "Please Choose a Topic That Interests You"
+msgstr "Prašome pasirinkti Jus dominančią temą"
+
+#: discussion/forms.py:25 discussion/forms.py:43
+msgid "Please Enter the Title of the Post"
+msgstr "Įrašykite temos pavadinimą"
+
+#: discussion/forms.py:27 discussion/forms.py:45
+msgid "You Can Leave a Fragment of the Message Here"
+msgstr "Šioje vietoje Jus galite palikti pranešimo fragmentą"
+
+#: discussion/models.py:10
+msgid "Meetings and Joint Activities"
+msgstr "Susitikimai ir bendra veikla"
+
+#: discussion/models.py:11
+msgid "Event Overview and Organizational Issues"
+msgstr "Renginių apžvalga ir organizaciniai klausimai"
+
+#: discussion/models.py:12
+msgid "Going to the Cinema"
+msgstr "Einam į kiną"
+
+#: discussion/models.py:13
+msgid "Suggestions for Club Activities"
+msgstr "Pasiūlymai, pagedavimai klubo veiklai"
+
+#: discussion/models.py:14
+msgid "New Members Introduction"
+msgstr "Naujų narių prisistatymai"
+
+#: discussion/models.py:15
+msgid "General Discussions (Off Topic)"
+msgstr "Bendro pobūdžio pokalbiai (Off topic)"
+
+#: discussion/models.py:16
+msgid "Testing Environment"
+msgstr "Testavimo aplinka"
+
+#: discussion/models.py:24 discussion/models.py:42
 msgid "category"
 msgstr "kategorija"
 
-#: discussion/models.py:13
+#: discussion/models.py:25
 msgid "categories"
 msgstr "kategorijos"
 
-#: discussion/models.py:23
+#: discussion/models.py:35
 msgid "title"
 msgstr "antraštė"
 
-#: discussion/models.py:24
+#: discussion/models.py:36
 msgid "header image"
 msgstr "antraštės paveikslėlis"
 
-#: discussion/models.py:25 discussion/models.py:46
+#: discussion/models.py:37 discussion/models.py:58
 msgid "author"
 msgstr "autorius"
 
-#: discussion/models.py:26 discussion/models.py:47
+#: discussion/models.py:38 discussion/models.py:59
 msgid "content"
 msgstr "turinys"
 
-#: discussion/models.py:27
+#: discussion/models.py:39
 msgid "snippet"
 msgstr "pranešimo ištrauka (fragmentas)"
 
-#: discussion/models.py:28 discussion/models.py:48
+#: discussion/models.py:40 discussion/models.py:60
 msgid "created at"
 msgstr "sukurta"
 
-#: discussion/models.py:29 discussion/models.py:49
+#: discussion/models.py:41 discussion/models.py:61
 msgid "updated at"
 msgstr "atnaujinta"
 
-#: discussion/models.py:33 discussion/models.py:45
+#: discussion/models.py:45 discussion/models.py:57
 msgid "post"
 msgstr "pranešimas"
 
-#: discussion/models.py:34
+#: discussion/models.py:46
 msgid "posts"
 msgstr "pranešimai"
 
-#: discussion/models.py:52
+#: discussion/models.py:64
 msgid "comment"
 msgstr "komentaras"
 
-#: discussion/models.py:53
+#: discussion/models.py:65
 msgid "comments"
 msgstr "komentarai"
 
@@ -91,6 +131,7 @@ msgstr "paskelbti komentarą"
 #: discussion/templates/discussion/add_comment.html:19
 #: discussion/templates/discussion/add_post.html:19
 #: discussion/templates/discussion/article_details.html:183
+#: discussion/templates/discussion/categories.html:34
 msgid "Return To Homepage"
 msgstr "grįžti į pagrindinį puslapį"
 
@@ -116,50 +157,61 @@ msgstr "pridėti pranešimą"
 msgid "Post"
 msgstr "paskelbti pranešimą"
 
-#: discussion/templates/discussion/article_details.html:34
-#: discussion/templates/discussion/article_details.html:125
+#: discussion/templates/discussion/article_details.html:31
+#: discussion/templates/discussion/article_details.html:122
 msgid "Profile Page"
 msgstr "profilio puslapis"
 
-#: discussion/templates/discussion/article_details.html:37
+#: discussion/templates/discussion/article_details.html:34
 msgid "Website"
 msgstr "asmeninė svetainė"
 
-#: discussion/templates/discussion/article_details.html:64
-#: discussion/templates/discussion/article_details.html:155
+#: discussion/templates/discussion/article_details.html:62
+#: discussion/templates/discussion/article_details.html:152
 msgid "By"
 msgstr "paskelbė"
 
-#: discussion/templates/discussion/article_details.html:71
+#: discussion/templates/discussion/article_details.html:69
+#: discussion/templates/discussion/categories.html:21
 msgid "Edit message"
 msgstr "redaguoti pranešimą"
 
-#: discussion/templates/discussion/article_details.html:73
+#: discussion/templates/discussion/article_details.html:71
+#: discussion/templates/discussion/categories.html:23
 msgid "Delete message"
 msgstr "ištrinti pranešimą"
 
-#: discussion/templates/discussion/article_details.html:82
+#: discussion/templates/discussion/article_details.html:80
 msgid "Your Header Image"
 msgstr "jūsų antraštės paveikslėlis"
 
-#: discussion/templates/discussion/article_details.html:91
+#: discussion/templates/discussion/article_details.html:88
 msgid "Post comments"
 msgstr "temos komentarai"
 
-#: discussion/templates/discussion/article_details.html:94
-msgid "No comments have been left"
-msgstr "nėra paliktų komentarų"
+#: discussion/templates/discussion/article_details.html:91
+msgid "No comments have been left."
+msgstr "nėra paliktų komentarų."
 
-#: discussion/templates/discussion/article_details.html:95
-#: discussion/templates/discussion/article_details.html:99
-#: discussion/templates/discussion/article_details.html:178
+#: discussion/templates/discussion/article_details.html:92
+#: discussion/templates/discussion/article_details.html:96
+#: discussion/templates/discussion/article_details.html:176
 msgid "Write a comment"
 msgstr "rašyti komentarą"
 
-#: discussion/templates/discussion/article_details.html:162
+#: discussion/templates/discussion/article_details.html:159
 msgid "Edit comment"
 msgstr "redaguoti komentarą"
 
-#: discussion/templates/discussion/article_details.html:164
+#: discussion/templates/discussion/article_details.html:161
 msgid "Delete comment"
 msgstr "ištrinti komentarą"
+
+#: discussion/templates/discussion/categories.html:33
+msgid "We're sorry, this page does not exist!"
+msgstr "atsiprašome, šis puslapis neegzistuoja!"
+
+#: discussion/templates/discussion/category_list.html:4
+#: discussion/templates/discussion/category_list.html:7
+msgid "Post categories"
+msgstr "pranešimų kategorijos"

@@ -6,12 +6,12 @@ from django.contrib.auth.models import User
 
 
 SUBJECT_CHOICES = (
-    ('', _('-- Please choose --')),
-    ('Join', _('For those who want to join the club')),
-    ('Events', _('Official club events and organisational matters')),
-    ('Suggestions', _('Suggestions, complaints for club activities')),
-    ('merchandise', _('Club merchandise')),
-    ('Other', _('Other general issues related to the club\'s activities')),
+    ('', _('Please Choose a Topic That Interests You')),
+    ('Join', _('For Those Wishing to Become Club Members')),
+    ('Events', _('Official Club Events and Organizational Matters')),
+    ('Suggestions', _('Suggestions, Requests for Club Activities')),
+    ('Merchandise', _('Club Merchandise')),
+    ('Other', _('Other General Issues Related to Club Activities')),
 )
 
 TICKET_STATUSES = (

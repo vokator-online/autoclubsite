@@ -2,45 +2,36 @@
 {% load i18n %}
 {% load static %}
 {% block content %}
-    <br>
-    <br>
-{% if category_posts %}
-    <h1>{{ cats }}</h1>
-    <br>
-    <br>
-    
-<ul>
-{% for post in category_posts %}
-    <li><a href="{% url 'article_detail' post.pk %}">
-        {{ post.title }}</a>
-        - {{ post.category }}
-        - {{ post.author.first_name }} 
-        {{ post.author.last_name }} -
-        {{ post.created_at }}
 
-        <small>
-            {% if user.is_authenticated %}
-                {% if user.id == post.author.id %}
-                - <a href="{% url 'update_post' post.pk %}">Redaguoti pranešimą</a>
-                    <span style="margin-right: 5px;"></span>
-                    <a href="{% url 'delete_post' post.pk %}">Ištrinti pranešimą</a>
-                {% endif %}
-            {% endif %}
-        </small>
-        <br>
-        <br>
-        {{ post.content | safe }}
-    </li>
-    <br>
-    <br>
-{% endfor %}
-</ul>
-
-{% else %}
-    <h2>Atsiprašome, šis puslapis neegzistuoja!</h2>
-    <br>
-    <br>
-    <a href="{% url 'discussion' %}" class="btn btn-secondary">Grįžti</a>
-{% endif %}
-
+<div class="category-posts">
+    {% if category_posts %}
+        <h1 class="category-title">{{ cats }}</h1>
+        <ul class="posts-list">
+        {% for post in category_posts %}
+            <li class="post-item">
+                <a href="{% url 'article_detail' post.pk %}">{{ post.title }}</a>
+                - {{ post.category }}
+                - {{ post.author.first_name }} 
+                {{ post.author.last_name }} -
+                {{ post.created_at }}
+                <div class="post-actions">
+                    <small>
+                        {% if user.is_authenticated %}
+                            {% if user.id == post.author.id %}
+                                <a href="{% url 'update_post' post.pk %}">{% trans "Edit message"|capfirst %}</a>
+                                <span class="spacer"></span>
+                                <a href="{% url 'delete_post' post.pk %}">{% trans "Delete message"|capfirst %}</a>
+                            {% endif %}
+                        {% endif %}
+                    </small>
+                </div>
+                <div class="post-content">{{ post.content | safe }}</div>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <h2 class="not-found">{% trans "We're sorry, this page does not exist!"|capfirst %}</h2>
+        <a href="{% url 'discussion' %}" class="custom-button">{% trans "Return To Homepage"|capfirst %}</a>
+    {% endif %}
+</div>
 {% endblock %}
