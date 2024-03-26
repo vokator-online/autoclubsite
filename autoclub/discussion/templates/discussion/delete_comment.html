@@ -1,36 +1,36 @@
 {% extends 'discussion/base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}Ištrinti pranešimą{% endblock %}
+{% block title %}{% trans "Delete Comment"|capfirst %}{% endblock %}
 {% block content %}
 
-{% if user.is_authenticated %}
-    {% if comment.author == user %}
-    <br>
-    <br>
-        <h1>Ištinti komentarą</h1>
-        <br>
-        <br>
-        <h3>Ištrinti: {{ post.title }}</h3>
-        <br>
-        <div class="form-group">
-            <form method="POST">
-                {% csrf_token %}
-                <strong>Ar Jūs tikrai norite ištrinti šį komentarą?</strong>
-                <br>
-                <br>
-                <button class="btn btn-secondary">Ištrinti komentarą</button>
-                <a href="{% url 'discussion' %}" class="btn btn-secondary">Grįžti</a>
-            </form>
-        </div>
+<div class="delete-comment-container">
+    {% if user.is_authenticated %}
+        {% if comment.author == user %}
+            <h1>{% trans "Delete Comment"|capfirst %}</h1>
+
+            <h3>{% trans "Delete" %}: {{ post.title }}</h3>
+
+            <div class="form-group">
+                <form method="POST" class="delete-form">
+                    {% csrf_token %}
+                    <strong>{% trans "Are You Sure You Want to Delete This Comment?"|capfirst %}</strong>
+                    <div class="form-actions">
+                        <button class="custom-button">{% trans "Delete Comment"|capfirst %}</button>
+                        <a href="{% url 'discussion' %}" class="custom-button">{% trans "Return To Homepage"|capfirst %}</a>
+                    </div>
+                </form>
+            </div>
+        {% else %}
+            <h2>{% trans "Access denied!"|capfirst %}
+            <br>
+            {% trans "Please log in to this page!"|capfirst %}</h2>
+        {% endif %}
+
     {% else %}
-        <h2>Prieiga uždrausta! Prisijunkite prie puslapio!</h2>
+        <h2>{% trans "Access denied!"|capfirst %}
+        <br>
+        {% trans "Please log in to this page!"|capfirst %}</h2>
     {% endif %}
-
-{% else %}
-
-<h2>Prieiga uždrausta! Prisijunkite prie puslapio!</h2>
-
-{% endif %}
-
+</div>
 {% endblock %}

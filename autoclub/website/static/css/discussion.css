@@ -372,17 +372,6 @@ h1.edit-profile-title {
     margin-top: 20px;
 }
 
-
-/*********************************************************************************/
-/* Add Post Form                                                                 */
-/*********************************************************************************/
-
-h1.article-details-title {
-    margin-top: 1em;
-    margin-bottom: 2em;
-}
-
-
 /*********************************************************************************/
 /* Add Post Form                                                                 */
 /*********************************************************************************/
@@ -397,6 +386,31 @@ h1.article-details-title {
 h1.add-post-title {
     margin-top: 1em;
     margin-bottom: 2em;
+}
+
+
+/*********************************************************************************/
+/* Delete Comment Form                                                                 */
+/*********************************************************************************/
+
+.delete-comment-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.delete-comment-container h1 {
+    margin-bottom: 2rem;
+}
+
+.delete-form {
+    margin-top: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4rem;
 }
 
 

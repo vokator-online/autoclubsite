@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-26 22:00+0200\n"
+"POT-Creation-Date: 2024-03-26 23:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -132,16 +132,21 @@ msgstr "paskelbti komentarą"
 #: discussion/templates/discussion/add_post.html:19
 #: discussion/templates/discussion/article_details.html:183
 #: discussion/templates/discussion/categories.html:34
+#: discussion/templates/discussion/delete_comment.html:20
 msgid "Return To Homepage"
 msgstr "grįžti į pagrindinį puslapį"
 
 #: discussion/templates/discussion/add_comment.html:24
 #: discussion/templates/discussion/add_post.html:24
+#: discussion/templates/discussion/delete_comment.html:25
+#: discussion/templates/discussion/delete_comment.html:31
 msgid "Access denied!"
 msgstr "prieiga uždrausta!"
 
 #: discussion/templates/discussion/add_comment.html:26
 #: discussion/templates/discussion/add_post.html:26
+#: discussion/templates/discussion/delete_comment.html:27
+#: discussion/templates/discussion/delete_comment.html:33
 msgid "Please log in to this page!"
 msgstr "prisijunkite prie puslapio!"
 
@@ -215,3 +220,17 @@ msgstr "atsiprašome, šis puslapis neegzistuoja!"
 #: discussion/templates/discussion/category_list.html:7
 msgid "Post categories"
 msgstr "pranešimų kategorijos"
+
+#: discussion/templates/discussion/delete_comment.html:4
+#: discussion/templates/discussion/delete_comment.html:10
+#: discussion/templates/discussion/delete_comment.html:19
+msgid "Delete Comment"
+msgstr "ištrinti komentarą"
+
+#: discussion/templates/discussion/delete_comment.html:12
+msgid "Delete"
+msgstr "ištrinti"
+
+#: discussion/templates/discussion/delete_comment.html:17
+msgid "Are You Sure You Want to Delete This Comment?"
+msgstr "ar Jus tikrai norite ištrinti šį komentarą?"
