@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 16:08+0200\n"
+"POT-Creation-Date: 2024-03-27 12:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -318,12 +318,12 @@ msgstr ""
 "įvestu el. pašto adresu yra sukurta paskyra, netrukus turėtumėte jas gauti."
 
 #: user_profile/templates/user_profile/edit_profile.html:4
-msgid "Edit User Profile"
-msgstr "vartotojo profilio redagavimas"
+msgid "User Profile Settings"
+msgstr "vartotojo profilio nustatymai"
 
 #: user_profile/templates/user_profile/edit_profile.html:8
-msgid "Edit Profile"
-msgstr "redaguoti profilį"
+msgid "Profile Settings"
+msgstr "profilio nustatymai"
 
 #: user_profile/templates/user_profile/edit_profile.html:14
 msgid "Update Profile"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 11:19+0200\n"
+"POT-Creation-Date: 2024-03-27 12:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -220,6 +220,7 @@ msgid "Delete comment"
 msgstr "ištrinti komentarą"
 
 #: discussion/templates/discussion/base.html:10
+#: discussion/templates/discussion/navbar.html:12
 msgid "Discussion Blog"
 msgstr "diskusijų blogas"
 
@@ -259,3 +260,35 @@ msgstr "ar Jus tikrai norite ištrinti šį pranešimą?"
 #: discussion/templates/discussion/discussion.html:7
 msgid "Discussion Board"
 msgstr "diskusijų lenta"
+
+#: discussion/templates/discussion/navbar.html:30
+msgid "Categories"
+msgstr "temų kategorijos"
+
+#: discussion/templates/discussion/navbar.html:59
+msgid "Add New Post"
+msgstr "pridėti naują pranešimą"
+
+#: discussion/templates/discussion/navbar.html:65
+msgid "Registration"
+msgstr "registracija"
+
+#: discussion/templates/discussion/navbar.html:69
+msgid "Log In"
+msgstr "prisijungti"
+
+#: discussion/templates/discussion/navbar.html:88
+msgid "Profile Settings"
+msgstr "profilio nustatymai"
+
+#: discussion/templates/discussion/navbar.html:90
+msgid "Edit User Profile Page"
+msgstr "redaguoti vartotojo profilio puslapį"
+
+#: discussion/templates/discussion/navbar.html:91
+msgid "View User Profile Page"
+msgstr "rodyti vartotojo profilio puslapį"
+
+#: discussion/templates/discussion/navbar.html:96
+msgid "Log Out"
+msgstr "atsijungti"

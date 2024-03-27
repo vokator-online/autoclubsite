@@ -1,11 +1,11 @@
 {% extends 'discussion/base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}{% trans "Edit User Profile"|capfirst %}{% endblock %}
+{% block title %}{% trans "User Profile Settings"|capfirst %}{% endblock %}
 {% block content %}
 
 <div class="edit-profile-container">
-    <h1 class="edit-profile-title">{% trans "Edit Profile"|capfirst %}:</h1>
+    <h1 class="edit-profile-title">{% trans "Profile Settings"|capfirst %}:</h1>
     <form method="POST" class="edit-profile-form">
         {% csrf_token %}
         {{ form.as_p }}

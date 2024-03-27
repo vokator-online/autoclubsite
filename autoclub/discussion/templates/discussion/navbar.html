@@ -9,7 +9,7 @@
 
 <nav class="navbar navbar-expand-lg bg-body-secondary" style="max-width: 1200px; margin: 0 auto;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'discussion' %}">Diskusijų blogas</a>
+        <a class="navbar-brand" href="{% url 'discussion' %}">{% trans "Discussion Blog"|capfirst %}</a>
         <button class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
@@ -27,7 +27,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Temų kategorijos
+                        {% trans "Categories"|capfirst %}
                     </a>
                     <ul class="dropdown-menu">
 
@@ -55,17 +55,17 @@
             <li class="nav-item">
                 <a class="nav-link active"
                 aria-current="page"
-                href="{% url 'add_post' %}">Pridėti naują pranešimą</a>
+                href="{% url 'add_post' %}">{% trans "Add New Post"|capfirst %}</a>
             </li>
 
             {% else %}
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'registration' %}">Registracija</a>
+                    <a class="nav-link" href="{% url 'registration' %}">{% trans "Registration"|capfirst %}</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Prisijungti</a>
+                    <a class="nav-link" href="{% url 'login' %}">{% trans "Log In"|capfirst %}</a>
                 </li>
 
             {% endif %}
@@ -84,15 +84,15 @@
                         {% endif %}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Profilio nustatymai</a></li>
+                        <li><a class="dropdown-item" href="{% url 'edit_profile' %}">{% trans "Profile Settings"|capfirst %}</a></li>
                         {% if user.profile.id %}
-                            <li><a class="dropdown-item" href="{% url 'edit_profile_page' pk=user.profile.id %}">Redaguoti vartotojo profilio puslapį</a></li>
-                            <li><a class="dropdown-item" href="{% url 'show_profile_page' pk=user.profile.id %}">Rodyti vartotojo profilio puslapį</a></li>
+                            <li><a class="dropdown-item" href="{% url 'edit_profile_page' pk=user.profile.id %}">{% trans "Edit User Profile Page"|capfirst %}</a></li>
+                            <li><a class="dropdown-item" href="{% url 'show_profile_page' pk=user.profile.id %}">{% trans "View User Profile Page"|capfirst %}</a></li>
                         {% endif %}
                         <form action="{% url 'logout' %}" method="post">
                             {% csrf_token %}
                             <li><hr class="dropdown-divider"></li>
-                            <button type="submit" class="dropdown-item" style="border: none; background: none; cursor: pointer">Atsijungti</button>
+                            <button type="submit" class="dropdown-item" style="border: none; background: none; cursor: pointer">{% trans "Log Out"|capfirst %}</button>
                         </form>
                     </ul>
                 </li>
