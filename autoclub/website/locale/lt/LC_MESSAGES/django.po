@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 13:10+0200\n"
+"POT-Creation-Date: 2024-03-27 19:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,67 +108,74 @@ msgstr "apdorojamos"
 msgid "closed"
 msgstr "uždarytos"
 
-#: website/models.py:26
+#: website/models.py:29
 msgid "subject"
 msgstr "temą"
 
-#: website/models.py:27 website/models.py:64
+#: website/models.py:30 website/models.py:68
 msgid "content"
 msgstr "turinys"
 
-#: website/models.py:30 website/models.py:67
+#: website/models.py:33 website/models.py:71
 msgid "sender"
 msgstr "siuntėjas"
 
-#: website/models.py:35 website/models.py:79 website/models.py:81
+#: website/models.py:38 website/models.py:83 website/models.py:85
 msgid "full name"
 msgstr "vardas ir pavardė"
 
-#: website/models.py:36 website/models.py:80 website/models.py:82
+#: website/models.py:39 website/models.py:84 website/models.py:86
 msgid "email"
 msgstr "elektroninis pašto adresas"
 
-#: website/models.py:37 website/models.py:83
+#: website/models.py:40 website/models.py:87
+#: website/templates/customer_support/ticket_detail.html:9
+#: website/templates/customer_support/ticket_detail.html:21
 msgid "sent at"
 msgstr "išsiuntimo laiką"
 
-#: website/models.py:38 website/models.py:84
+#: website/models.py:41 website/models.py:88
 msgid "email sent"
 msgstr "išsiųstas elektroninis laiškas"
 
-#: website/models.py:39
+#: website/models.py:42 website/templates/customer_support/ticket_detail.html:8
 msgid "status"
 msgstr "būseną"
 
-#: website/models.py:42 website/models.py:63
+#: website/models.py:43
+msgid "access key"
+msgstr ""
+
+#: website/models.py:46 website/models.py:67
+#: website/templates/customer_support/ticket_detail.html:7
 msgid "ticket"
 msgstr "užklausa"
 
-#: website/models.py:43
+#: website/models.py:47
 msgid "tickets"
 msgstr "užklausos"
 
-#: website/models.py:47
+#: website/models.py:51
 msgid "{} from {} sent {}"
 msgstr "{} nuo {} išsiųsta {}"
 
-#: website/models.py:74
+#: website/models.py:78
 msgid "recipient"
 msgstr "gavėjas"
 
-#: website/models.py:85
+#: website/models.py:89
 msgid "is read"
 msgstr "perskaityta"
 
-#: website/models.py:88
+#: website/models.py:92
 msgid "ticket message"
 msgstr "užklausos pranešimas"
 
-#: website/models.py:89
+#: website/models.py:93
 msgid "ticket messages"
 msgstr "užklausos pranešimai"
 
-#: website/models.py:93
+#: website/models.py:97
 msgid "ticket: {} message from {} to {} at {}"
 msgstr "užklausa: {} pranešimas nuo {} kam {} į {}"
 
@@ -183,6 +190,55 @@ msgstr "Nuotraukų autorius"
 #: website/templates/base.html:151
 msgid "Design by"
 msgstr "Dizainą kūrė"
+
+#: website/templates/customer_support/ticket_detail.html:4
+#, fuzzy
+#| msgid "ticket"
+msgid "Ticket"
+msgstr "užklausa"
+
+#: website/templates/customer_support/ticket_detail.html:9
+msgid "by"
+msgstr ""
+
+#: website/templates/customer_support/ticket_detail.html:13
+msgid "reply here"
+msgstr ""
+
+#: website/templates/customer_support/ticket_detail.html:15
+#, fuzzy
+#| msgid "ticket message"
+msgid "Send Message"
+msgstr "užklausos pranešimas"
+
+#: website/templates/customer_support/ticket_detail.html:17
+msgid "replies"
+msgstr ""
+
+#: website/templates/customer_support/ticket_detail.html:19
+msgid "from"
+msgstr ""
+
+#: website/templates/customer_support/ticket_detail.html:20
+msgid "to"
+msgstr ""
+
+#: website/templates/customer_support/ticket_list.html:4
+#: website/templates/customer_support/ticket_list.html:7
+msgid "customer support"
+msgstr ""
+
+#: website/templates/customer_support/ticket_list.html:12
+msgid "No customer support tickets found."
+msgstr ""
+
+#: website/templates/main/contact.html:26
+msgid "Submit"
+msgstr ""
+
+#: website/templates/main/contact.html:27
+msgid "Reset"
+msgstr ""
 
 #: website/utils.py:25
 msgid "Thank you. We had some issues ({}) but we still got your message."

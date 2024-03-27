@@ -27,6 +27,8 @@ urlpatterns = [
     path('user_profile/', include('user_profile.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('tinymce/', include('tinymce.urls')),
+    path('i18n/', include('django.conf.urls.i18n')),
+    path('rosetta/', include('rosetta.urls')),
     path('admin/', admin.site.urls),
     path('<int:user_id>/password/', views.PasswordsChangeView.as_view(template_name='registration/change_password.html'), name='change_password'),
     path('password_success/', auth_views.PasswordChangeDoneView.as_view(), name='password_success'),

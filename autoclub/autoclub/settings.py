@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'discussion',
     'user_profile',
     'tinymce',
+    'rosetta',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -108,10 +109,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'lt'
 LANGUAGES = [
-    (LANGUAGE_CODE, 'English'),
     ('lt', 'Lietuvių'),
+    ('en-us', 'English'),
 ]
 
 TIME_ZONE = 'Europe/Vilnius'
