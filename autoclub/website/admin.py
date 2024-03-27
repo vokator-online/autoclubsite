@@ -19,8 +19,8 @@ class TicketAdmin(admin.ModelAdmin):
     list_display = ['sender_name', 'subject', 'sent_at', 'status']
     list_display_links = ['sender_name', 'subject']
     list_filter = ['status', 'mail_sent', 'subject', 'sent_at']
-    readonly_fields = ['sender_name', 'sender_email', 'mail_sent', 'sent_at', 'mail_sent']
-    fields = ['sender_name', 'sender_email', 'sender', 'subject', 'content', 'status', 'sent_at', 'mail_sent']
+    readonly_fields = ['sender_name', 'sender_email', 'mail_sent', 'sent_at', 'mail_sent', 'access_key']
+    fields = ['sender_name', 'sender_email', 'sender', 'subject', 'content', 'status', 'sent_at', 'mail_sent', 'access_key']
     actions = ['mark_unread', 'mark_read', 'set_processing', 'close']
     inlines = [TicketMessageInline]
 
@@ -31,13 +31,12 @@ class TicketAdmin(admin.ModelAdmin):
         for instance in instances:
             if instance._state.adding:
                 instance.sender = request.user
-                instance.sender_name = f"{request.user.first_name} {request.user.last_name}"
-                instance.sender_email = request.user.email
                 if instance.ticket.sender:
                     instance.recipient = instance.ticket.sender
                 else:
                     instance.recipient_name = instance.ticket.sender_name
                     instance.recipient_email = instance.ticket.sender_email
+                instance.clean()
                 instance.save()
                 utils.send_support_ticket_email(request, instance)
         formset.save_m2m()
@@ -90,4 +89,7 @@ class TicketAdmin(admin.ModelAdmin):
             "%d tickets have been closed",
             updated
         ) % updated, messages.SUCCESS)
-        
+
+@admin.register(models.TicketMessage)
+class TicketMessageAdmin(admin.ModelAdmin):
+    pass

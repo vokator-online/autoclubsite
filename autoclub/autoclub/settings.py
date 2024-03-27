@@ -162,6 +162,9 @@ TINYMCE_DEFAULT_CONFIG = {
     "language": "lt",
 }
 
+ADMIN_EMAIL = "vokator@gmail.com"
+ADMIN_NAME = "Customer Support"
+
 
 try:
     from .local_settings import *
