@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 13:56+0200\n"
+"POT-Creation-Date: 2024-03-27 14:22+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -135,6 +135,7 @@ msgstr "paskelbti komentarą"
 #: discussion/templates/discussion/delete_comment.html:18
 #: discussion/templates/discussion/delete_post.html:20
 #: discussion/templates/discussion/update_comment.html:19
+#: discussion/templates/discussion/update_post.html:19
 msgid "Return To Homepage"
 msgstr "grįžti į pagrindinį puslapį"
 
@@ -146,6 +147,8 @@ msgstr "grįžti į pagrindinį puslapį"
 #: discussion/templates/discussion/delete_post.html:31
 #: discussion/templates/discussion/update_comment.html:24
 #: discussion/templates/discussion/update_comment.html:30
+#: discussion/templates/discussion/update_post.html:24
+#: discussion/templates/discussion/update_post.html:30
 msgid "Access denied!"
 msgstr "prieiga uždrausta!"
 
@@ -157,6 +160,8 @@ msgstr "prieiga uždrausta!"
 #: discussion/templates/discussion/delete_post.html:33
 #: discussion/templates/discussion/update_comment.html:26
 #: discussion/templates/discussion/update_comment.html:32
+#: discussion/templates/discussion/update_post.html:26
+#: discussion/templates/discussion/update_post.html:32
 msgid "Please log in to this page!"
 msgstr "prisijunkite prie puslapio!"
 
@@ -303,5 +308,14 @@ msgid "Edit Comment"
 msgstr "redaguoti komentarą"
 
 #: discussion/templates/discussion/update_comment.html:18
+#: discussion/templates/discussion/update_post.html:18
 msgid "Update"
 msgstr "atnaujinti"
+
+#: discussion/templates/discussion/update_post.html:4
+msgid "Update Post"
+msgstr "atnaujinti pranešimą"
+
+#: discussion/templates/discussion/update_post.html:10
+msgid "Edit Post"
+msgstr "redaguoti pranešimą"
