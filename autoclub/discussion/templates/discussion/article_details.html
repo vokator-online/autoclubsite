@@ -4,7 +4,7 @@
 {% block title %}{{ post.title }}{% endblock %}
 {% block content %}
 
-<h1 class="article-details-title">{{ post.title }}</h1>
+<h1 class="article-details-title">{{ post.title }}:</h1>
 
 <div class="card mb-3" style="background-color: transparent !important; border: none;">
   <div class="row g-0" style="display: flex; align-items: center;">
@@ -72,19 +72,15 @@
         {% endif %}
     {% endif %}    
 </small>
-
 <hr>
 <br>
-
 {% if post.header_image %}
     <a href="{{ post.header_image.url }}" data-lightbox="header-image" data-title="{% trans "Your Header Image"|capfirst %}">
         <img src="{{ post.header_image.url }}" alt="Header Image" style="max-width: 50%; height: auto; cursor: pointer;">
     </a>
 {% endif %}
 {{ post.content | safe }}
-
 <hr>
-
 <h1 style="margin-top: 3em; margin-bottom: 2em;">{% trans "Post comments"|capfirst %}:</h1>
 
 {% if not post.comments.all %}
@@ -162,13 +158,9 @@
           {% endif %}
       {% endif %}
   </small>
-
   <hr>
-
     {{ comment.content|safe }}
-
   <hr>
-
 </div>
 
 {% endfor %}

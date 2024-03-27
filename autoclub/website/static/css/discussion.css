@@ -468,6 +468,20 @@ h1.add-comment-title {
 
 
 /*********************************************************************************/
+/* Update Comment Form                                                              */
+/*********************************************************************************/
+
+.update-comment-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+h1.update-comment-title {
+    margin-bottom: 2em;
+}
+
+
+/*********************************************************************************/
 /* Delete Comment Form                                                           */
 /*********************************************************************************/
 
@@ -476,7 +490,7 @@ h1.add-comment-title {
     margin-bottom: 2rem;
 }
 
-.delete-comment-container h1 {
+h1.delete-comment-title {
     margin-bottom: 2rem;
 }
 

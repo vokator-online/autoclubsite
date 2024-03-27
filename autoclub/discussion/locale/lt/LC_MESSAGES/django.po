@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 12:13+0200\n"
+"POT-Creation-Date: 2024-03-27 13:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,19 +121,20 @@ msgid "Comment On Blog Post"
 msgstr "komentuoti tinklaraščio įrašą"
 
 #: discussion/templates/discussion/add_comment.html:9
-msgid "Add Comment:"
+msgid "Add Comment"
 msgstr "rašyti komentarą"
 
 #: discussion/templates/discussion/add_comment.html:18
-msgid "Add Comment"
+msgid "Post a Comment"
 msgstr "paskelbti komentarą"
 
 #: discussion/templates/discussion/add_comment.html:19
 #: discussion/templates/discussion/add_post.html:19
-#: discussion/templates/discussion/article_details.html:183
+#: discussion/templates/discussion/article_details.html:175
 #: discussion/templates/discussion/categories.html:34
 #: discussion/templates/discussion/delete_comment.html:18
 #: discussion/templates/discussion/delete_post.html:20
+#: discussion/templates/discussion/update_comment.html:19
 msgid "Return To Homepage"
 msgstr "grįžti į pagrindinį puslapį"
 
@@ -143,6 +144,8 @@ msgstr "grįžti į pagrindinį puslapį"
 #: discussion/templates/discussion/delete_comment.html:29
 #: discussion/templates/discussion/delete_post.html:25
 #: discussion/templates/discussion/delete_post.html:31
+#: discussion/templates/discussion/update_comment.html:24
+#: discussion/templates/discussion/update_comment.html:30
 msgid "Access denied!"
 msgstr "prieiga uždrausta!"
 
@@ -152,6 +155,8 @@ msgstr "prieiga uždrausta!"
 #: discussion/templates/discussion/delete_comment.html:31
 #: discussion/templates/discussion/delete_post.html:27
 #: discussion/templates/discussion/delete_post.html:33
+#: discussion/templates/discussion/update_comment.html:26
+#: discussion/templates/discussion/update_comment.html:32
 msgid "Please log in to this page!"
 msgstr "prisijunkite prie puslapio!"
 
@@ -168,7 +173,7 @@ msgid "Post"
 msgstr "paskelbti pranešimą"
 
 #: discussion/templates/discussion/article_details.html:31
-#: discussion/templates/discussion/article_details.html:122
+#: discussion/templates/discussion/article_details.html:118
 msgid "Profile Page"
 msgstr "profilio puslapis"
 
@@ -177,7 +182,7 @@ msgid "Website"
 msgstr "asmeninė svetainė"
 
 #: discussion/templates/discussion/article_details.html:62
-#: discussion/templates/discussion/article_details.html:152
+#: discussion/templates/discussion/article_details.html:148
 msgid "By"
 msgstr "paskelbė"
 
@@ -193,29 +198,29 @@ msgstr "redaguoti pranešimą"
 msgid "Delete message"
 msgstr "ištrinti pranešimą"
 
-#: discussion/templates/discussion/article_details.html:80
+#: discussion/templates/discussion/article_details.html:78
 msgid "Your Header Image"
 msgstr "jūsų antraštės paveikslėlis"
 
-#: discussion/templates/discussion/article_details.html:88
+#: discussion/templates/discussion/article_details.html:84
 msgid "Post comments"
 msgstr "temos komentarai"
 
-#: discussion/templates/discussion/article_details.html:91
+#: discussion/templates/discussion/article_details.html:87
 msgid "No comments have been left."
 msgstr "nėra paliktų komentarų."
 
+#: discussion/templates/discussion/article_details.html:88
 #: discussion/templates/discussion/article_details.html:92
-#: discussion/templates/discussion/article_details.html:96
-#: discussion/templates/discussion/article_details.html:176
+#: discussion/templates/discussion/article_details.html:168
 msgid "Write a comment"
 msgstr "rašyti komentarą"
 
-#: discussion/templates/discussion/article_details.html:159
+#: discussion/templates/discussion/article_details.html:155
 msgid "Edit comment"
 msgstr "redaguoti komentarą"
 
-#: discussion/templates/discussion/article_details.html:161
+#: discussion/templates/discussion/article_details.html:157
 msgid "Delete comment"
 msgstr "ištrinti komentarą"
 
@@ -261,10 +266,6 @@ msgstr "ar Jus tikrai norite ištrinti šį pranešimą?"
 msgid "Discussion Board"
 msgstr "diskusijų lenta"
 
-#: discussion/templates/discussion/navbar.html:30
-msgid "Categories"
-msgstr "temų kategorijos"
-
 #: discussion/templates/discussion/navbar.html:59
 msgid "Add New Post"
 msgstr "pridėti naują pranešimą"
@@ -292,3 +293,15 @@ msgstr "rodyti vartotojo profilio puslapį"
 #: discussion/templates/discussion/navbar.html:96
 msgid "Log Out"
 msgstr "atsijungti"
+
+#: discussion/templates/discussion/update_comment.html:4
+msgid "Update Comment"
+msgstr "atnaujinti komentarą"
+
+#: discussion/templates/discussion/update_comment.html:10
+msgid "Edit Comment"
+msgstr "redaguoti komentarą"
+
+#: discussion/templates/discussion/update_comment.html:18
+msgid "Update"
+msgstr "atnaujinti"

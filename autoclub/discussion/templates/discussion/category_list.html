@@ -4,7 +4,7 @@
 {% block title %}{% trans "Post categories"|capfirst %}{% endblock %}
 {% block content %}
 
-    <h1>{% trans "Post categories"|capfirst %}</h1>
+    <h1>{% trans "Post categories"|capfirst %}:</h1>
 
     {% for item in cat_menu_list %}
         {% with item_slug=item|slugify %}
