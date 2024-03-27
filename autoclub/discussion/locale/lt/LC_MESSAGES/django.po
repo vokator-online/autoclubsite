@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 09:46+0200\n"
+"POT-Creation-Date: 2024-03-27 11:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,11 +183,13 @@ msgstr "paskelbė"
 
 #: discussion/templates/discussion/article_details.html:69
 #: discussion/templates/discussion/categories.html:21
+#: discussion/templates/discussion/discussion.html:17
 msgid "Edit message"
 msgstr "redaguoti pranešimą"
 
 #: discussion/templates/discussion/article_details.html:71
 #: discussion/templates/discussion/categories.html:23
+#: discussion/templates/discussion/discussion.html:19
 msgid "Delete message"
 msgstr "ištrinti pranešimą"
 
@@ -217,13 +219,9 @@ msgstr "redaguoti komentarą"
 msgid "Delete comment"
 msgstr "ištrinti komentarą"
 
-#: discussion/templates/discussion/base.html:4
+#: discussion/templates/discussion/base.html:10
 msgid "Discussion Blog"
 msgstr "diskusijų blogas"
-
-#: discussion/templates/discussion/base.html:11
-msgid "Discussion Board"
-msgstr "diskusijų lenta"
 
 #: discussion/templates/discussion/categories.html:33
 msgid "We're sorry, this page does not exist!"
@@ -257,3 +255,7 @@ msgstr "ištrinti"
 #: discussion/templates/discussion/delete_post.html:17
 msgid "Are You Sure You Want to Delete This Post?"
 msgstr "ar Jus tikrai norite ištrinti šį pranešimą?"
+
+#: discussion/templates/discussion/discussion.html:7
+msgid "Discussion Board"
+msgstr "diskusijų lenta"

@@ -2,34 +2,29 @@
 {% load i18n %}
 {% load static %}
 {% block content %}
-    <br>
-    <br>    
-    <h1>Diskusijų lenta</h1>
-    <br>
-    <br>
-    <ul>
+
+<div class="discussion-board-container">
+    <h1 class="discussion-board-title">{% trans "Discussion Board"|capfirst %}:</h1>
+    <ul class="posts-list">
     {% for post in object_list %}
-        <li>
+        <li class="post-item">
             <a href="{% url 'article_detail' post.pk %}">{{ post.title }}</a>
             - <a href="{% url 'category' post.category %}">{{ post.category }}</a>
             - {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.created_at }}
-            <small>
+            <small class="post-actions">
                 {% if user.is_authenticated %}
                     {% if user.id == post.author.id %}
-                        - <a href="{% url 'update_post' post.pk %}">Redaguoti pranešimą</a>
-                        <span style="margin-right: 5px;"></span>
-                        <a href="{% url 'delete_post' post.pk %}">Ištrinti pranešimą</a>
+                        - <a href="{% url 'update_post' post.pk %}">{% trans "Edit message"|capfirst %}</a>
+                        <span class="actions-spacer"></span>
+                        <a href="{% url 'delete_post' post.pk %}">{% trans "Delete message"|capfirst %}</a>
                     {% endif %}
                 {% endif %}
             </small>
-            <br>
-            <br>
-            {{ post.snippet }}
+            <div class="post-snippet">{{ post.snippet }}</div>
         </li>
-        <br>
-        <br>
         <hr>
     {% endfor %}
     </ul>
+</div>
 
 {% endblock %}

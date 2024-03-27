@@ -25,7 +25,6 @@ msgid "mark unread"
 msgstr "pažymėti kaip neskaitytą"
 
 #: website/admin.py:62
-#, python-format
 msgid "%d ticket has been made as new"
 msgid_plural "%d tickets have been made as new"
 msgstr[0] "%d užklausa buvo sukurta kaip nauja"
@@ -36,7 +35,6 @@ msgid "mark read"
 msgstr "pažymėti kaip perskaitytą"
 
 #: website/admin.py:71
-#, python-format
 msgid "%d ticket has been marked as read"
 msgid_plural "%d tickets have been marked as read"
 msgstr[0] "%d užklausa pažymėta kaip perskaityta"
@@ -47,7 +45,6 @@ msgid "set processing"
 msgstr "nustatyti apdorojimą"
 
 #: website/admin.py:80
-#, python-format
 msgid "%d ticket has been set processing"
 msgid_plural "%d tickets have been set processing"
 msgstr[0] "%d užklausai buvo nustatytas apdorojimas"
@@ -58,7 +55,6 @@ msgid "close"
 msgstr "uždaryti"
 
 #: website/admin.py:89
-#, python-format
 msgid "%d ticket has been closed"
 msgid_plural "%d tickets have been closed"
 msgstr[0] "%d užklausa buvo uždaryta"

@@ -30,6 +30,42 @@
 
 
 /*********************************************************************************/
+/* Discussion Board Form                                                      */
+/*********************************************************************************/
+
+.discussion-board-container {
+    margin: 2rem auto;
+}
+
+.discussion-board-title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.posts-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.post-item {
+    margin-bottom: 3rem;
+}
+
+.post-actions {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.actions-spacer {
+    margin-right: 5px;
+}
+
+.post-snippet {
+    margin-top: 0.5rem;
+}
+
+
+/*********************************************************************************/
 /* Registration Form                                                             */
 /*********************************************************************************/
 
@@ -490,4 +526,13 @@ h1.add-comment-title {
 
 .post-content {
     margin-top: 1rem;
+}
+
+
+/*********************************************************************************/
+/* Article Details Form                                                               */
+/*********************************************************************************/
+
+h1.article-details-title {
+    margin-bottom: 2rem;
 }
