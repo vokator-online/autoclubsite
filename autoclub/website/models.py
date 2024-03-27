@@ -65,7 +65,7 @@ class Ticket(models.Model):
 
 class TicketMessage(models.Model):
     ticket = models.ForeignKey(Ticket, verbose_name=_("ticket"), on_delete=models.CASCADE, related_name="messages")
-    body = models.TextField(_("body"), max_length=10000, default='', blank=True)
+    content = models.TextField(_("content"), max_length=10000, default='', blank=True)
     sender = models.ForeignKey(
         User, 
         verbose_name=_("sender"), 

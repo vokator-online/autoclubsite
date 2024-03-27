@@ -19,17 +19,12 @@
         <h2 style="margin-top: 4em;">Esate drovus žmogus?</h2>
         <p>Palikite mums žinutę.</p>
 
-        <h2 style="margin-top: 2em;">PASTABA:</h2>
-        <p>Norėtume priminti, kad pildydami užklausos formą Jūs privalote užpildyti visus laukelius.
-            Priešingu atveju sistema Jūsų laiško neišsiųs, o mes negausime atsakymo.</p>
-            <br>
-            <br>
             <form action="{{ request.path }}" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div class="form-actions">
-                    <input class="contact-button" type="submit" value="Submit">
-                    <input class="contact-button" type="reset" value="Reset">
+                    <input class="contact-button" type="submit" value={% trans "Submit"|capfirst %}>
+                    <input class="contact-button" type="reset" value={% trans "Reset"|capfirst %}>
                 </div>
             </form>
     </div>
