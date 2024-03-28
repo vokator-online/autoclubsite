@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 19:48+0200\n"
+"POT-Creation-Date: 2024-03-28 08:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,49 +20,53 @@ msgstr ""
 "11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
 "1 : n % 1 != 0 ? 2: 3);\n"
 
-#: website/admin.py:58
+#: website/admin.py:57
 msgid "mark unread"
 msgstr "pažymėti kaip neskaitytą"
 
-#: website/admin.py:62
-#, python-format
+#: website/admin.py:61
 msgid "%d ticket has been made as new"
 msgid_plural "%d tickets have been made as new"
 msgstr[0] "%d užklausa buvo sukurta kaip nauja"
 msgstr[1] "%d užklausos buvo sukurtos kaip naujos"
+msgstr[2] ""
+msgstr[3] ""
 
-#: website/admin.py:67
+#: website/admin.py:66
 msgid "mark read"
 msgstr "pažymėti kaip perskaitytą"
 
-#: website/admin.py:71
-#, python-format
+#: website/admin.py:70
 msgid "%d ticket has been marked as read"
 msgid_plural "%d tickets have been marked as read"
 msgstr[0] "%d užklausa pažymėta kaip perskaityta"
 msgstr[1] "%d užklausos pažymėtos kaip perskaitytos"
+msgstr[2] ""
+msgstr[3] ""
 
-#: website/admin.py:76
+#: website/admin.py:75
 msgid "set processing"
 msgstr "nustatyti apdorojimą"
 
-#: website/admin.py:80
-#, python-format
+#: website/admin.py:79
 msgid "%d ticket has been set processing"
 msgid_plural "%d tickets have been set processing"
 msgstr[0] "%d užklausai buvo nustatytas apdorojimas"
 msgstr[1] "%d užklausoms buvo nustatytas apdorojimas"
+msgstr[2] ""
+msgstr[3] ""
 
-#: website/admin.py:85
+#: website/admin.py:84
 msgid "close"
 msgstr "uždaryti"
 
-#: website/admin.py:89
-#, python-format
+#: website/admin.py:88
 msgid "%d ticket has been closed"
 msgid_plural "%d tickets have been closed"
 msgstr[0] "%d užklausa buvo uždaryta"
 msgstr[1] "%d užklausos buvo uždarytos"
+msgstr[2] ""
+msgstr[3] ""
 
 #: website/apps.py:8
 msgid "website"
@@ -144,7 +148,7 @@ msgstr "būseną"
 
 #: website/models.py:43
 msgid "access key"
-msgstr ""
+msgstr "prieigos raktas"
 
 #: website/models.py:46 website/models.py:67
 #: website/templates/customer_support/ticket_detail.html:7
@@ -181,71 +185,65 @@ msgstr "užklausa: {} pranešimas nuo {} kam {} į {}"
 
 #: website/templates/base.html:151
 msgid "All rights reserved."
-msgstr "Visos teisės saugomos."
+msgstr "visos teisės saugomos."
 
 #: website/templates/base.html:151
 msgid "Photos by"
-msgstr "Nuotraukų autorius"
+msgstr "nuotraukų autorius"
 
 #: website/templates/base.html:151
 msgid "Design by"
-msgstr "Dizainą kūrė"
+msgstr "dizainą kūrė"
 
 #: website/templates/customer_support/ticket_detail.html:4
-#, fuzzy
-#| msgid "ticket"
 msgid "Ticket"
 msgstr "užklausa"
 
 #: website/templates/customer_support/ticket_detail.html:9
 msgid "by"
-msgstr ""
+msgstr "nuo"
 
 #: website/templates/customer_support/ticket_detail.html:13
 msgid "reply here"
-msgstr ""
+msgstr "atsakykite čia"
 
 #: website/templates/customer_support/ticket_detail.html:15
-#, fuzzy
-#| msgid "ticket message"
 msgid "Send Message"
-msgstr "užklausos pranešimas"
+msgstr "siųsti žinutę"
 
 #: website/templates/customer_support/ticket_detail.html:17
 msgid "replies"
-msgstr ""
+msgstr "atsakymai"
 
 #: website/templates/customer_support/ticket_detail.html:19
 msgid "from"
-msgstr ""
+msgstr "nuo"
 
 #: website/templates/customer_support/ticket_detail.html:20
 msgid "to"
-msgstr ""
+msgstr "į"
 
 #: website/templates/customer_support/ticket_list.html:4
 #: website/templates/customer_support/ticket_list.html:7
 msgid "customer support"
-msgstr ""
+msgstr "klientų palaikymas"
 
 #: website/templates/customer_support/ticket_list.html:12
 msgid "No customer support tickets found."
-msgstr ""
+msgstr "Nerasta klientų palaikymo užklausų."
 
 #: website/templates/main/contact.html:26
 msgid "Submit"
-msgstr ""
+msgstr "pateikti"
 
 #: website/templates/main/contact.html:27
 msgid "Reset"
-msgstr ""
+msgstr "anuliuoti"
 
-#: website/utils.py:25
+#: website/utils.py:26
 msgid "Thank you. We had some issues ({}) but we still got your message."
-msgstr ""
-"Dėkojame. Turėjome tam tikrų problemų ({}), bet vis tiek gavome Jūsų "
-"užklausą."
+msgstr "Dėkojame. Iškilo kai kurios problemos ({}), bet Jūsų žinutę vis tiek gavome."
 
-#: website/utils.py:29
+#: website/utils.py:30
 msgid "Message sent. Thank you. We will get back to you as soon as we can."
-msgstr "Pranešimas išsiųstas. Artimiausiu metu susisieksime su Jumis."
+msgstr "Pranešimas išsiųstas. Dėkojame. Susisieksime su Jumis kaip įmanoma greičiau."
