@@ -103,3 +103,7 @@ class TicketList(LoginRequiredMixin, generic.ListView):
         qs = super().get_queryset()
         qs = qs.filter(sender=self.request.user)
         return qs
+    
+
+class GrandView(TemplateView):
+    template_name = 'main/grand_meet_2023.html'
