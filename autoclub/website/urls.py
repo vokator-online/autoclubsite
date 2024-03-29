@@ -12,5 +12,4 @@ urlpatterns = [
     path('contact/', views.TicketCreateView.as_view(), name='contact'),
     path('tickets/', views.TicketList.as_view(), name='ticket_list'),
     path('ticket/<int:pk>/', views.TicketDetail.as_view(), name='ticket_detail'),
-
 ]

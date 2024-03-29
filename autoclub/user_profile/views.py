@@ -7,7 +7,6 @@ from . import forms
 from user_profile.models import Profile
 
 
-
 class UserRegisterView(generic.CreateView):
     form_class = forms.CreateUserForm
     template_name = 'registration/registration.html'
