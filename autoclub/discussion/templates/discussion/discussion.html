@@ -8,9 +8,11 @@
     <ul class="posts-list">
     {% for post in object_list %}
         <li class="post-item">
-            <a href="{% url 'article_detail' post.pk %}">{{ post.title }}</a>
-            - <a href="{% url 'category' post.category %}">{{ post.category }}</a>
-            - {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.created_at }}
+            <h3><strong><a href="{% url 'article_detail' post.pk %}">{{ post.title }}</a></strong></h3>
+            <br>
+            <a href="{% url 'category' post.category %}">{{ post.category }}</a>
+            <br>
+            {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.created_at }}
             <small class="post-actions">
                 {% if user.is_authenticated %}
                     {% if user.id == post.author.id %}
