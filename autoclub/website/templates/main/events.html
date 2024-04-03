@@ -1,103 +1,25 @@
-﻿{% extends 'base.html' %}
+{% extends 'base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}Renginių apžvalga{% endblock %}
+{% block title %}Event List{% endblock %}
 {% block content %}
 
 <div class="container page">
 	<div class="content">
 		<div class="title" style="margin-bottom: 5em;">
-			<h2>Renginių <span class="byline">apžvalga</span></h2>
+			<h2>Event <span class="byline">List</span></h2>
 		</div>
 
-        <ul class="style2">
-			<li class="first" style="display: flex; align-items: center;">
-					<img src="{% static 'img/default_profile_pic.png' %}"
-					width="120" height="130" style="flex: 0 0 auto; margin-right: 15px;" alt="DEFAULT PIC">
-				<p style="margin: 0;"><strong>Naujametinis renginys Panemunės pilyje '2024</strong>
-					<br>					
-					2023-12-31 / 2024-01-01</p>
-			</li>
-
-            <li style="display: flex; align-items: center;">
-				<img src="{% static 'img/default_profile_pic.png' %}"
-				width="120" height="130" style="flex: 0 0 auto; margin-right: 15px;" alt="DEFAULT PIC">
-				<p style="margin: 0;"><strong>Lietuvos automobilių mėgėjų klubo GRAND MEET '2023</strong>
-					<br>
-					2023-10-14 / 2023-10-15</p>
-			</li>
-
-            <li style="display: flex; align-items: center;">
-				<img src="{% static 'img/default_profile_pic.png' %}"
-				width="120" height="130" style="flex: 0 0 auto; margin-right: 15px;" alt="DEFAULT PIC">
-				<p style="margin: 0;"><strong>Kosminė odisėja Lietuvos etnokosmologijos muziejuje '2023</strong>
-					<br>
-					2023-05-13 / 2023-05-14</p>
-			</li>
-
-            <li style="display: flex; align-items: center;">
-				<img src="{% static 'img/default_profile_pic.png' %}"
-				width="120" height="130" style="flex: 0 0 auto; margin-right: 15px;" alt="DEFAULT PIC">
-				<p style="margin: 0;"><strong>Naujieji Metai Aristokratiškai '2023</strong>
-					<br>
-					2022-12-31 / 2023-01-01</p>
-			</li>
-
-            <li style="display: flex; align-items: center;">
-				<img src="{% static 'img/default_profile_pic.png' %}"
-				width="120" height="130" style="flex: 0 0 auto; margin-right: 15px;" alt="DEFAULT PIC">
-				<p style="margin: 0;"><strong>Adomo Mickevičiaus gimtinės lankymas Naugarduke '2019</strong>
-					<br>
-					2019-11-22</p>
-			</li>
-
-            <li style="display: flex; align-items: center;">
-				<img src="{% static 'img/default_profile_pic.png' %}"
-				width="120" height="130" style="flex: 0 0 auto; margin-right: 15px;" alt="DEFAULT PIC">
-				<p style="margin: 0;"><strong>Lietuvos automobilių mėgėjų klubo GRAND MEET '2019</strong>
-					<br>
-					2019-10-26 / 2019-10-27</p>
-			</li>
-
-            <li style="display: flex; align-items: center;">
-				<img src="{% static 'img/default_profile_pic.png' %}"
-				width="120" height="130" style="flex: 0 0 auto; margin-right: 15px;" alt="DEFAULT PIC">
-				<p style="margin: 0;"><strong>Lietuvos automobilių mėgėjų klubo GRAND MEET - PANEVĖŽYS '2019</strong>
-					<br>
-					2019-05-04 / 2019-05-05</p>
-			</li>
-
-            <li style="display: flex; align-items: center;">
-				<img src="{% static 'img/default_profile_pic.png' %}"
-				width="120" height="130" style="flex: 0 0 auto; margin-right: 15px;" alt="DEFAULT PIC">
-				<p style="margin: 0;"><strong>Lietuvos automobilių mėgėjų klubo forum meet (Extended Edition)</strong>
-					<br>
-					2019-04-05</p>
-			</li>
-
-            <li style="display: flex; align-items: center;">
-				<img src="{% static 'img/default_profile_pic.png' %}"
-				width="120" height="130" style="flex: 0 0 auto; margin-right: 15px;" alt="DEFAULT PIC">
-				<p style="margin: 0;"><strong>Renginys Druskininkų vandens parke '2018</strong>
-					<br>
-					2018-10-20 / 2018-10-21</p>
-			</li>
-
-            <li style="display: flex; align-items: center;">
-				<img src="{% static 'img/default_profile_pic.png' %}"
-				width="120" height="130" style="flex: 0 0 auto; margin-right: 15px;" alt="DEFAULT PIC">
-				<p style="margin: 0;"><strong>Lietuvos automobilių mėgėjų klubo GRAND MEET prie ASVEJOS ežero '2018</strong>
-					<br>
-					2018-06-23 / 2018-06-24</p>
-			</li>
-
-            <li style="display: flex; align-items: center;">
-				<img src="{% static 'img/default_profile_pic.png' %}"
-				width="120" height="130" style="flex: 0 0 auto; margin-right: 15px;" alt="DEFAULT PIC">
-				<p style="margin: 0;"><strong>KGB kalėjimo muziejaus ir KD prie LR TM Mokymo centro lankymas '2018</strong>
-					<br>
-					2018-04-07</p>
-			</li>
+        <ul class="event-list">
+            {% for event in events %}
+                <li class="event-item">
+                    <img class="event-image" src="{{ event.image.url }}" alt="{{ event.title }}">
+                    <div class="event-details">
+                        <p class="event-title"><a href="{% url 'event_detail' event.pk %}">{{ event.title }}</a></p>
+                        <p class="event-date">{{ event.date|date:"Y-m-d" }}</p>
+                    </div>
+                </li>
+            {% endfor %}
         </ul>
     </div>
 

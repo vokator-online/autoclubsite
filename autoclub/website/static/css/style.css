@@ -636,10 +636,35 @@ h1.merchandise-title::before {
 
 
 /*********************************************************************************/
-/* Ticket Detail Form                                                            */
+/* Events Form                                                                 */
 /*********************************************************************************/
 
+.event-list {
+    list-style-type: none; /* Pašalina sąrašo simbolius */
+}
 
+.event-item {
+    display: flex;
+    align-items: flex-start; /* Nuotraukai palieka viršutinę kiekvieno elemento dalį */
+    border-bottom: 1px solid #363636; /* Pritaikykite savo esamą linijos spalvą */
+    margin: 10px 0; /* Atstumas tarp linijų */
+}
+
+.event-image {
+    margin-right: 10px; /* Atstumas tarp nuotraukos ir detalių */
+}
+
+.event-details {
+    flex: 1; /* Elementas užima likusią vietą, kad būtų galima nusistatyti reikiamą plotį */
+}
+
+.event-title {
+    font-weight: bold; /* Pavadinimo teksto paryškinimas */
+}
+
+.event-date {
+    color: gray; /* Data spalva */
+}
 
 
 /*********************************************************************************/
@@ -649,9 +674,12 @@ h1.merchandise-title::before {
 .style1 {
 	color: #FFFFFF;
 }
+
 .style2 {
 	font-weight: normal;
 }
+
 .style3 {
 	text-align: justify;
 }
+

@@ -3,6 +3,7 @@ from django.utils.translation import gettext_lazy as _
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils.crypto import get_random_string
+from tinymce.models import HTMLField
 
 
 SUBJECT_CHOICES = (
@@ -111,3 +112,19 @@ class TicketMessage(models.Model):
 
     def get_absolute_url(self):
         return reverse("ticketmessage_detail", kwargs={"pk": self.pk})
+
+
+class Event(models.Model):
+    image = models.ImageField(upload_to='images/events/', verbose_name=_("event image"), blank=True, null=True)
+    title = models.CharField(max_length=100, verbose_name=_("title"))
+    date = models.DateField(verbose_name=_("date"), db_index=True)
+    content = HTMLField(verbose_name=_("content"))
+    created_at = models.DateTimeField(_("created at"), auto_now_add=True, db_index=True)
+    updated_at = models.DateTimeField(_("updated at"), auto_now=True, db_index=True)
+    cancellation_date = models.DateField(blank=True, null=True, verbose_name=_("cancellation date"))
+
+    class Meta:
+            ordering = ['-date']
+
+    def __str__(self):
+        return self.title

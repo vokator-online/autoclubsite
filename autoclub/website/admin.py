@@ -7,6 +7,12 @@ from django.db.models import QuerySet
 from . import models, utils
 
 
+@admin.register(models.Event)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ('title', 'date', 'created_at', 'updated_at')
+    search_fields = ['title']
+
+
 class TicketMessageInline(admin.TabularInline):
     model = models.TicketMessage
     extra = 0

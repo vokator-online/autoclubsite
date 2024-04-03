@@ -1,4 +1,5 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView, DetailView
+from PIL import Image
 from typing import Any
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -15,8 +16,28 @@ class HomeView(TemplateView):
     template_name = 'main/home.html'
 
 
-class EventsView(TemplateView):
+class EventListView(ListView):
+    model = models.Event
     template_name = 'main/events.html'
+    context_object_name = 'events'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        events = context['events']
+
+        for event in events:
+            if event.image:
+                img = Image.open(event.image.path)
+                img.thumbnail((150, 100))
+                img.save(event.image.path)
+
+        return context
+
+
+class EventDetailView(DetailView):
+    model = models.Event
+    template_name = 'main/event_detail.html'
+    context_object_name = 'event'
 
 
 class CinemaView(TemplateView):
