@@ -79,15 +79,15 @@ class EditProfileForm(UserChangeForm):
         label=_('Email'),
         widget=forms.EmailInput(attrs={'placeholder': _('Please enter your e-mail address')})
     )
-    last_login = forms.CharField(
+    last_login = forms.DateTimeField(
         label=_('Last login'),
-        max_length=100,
-        widget=forms.TextInput(attrs={'readonly': True})
+        input_formats=['%Y-%m-%d %H:%M:%S.%f%z'],
+        widget=forms.DateTimeInput(attrs={'readonly': True, 'format': '%Y-%m-%d %H:%M:%S'})
     )
-    date_joined = forms.CharField(
+    date_joined = forms.DateTimeField(
         label=_('Date joined'),
-        max_length=100,
-        widget=forms.TextInput(attrs={'readonly': True})
+        input_formats=['%Y-%m-%d %H:%M:%S%z'],
+        widget=forms.DateTimeInput(attrs={'readonly': True, 'format': '%Y-%m-%d %H:%M:%S'})
     )
 
     class Meta:
