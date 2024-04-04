@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-28 14:42+0200\n"
+"POT-Creation-Date: 2024-04-04 22:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,14 @@ msgstr ""
 "11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
 "1 : n % 1 != 0 ? 2: 3);\n"
 
-#: website/admin.py:57
+#: website/admin.py:63
 msgid "mark unread"
 msgstr "pažymėti kaip neskaitytą"
 
-#: website/admin.py:61
+#: website/admin.py:67
+#, fuzzy, python-format
+#| msgid "%d ticket has been made as new"
+#| msgid_plural "%d tickets have been made as new"
 msgid "%d ticket has been made as new"
 msgid_plural "%d tickets have been made as new"
 msgstr[0] "%d užklausa buvo pažymėta kaip neperskaityta"
@@ -32,11 +35,14 @@ msgstr[1] "%d užklausos buvo pažymėtos kaip neperskaitytos"
 msgstr[2] ""
 msgstr[3] ""
 
-#: website/admin.py:66
+#: website/admin.py:72
 msgid "mark read"
 msgstr "pažymėti kaip perskaitytą"
 
-#: website/admin.py:70
+#: website/admin.py:76
+#, fuzzy, python-format
+#| msgid "%d ticket has been marked as read"
+#| msgid_plural "%d tickets have been marked as read"
 msgid "%d ticket has been marked as read"
 msgid_plural "%d tickets have been marked as read"
 msgstr[0] "%d užklausa pažymėta kaip perskaityta"
@@ -44,11 +50,14 @@ msgstr[1] "%d užklausos pažymėtos kaip perskaitytos"
 msgstr[2] ""
 msgstr[3] ""
 
-#: website/admin.py:75
+#: website/admin.py:81
 msgid "set processing"
 msgstr "nustatyti apdorojimą"
 
-#: website/admin.py:79
+#: website/admin.py:85
+#, fuzzy, python-format
+#| msgid "%d ticket has been set processing"
+#| msgid_plural "%d tickets have been set processing"
 msgid "%d ticket has been set processing"
 msgid_plural "%d tickets have been set processing"
 msgstr[0] "%d užklausai buvo nustatytas apdorojimas"
@@ -56,11 +65,14 @@ msgstr[1] "%d užklausoms buvo nustatytas apdorojimas"
 msgstr[2] ""
 msgstr[3] ""
 
-#: website/admin.py:84
+#: website/admin.py:90
 msgid "close"
 msgstr "uždaryti"
 
-#: website/admin.py:88
+#: website/admin.py:94
+#, fuzzy, python-format
+#| msgid "%d ticket has been closed"
+#| msgid_plural "%d tickets have been closed"
 msgid "%d ticket has been closed"
 msgid_plural "%d tickets have been closed"
 msgstr[0] "%d užklausa buvo uždaryta"
@@ -72,114 +84,138 @@ msgstr[3] ""
 msgid "website"
 msgstr "interneto svetainė"
 
-#: website/models.py:9
+#: website/models.py:10
 msgid "Please Choose a Topic That Interests You"
 msgstr "Prašome pasirinkti Jus dominančią temą"
 
-#: website/models.py:10
+#: website/models.py:11
 msgid "For Those Wishing to Become Club Members"
 msgstr "Norintiems tapti klubo nariais"
 
-#: website/models.py:11
+#: website/models.py:12
 msgid "Official Club Events and Organizational Matters"
 msgstr "Oficialūs klubo renginiai ir organizaciniai klausimai"
 
-#: website/models.py:12
+#: website/models.py:13
 msgid "Suggestions, Requests for Club Activities"
 msgstr "Pasiūlymai, pageidavimai klubo veiklai"
 
-#: website/models.py:13
+#: website/models.py:14
 msgid "Club Merchandise"
 msgstr "Klubo atributika"
 
-#: website/models.py:14
+#: website/models.py:15
 msgid "Other General Issues Related to Club Activities"
 msgstr "Kiti bendri su klubo veikla susiję klausimai"
 
-#: website/models.py:18
+#: website/models.py:19
 msgid "new"
 msgstr "naujos"
 
-#: website/models.py:19
+#: website/models.py:20
 msgid "read"
 msgstr "perskaitytos"
 
-#: website/models.py:20
+#: website/models.py:21
 msgid "processing"
 msgstr "apdorojamos"
 
-#: website/models.py:21
+#: website/models.py:22
 msgid "closed"
 msgstr "uždarytos"
 
-#: website/models.py:29
+#: website/models.py:30
 msgid "subject"
 msgstr "temą"
 
-#: website/models.py:30 website/models.py:68
+#: website/models.py:31 website/models.py:69 website/models.py:121
 msgid "content"
 msgstr "turinys"
 
-#: website/models.py:33 website/models.py:71
+#: website/models.py:34 website/models.py:72
 msgid "sender"
 msgstr "siuntėjas"
 
-#: website/models.py:38 website/models.py:83 website/models.py:85
+#: website/models.py:39 website/models.py:84 website/models.py:86
 msgid "full name"
 msgstr "vardas ir pavardė"
 
-#: website/models.py:39 website/models.py:84 website/models.py:86
+#: website/models.py:40 website/models.py:85 website/models.py:87
 msgid "email"
 msgstr "elektroninis pašto adresas"
 
-#: website/models.py:40 website/models.py:87
+#: website/models.py:41 website/models.py:88
 msgid "sent at"
 msgstr "išsintimo laiką"
 
-#: website/models.py:41 website/models.py:88
+#: website/models.py:42 website/models.py:89
 msgid "email sent"
 msgstr "išsiųstų elektroninių laiškų skaičių"
 
-#: website/models.py:42
+#: website/models.py:43
 msgid "status"
 msgstr "būseną"
 
-#: website/models.py:43
+#: website/models.py:44
 msgid "access key"
 msgstr "prieigos raktas"
 
-#: website/models.py:46 website/models.py:67
+#: website/models.py:47 website/models.py:68
 #: website/templates/customer_support/ticket_detail.html:10
 msgid "ticket"
 msgstr "užklausa"
 
-#: website/models.py:47
+#: website/models.py:48
 msgid "tickets"
 msgstr "užklausos"
 
-#: website/models.py:51
+#: website/models.py:52
 msgid "{} from {} sent {}"
 msgstr "{} nuo {} išsiųsta {}"
 
-#: website/models.py:78
+#: website/models.py:79
 msgid "recipient"
 msgstr "gavėjas"
 
-#: website/models.py:89
+#: website/models.py:90
 msgid "is read"
 msgstr "perskaityta"
 
-#: website/models.py:92
+#: website/models.py:93
 msgid "ticket message"
 msgstr "užklausos pranešimas"
 
-#: website/models.py:93
+#: website/models.py:94
 msgid "ticket messages"
 msgstr "užklausos pranešimai"
 
-#: website/models.py:97
+#: website/models.py:98
 msgid "ticket: {} message from {} to {} at {}"
 msgstr "užklausa: {} pranešimas nuo {} kam {} į {}"
+
+#: website/models.py:118
+msgid "event image"
+msgstr "Renginio nuotrauka"
+
+#: website/models.py:119
+msgid "title"
+msgstr "Antraštė"
+
+#: website/models.py:120
+msgid "date"
+msgstr "Data"
+
+#: website/models.py:122
+msgid "created at"
+msgstr "Sukurta"
+
+#: website/models.py:123
+msgid "updated at"
+msgstr "Atnaujinta"
+
+#: website/models.py:124
+msgid "cancellation date"
+msgstr "Atšaukimo data"
 
 #: website/templates/base.html:151
 msgid "All rights reserved."
@@ -250,6 +286,18 @@ msgstr "pateikti"
 #: website/templates/main/contact.html:27
 msgid "Reset"
 msgstr "anuliuoti"
+
+#: website/templates/main/events.html:4
+msgid "Event List"
+msgstr "renginių apžvalga"
+
+#: website/templates/main/events.html:10
+msgid "Event"
+msgstr "renginių"
+
+#: website/templates/main/events.html:10
+msgid "List"
+msgstr "apžvalga"
 
 #: website/utils.py:26
 msgid "Thank you. We had some issues ({}) but we still got your message."

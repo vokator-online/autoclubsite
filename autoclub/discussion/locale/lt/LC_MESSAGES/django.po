@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 19:45+0200\n"
+"POT-Creation-Date: 2024-04-04 21:28+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -193,13 +193,13 @@ msgstr "paskelbė"
 
 #: discussion/templates/discussion/article_details.html:69
 #: discussion/templates/discussion/categories.html:21
-#: discussion/templates/discussion/discussion.html:17
+#: discussion/templates/discussion/discussion.html:19
 msgid "Edit message"
 msgstr "redaguoti pranešimą"
 
 #: discussion/templates/discussion/article_details.html:71
 #: discussion/templates/discussion/categories.html:23
-#: discussion/templates/discussion/discussion.html:19
+#: discussion/templates/discussion/discussion.html:21
 msgid "Delete message"
 msgstr "ištrinti pranešimą"
 

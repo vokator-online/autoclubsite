@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% load i18n %}
 {% load static %}
-{% block title %}Event List{% endblock %}
+{% block title %}{% trans "Event List"|capfirst %}{% endblock %}
 {% block content %}
 
 <div class="container page">
 	<div class="content">
 		<div class="title" style="margin-bottom: 5em;">
-			<h2>Event <span class="byline">List</span></h2>
+			<h2>{% trans "Event"|capfirst %} <span class="byline">{% trans "List"|capfirst %}</span></h2>
 		</div>
 
         <ul class="event-list">
