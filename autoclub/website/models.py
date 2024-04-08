@@ -128,3 +128,21 @@ class Event(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Merchandise(models.Model):
+    image = models.ImageField(_("image"),upload_to='images/merchandise/', null=True, blank=True)
+    title = models.CharField(_("title"), max_length=100, db_index=True)
+    price = models.DecimalField(_("price"), max_digits=10, decimal_places=2)
+    quantity = models.IntegerField(_("quantity"))
+    created_at = models.DateTimeField(_("created at"), auto_now_add=True, db_index=True)
+    updated_at = models.DateTimeField(_("updated at"), auto_now=True, db_index=True)
+    is_active = models.BooleanField(_("is active"), default=True)
+
+    class Meta:
+        verbose_name = _("merchandise")
+        verbose_name_plural = _("merchandises")
+        ordering = ['title']
+
+    def __str__(self):
+        return self.title

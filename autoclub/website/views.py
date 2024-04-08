@@ -55,6 +55,11 @@ class ApplicationsView(TemplateView):
 class MerchandiseView(TemplateView):
     template_name = 'main/merchandise.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['merchandise'] = models.Merchandise.objects.all()
+        return context
+
 
 class TicketCreateView(generic.CreateView):
     model = models.Ticket

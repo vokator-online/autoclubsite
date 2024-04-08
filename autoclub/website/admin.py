@@ -13,6 +13,13 @@ class EventAdmin(admin.ModelAdmin):
     search_fields = ['title']
 
 
+class MerchandiseAdmin(admin.ModelAdmin):
+    list_display = ['title', 'price', 'quantity', 'created_at', 'updated_at', 'is_active']
+    search_fields = ['title', 'description', 'category']
+
+admin.site.register(models.Merchandise, MerchandiseAdmin)
+
+
 class TicketMessageInline(admin.TabularInline):
     model = models.TicketMessage
     extra = 0

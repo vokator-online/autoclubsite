@@ -579,13 +579,8 @@
 
 
 /*********************************************************************************/
-/* Gallery Form                                                                  */
+/* Merchadise Form                                                                  */
 /*********************************************************************************/
-
-.container2 {
-    width: 100%;
-    text-align: center;
-}
 
 h1.merchandise-title {
     font-weight: normal;
@@ -612,26 +607,33 @@ h1.merchandise-title::before {
     100% { width: 100px; }
 }
 
-.photo-gallery {
+.merchandise-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
 }
 
-.pic { 
-    width: calc(33.333% - 20px);
-    border-radius: 10px;
+.merchandise-item {
+    width: 31%;
+    margin-bottom: 30px;
+}
+
+.merchandise-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+	border-radius: 10px;
     box-shadow: 3px 3px 5px lightgray;
     cursor: pointer;
     transition: .5s;
 }
 
-.pic img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    transition: .5s;
+.active {
+    color: green;
+}
+
+.inactive {
+    color: red;
 }
 
 
