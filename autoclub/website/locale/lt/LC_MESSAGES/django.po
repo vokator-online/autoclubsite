@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-04 22:47+0300\n"
+"POT-Creation-Date: 2024-04-10 23:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
 "1 : n % 1 != 0 ? 2: 3);\n"
 
-#: website/admin.py:63
+#: website/admin.py:86
 msgid "mark unread"
 msgstr "pažymėti kaip neskaitytą"
 
-#: website/admin.py:67
+#: website/admin.py:90
 #, fuzzy, python-format
 #| msgid "%d ticket has been made as new"
 #| msgid_plural "%d tickets have been made as new"
@@ -35,11 +35,11 @@ msgstr[1] "%d užklausos buvo pažymėtos kaip neperskaitytos"
 msgstr[2] ""
 msgstr[3] ""
 
-#: website/admin.py:72
+#: website/admin.py:95
 msgid "mark read"
 msgstr "pažymėti kaip perskaitytą"
 
-#: website/admin.py:76
+#: website/admin.py:99
 #, fuzzy, python-format
 #| msgid "%d ticket has been marked as read"
 #| msgid_plural "%d tickets have been marked as read"
@@ -50,11 +50,11 @@ msgstr[1] "%d užklausos pažymėtos kaip perskaitytos"
 msgstr[2] ""
 msgstr[3] ""
 
-#: website/admin.py:81
+#: website/admin.py:104
 msgid "set processing"
 msgstr "nustatyti apdorojimą"
 
-#: website/admin.py:85
+#: website/admin.py:108
 #, fuzzy, python-format
 #| msgid "%d ticket has been set processing"
 #| msgid_plural "%d tickets have been set processing"
@@ -65,11 +65,11 @@ msgstr[1] "%d užklausoms buvo nustatytas apdorojimas"
 msgstr[2] ""
 msgstr[3] ""
 
-#: website/admin.py:90
+#: website/admin.py:113
 msgid "close"
 msgstr "uždaryti"
 
-#: website/admin.py:94
+#: website/admin.py:117
 #, fuzzy, python-format
 #| msgid "%d ticket has been closed"
 #| msgid_plural "%d tickets have been closed"
@@ -100,7 +100,7 @@ msgstr "Oficialūs klubo renginiai ir organizaciniai klausimai"
 msgid "Suggestions, Requests for Club Activities"
 msgstr "Pasiūlymai, pageidavimai klubo veiklai"
 
-#: website/models.py:14
+#: website/models.py:14 website/templates/main/merchandise.html:4
 msgid "Club Merchandise"
 msgstr "Klubo atributika"
 
@@ -197,7 +197,7 @@ msgstr "užklausa: {} pranešimas nuo {} kam {} į {}"
 msgid "event image"
 msgstr "Renginio nuotrauka"
 
-#: website/models.py:119
+#: website/models.py:119 website/models.py:135
 msgid "title"
 msgstr "Antraštė"
 
@@ -205,17 +205,41 @@ msgstr "Antraštė"
 msgid "date"
 msgstr "Data"
 
-#: website/models.py:122
+#: website/models.py:122 website/models.py:138
 msgid "created at"
 msgstr "Sukurta"
 
-#: website/models.py:123
+#: website/models.py:123 website/models.py:139
 msgid "updated at"
 msgstr "Atnaujinta"
 
 #: website/models.py:124
 msgid "cancellation date"
 msgstr "Atšaukimo data"
+
+#: website/models.py:134
+msgid "image"
+msgstr "Paveikslėlis"
+
+#: website/models.py:136
+msgid "price"
+msgstr "Kaina"
+
+#: website/models.py:137
+msgid "quantity"
+msgstr "Kiekis"
+
+#: website/models.py:140
+msgid "is active"
+msgstr "Prieinamumas"
+
+#: website/models.py:143
+msgid "merchandise"
+msgstr "atributika"
+
+#: website/models.py:144
+msgid "merchandises"
+msgstr "klubo atributika"
 
 #: website/templates/base.html:151
 msgid "All rights reserved."
@@ -298,6 +322,30 @@ msgstr "renginių"
 #: website/templates/main/events.html:10
 msgid "List"
 msgstr "apžvalga"
+
+#: website/templates/main/merchandise.html:10
+msgid "Club"
+msgstr "klubo"
+
+#: website/templates/main/merchandise.html:10
+msgid "Merchandise"
+msgstr "atributika"
+
+#: website/templates/main/merchandise.html:46
+msgid "Price"
+msgstr "kaina"
+
+#: website/templates/main/merchandise.html:47
+msgid "Quantity"
+msgstr "kiekis"
+
+#: website/templates/main/merchandise.html:49
+msgid "Available"
+msgstr "prieinama"
+
+#: website/templates/main/merchandise.html:49
+msgid "Currently Unavailable"
+msgstr "šiuo metu neprieinama"
 
 #: website/utils.py:26
 msgid "Thank you. We had some issues ({}) but we still got your message."

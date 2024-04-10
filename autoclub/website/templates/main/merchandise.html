@@ -7,7 +7,7 @@
 <div id="page" class="container">
 	<div id="content">
 		<div class="title" style="margin-bottom: 5em;">
-			<h2>Klubo <span class="byline">atributika</span></h2>
+			<h2>{% trans "Club"|capfirst %} <span class="byline">{% trans "Merchandise"|capfirst %}</span></h2>
 		</div>
 			<p>Automobilių mėgėjų klubas siūlo įsigyti gaminamą atributiką: nuo marškinėlių iki pakabukų ir atvirukų.</p>
 			<p>Šiuo metu klubas siūlo Jums įsigyti <strong>dekoratyvines pagalvėles</strong>, kurių dydis 40x40 cm.</p>
@@ -43,10 +43,10 @@
 							{% endif %}								
 							<small>
 							<p>{{ merchandise.title }}<br>
-							Price: {{ merchandise.price }}EUR<br>
-							Quantity: {{ merchandise.quantity }}</p>
+							{% trans "Price"|capfirst %}: {{ merchandise.price }}EUR<br>
+							{% trans "Quantity"|capfirst %}: {{ merchandise.quantity }}</p>
 							<p class="{% if merchandise.is_active %}active{% else %}inactive{% endif %}">
-								{% if merchandise.is_active %}Active{% else %}Not Active{% endif %}
+								{% if merchandise.is_active %}{% trans "Available"|capfirst %}{% else %}{% trans "Currently Unavailable"|capfirst %}{% endif %}
 							</p>
 							</small>
 						</div>
