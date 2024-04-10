@@ -636,6 +636,11 @@ h1.merchandise-title::before {
     color: red;
 }
 
+.no-image {
+    cursor: default;
+	pointer-events: none;
+}
+
 
 /*********************************************************************************/
 /* Events Form                                                                 */

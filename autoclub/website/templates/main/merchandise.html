@@ -34,9 +34,13 @@
 				<div class="merchandise-row">
 					{% for merchandise in merchandise %}
 						<div class="merchandise-item">
-							<a href="{{ merchandise.image.url }}" data-lightbox="example-set" data-title="{{ merchandise.title }}">
-								<img src="{{ merchandise.image.url }}" alt="{{ merchandise.title }}">
-							</a>
+							{% if merchandise.image and merchandise.image.url %}
+								<a href="{{ merchandise.image.url }}" data-lightbox="example-set" data-title="{{ merchandise.title }}">
+									<img src="{{ merchandise.image.url }}" alt="{{ merchandise.title }}">
+								</a>
+							{% else %}
+								<img class="no-image" src="{% static 'img/no_image.png' %}" alt="{{ merchandise.title }}">
+							{% endif %}								
 							<small>
 							<p>{{ merchandise.title }}<br>
 							Price: {{ merchandise.price }}EUR<br>

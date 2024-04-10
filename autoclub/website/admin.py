@@ -2,6 +2,8 @@ from typing import Any
 from django.contrib import admin, messages
 from django.http import HttpRequest
 from django.http.response import HttpResponse
+from django.templatetags.static import static
+from django.utils.html import format_html
 from django.utils.translation import ngettext, gettext as _
 from django.db.models import QuerySet
 from . import models, utils
@@ -14,8 +16,22 @@ class EventAdmin(admin.ModelAdmin):
 
 
 class MerchandiseAdmin(admin.ModelAdmin):
-    list_display = ['title', 'price', 'quantity', 'created_at', 'updated_at', 'is_active']
+    list_display = ['title', 'display_image', 'price', 'quantity', 'created_at', 'updated_at', 'is_active']
     search_fields = ['title', 'description', 'category']
+
+    def display_image(self, obj):
+        if obj.image and hasattr(obj.image, 'url'):
+            return format_html('<img class="admin-thumbnail" src="{}" />'.format(obj.image.url))
+        else:
+            no_image_url = static('img/no_image.png')
+            return format_html('<img class="admin-thumbnail" src="{}" />'.format(no_image_url))
+
+    display_image.short_description = 'Image'
+
+    class Media:
+        css = {
+            'all': ('css/admin.css',),
+        }
 
 admin.site.register(models.Merchandise, MerchandiseAdmin)
 
