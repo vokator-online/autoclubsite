@@ -8,11 +8,11 @@ from tinymce.models import HTMLField
 
 SUBJECT_CHOICES = (
     ('', _('Please Choose a Topic That Interests You')),
-    ('Join', _('For Those Wishing to Become Club Members')),
-    ('Events', _('Official Club Events and Organizational Matters')),
-    ('Suggestions', _('Suggestions, Requests for Club Activities')),
-    ('Merchandise', _('Club Merchandise')),
-    ('Other', _('Other General Issues Related to Club Activities')),
+    (_('Join'), _('For Those Wishing to Become Club Members')),
+    (_('Events'), _('Official Club Events and Organizational Matters')),
+    (_('Suggestions'), _('Suggestions, Requests for Club Activities')),
+    (_('Merchandise'), _('Club Merchandise')),
+    (_('Other'), _('Other General Issues Related to Club Activities')),
 )
 
 TICKET_STATUSES = (
@@ -124,7 +124,9 @@ class Event(models.Model):
     cancellation_date = models.DateField(blank=True, null=True, verbose_name=_("cancellation date"))
 
     class Meta:
-            ordering = ['-date']
+        verbose_name = _("event")
+        verbose_name_plural = _("events")
+        ordering = ['-date']
 
     def __str__(self):
         return self.title
