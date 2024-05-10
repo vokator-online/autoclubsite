@@ -3,12 +3,12 @@ from .models import Post, Category, Comment
 from django.utils.translation import gettext_lazy as _
 
 
-choices = Category.objects.all().values_list('name', 'name')
+# choices = Category.objects.all().values_list('name', 'name')
 
-choice_list = []
+# choice_list = []
 
-for item in choices:
-    choice_list.append(item)
+# for item in choices:
+#     choice_list.append(item)
 
 
 class PostForm(forms.ModelForm):
